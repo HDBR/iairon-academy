@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Play } from 'lucide-react';
@@ -11,7 +10,7 @@ const VideoSection = () => {
       description: "Aprenda a criar clones de voz profissionais"
     },
     {
-      id: "lPx8tTx3KaE",
+      id: "ktmn0GwgVh4",
       title: "Vídeos Animados com VEO 3",
       description: "Criação de vídeos animados usando IA"
     },
