@@ -1,3 +1,4 @@
+
 import React from 'react';
 import UrgencyBar from '@/components/UrgencyBar';
 import VideoSection from '@/components/VideoSection';
@@ -101,7 +102,7 @@ const Index = () => {
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground leading-relaxed">
                   A formação mais completa do Brasil para dominar o 
                   <span className="gradient-text-accent"> VEO 3 </span>
-                  e faturar alto com vídeos criados por IA
+                  e outras IAs de vídeo e ainda faturar alto com vídeos criados por IA
                 </h2>
               </div>
 
