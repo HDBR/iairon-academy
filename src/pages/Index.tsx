@@ -1,3 +1,4 @@
+
 import React from 'react';
 import UrgencyBar from '@/components/UrgencyBar';
 import VideoSection from '@/components/VideoSection';
@@ -93,9 +94,11 @@ const Index = () => {
               </div>
               
               <div className="mb-6">
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tight">
-                  <span className="gradient-text">LABVIDIA</span>
-                </h1>
+                <img 
+                  src="/lovable-uploads/6a7a0740-082a-461e-a486-8ef7542d838e.png" 
+                  alt="LABVIDIA Logo" 
+                  className="mx-auto max-w-lg w-full h-auto"
+                />
               </div>
               
               <p className="text-xl md:text-2xl text-muted-foreground font-light mb-6 max-w-3xl mx-auto">
