@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Card } from '@/components/ui/card';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Star, Award, Users } from 'lucide-react';
 
 const MentorSection = () => {
@@ -58,13 +59,16 @@ const MentorSection = () => {
             
             <div className="order-1 md:order-2 flex justify-center">
               <div className="relative">
-                <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-tech-blue to-tech-purple p-1">
-                  <div className="w-full h-full rounded-full bg-gradient-to-br from-muted to-background flex items-center justify-center">
-                    <div className="text-4xl md:text-6xl font-bold gradient-text-accent">
-                      PV
-                    </div>
-                  </div>
-                </div>
+                <Avatar className="w-48 h-48 md:w-64 md:h-64 border-4 border-gradient-to-br from-tech-blue to-tech-purple">
+                  <AvatarImage 
+                    src="/placeholder.svg" 
+                    alt="Pettrus Vaz" 
+                    className="object-cover"
+                  />
+                  <AvatarFallback className="text-4xl md:text-6xl font-bold gradient-text-accent bg-gradient-to-br from-muted to-background">
+                    PV
+                  </AvatarFallback>
+                </Avatar>
                 
                 <div className="absolute -top-2 -right-2 w-12 h-12 bg-tech-amber rounded-full flex items-center justify-center animate-pulse-glow">
                   <Star className="w-6 h-6 text-background" />
