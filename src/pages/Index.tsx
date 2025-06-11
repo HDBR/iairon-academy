@@ -86,32 +86,30 @@ const Index = () => {
       <div className="main-content">
         {/* Hero Section with Video */}
         <section className="pt-16 pb-8 container-padding relative overflow-hidden">
-          <div className="container mx-auto text-center max-w-5xl relative">
+          <div className="container mx-auto text-center max-w-5xl">
             <div className="mb-12">
               <div className="inline-block glass-card px-6 py-3 rounded-full mb-8 animate-shimmer">
                 <span className="text-tech-blue font-medium">🚀 Primeira turma exclusiva</span>
               </div>
               
-              {/* Logo positioned behind text */}
-              <div className="relative mb-6">
+              <div className="mb-6">
                 <img 
                   src="/lovable-uploads/6a7a0740-082a-461e-a486-8ef7542d838e.png" 
-                  alt="LABVIDIA Logo Background" 
-                  className="absolute inset-0 mx-auto w-full max-w-6xl h-auto opacity-30 top-12 z-0"
+                  alt="LABVIDIA Logo" 
+                  className="mx-auto max-w-2xl w-full h-auto"
                 />
-                <div className="relative z-10">
-                  <p className="text-xl md:text-2xl text-muted-foreground font-light mb-6 max-w-3xl mx-auto">
-                    Laboratório de Vídeos com IA
-                  </p>
-                  
-                  <div className="max-w-4xl mx-auto mb-8">
-                    <h2 className="text-2xl md:text-3xl font-bold text-foreground leading-relaxed">
-                      A formação mais completa do Brasil para dominar o 
-                      <span className="gradient-text-accent"> VEO 3 </span>
-                      e outras IAs de vídeo e ainda faturar alto com vídeos criados por IA
-                    </h2>
-                  </div>
-                </div>
+              </div>
+              
+              <p className="text-xl md:text-2xl text-muted-foreground font-light mb-6 max-w-3xl mx-auto">
+                Laboratório de Vídeos com IA
+              </p>
+              
+              <div className="max-w-4xl mx-auto mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground leading-relaxed">
+                  A formação mais completa do Brasil para dominar o 
+                  <span className="gradient-text-accent"> VEO 3 </span>
+                  e outras IAs de vídeo e ainda faturar alto com vídeos criados por IA
+                </h2>
               </div>
 
               <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
