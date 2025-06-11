@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Play } from 'lucide-react';
@@ -15,7 +16,7 @@ const VideoSection = () => {
       description: "Criação de vídeos animados usando IA"
     },
     {
-      id: "ktmn0GwgVh4",
+      id: "3-sygPKI0XA",
       title: "Automação de Conteúdo para Redes Sociais", 
       description: "Como automatizar sua produção de conteúdo"
     }
