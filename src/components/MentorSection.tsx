@@ -32,7 +32,7 @@ const MentorSection = () => {
                     <Award className="w-5 h-5 text-tech-blue" />
                   </div>
                   <span className="text-foreground font-medium">
-                    +5 anos especializando em IA e automações
+                    +2 anos especializando em IA e automações
                   </span>
                 </div>
                 
@@ -41,7 +41,7 @@ const MentorSection = () => {
                     <Users className="w-5 h-5 text-tech-purple" />
                   </div>
                   <span className="text-foreground font-medium">
-                    +10.000 alunos treinados com sucesso
+                    +1.000 alunos treinados com sucesso
                   </span>
                 </div>
                 
