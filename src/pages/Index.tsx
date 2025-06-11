@@ -1,4 +1,3 @@
-
 import React from 'react';
 import UrgencyBar from '@/components/UrgencyBar';
 import VideoSection from '@/components/VideoSection';
@@ -43,11 +42,6 @@ const Index = () => {
       value: "Valor: R$ 497/ano | Seu preço: GRÁTIS"
     },
     {
-      title: "BÔNUS #2: Desconto Vitalício",
-      description: "50% de desconto em TUDO que eu lançar em 2025 sobre IA!",
-      value: "Valor: R$ 200+ | Seu preço: GRÁTIS"
-    },
-    {
       title: "BÔNUS #3: Arsenal de Prompts e Assistentes",
       description: "Acesso aos meus prompts secretos e assistentes geradores para fotos, vídeos VEO3 e muito mais. Material que NUNCA foi vendido!",
       value: "Valor: R$ 297 | Seu preço: GRÁTIS"
@@ -71,6 +65,16 @@ const Index = () => {
       title: "BÔNUS #7: Imersão \"Lançamento 100% IA\"",
       description: "Descubra como eu fiz ESTE lançamento inteiro com apenas 1 pessoa e 100% IA! Copy, criativos, página, automação, conteúdos!",
       value: "Valor: R$ 297 | Seu preço: GRÁTIS"
+    },
+    {
+      title: "BÔNUS #8: Sorteio entre os membros",
+      description: "Desenvolvimento de Funil de aquisição 100% com IA, onde vou ensinar como montar uma estrutura de funil para aquisição de cliente ou venda de infoproduto 100% com IA",
+      value: "Valor: Inestimável | Seu preço: GRÁTIS"
+    },
+    {
+      title: "BÔNUS #2: Desconto em próximos produtos",
+      description: "Desconto nos próximos produtos que lançarei em 2025",
+      value: "Valor: R$ 200+ | Seu preço: GRÁTIS"
     }
   ];
 

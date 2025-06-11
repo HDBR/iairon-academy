@@ -74,7 +74,7 @@ const OpportunitiesSection = () => {
               💰 Mercado em Expansão
             </div>
             <p className="text-muted-foreground">
-              O mercado de vídeos com IA deve crescer <span className="text-tech-blue font-semibold">300% até 2025</span>
+              O mercado de vídeos com IA deve crescer <span className="text-tech-blue font-semibold">300% em 2025</span>
             </p>
           </Card>
         </div>
