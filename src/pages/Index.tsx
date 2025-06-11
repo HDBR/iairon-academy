@@ -1,3 +1,4 @@
+
 import React from 'react';
 import UrgencyBar from '@/components/UrgencyBar';
 import VideoSection from '@/components/VideoSection';
@@ -87,9 +88,13 @@ const Index = () => {
                 <span className="text-tech-blue font-medium">🚀 Primeira turma exclusiva</span>
               </div>
               
-              <h1 className="font-inter text-4xl md:text-6xl lg:text-7xl font-black gradient-text mb-6 leading-tight">
-                LABVIDIA
-              </h1>
+              <div className="mb-6">
+                <img 
+                  src="https://i.ibb.co/yB8f67v/logo.png" 
+                  alt="LABVIDIA" 
+                  className="mx-auto h-20 md:h-24 lg:h-28 w-auto"
+                />
+              </div>
               
               <p className="text-xl md:text-2xl text-muted-foreground font-light mb-6 max-w-3xl mx-auto">
                 Laboratório de Vídeos com IA
