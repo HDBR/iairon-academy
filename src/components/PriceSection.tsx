@@ -20,11 +20,14 @@ const PriceSection = () => {
   const totalValue = 3382;
   const currentPrice = 497;
   const savings = totalValue - currentPrice;
+  const installmentValue = (currentPrice / 12).toFixed(2);
+
+  const handlePurchase = () => {
+    window.open('https://payfast.greenn.com.br/122280', '_blank');
+  };
 
   return (
-    <section className="section-spacing container-padding">
-      <div className="section-divider mb-12"></div>
-      
+    <section className="py-16 px-4 md:px-6 lg:px-8">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
@@ -73,11 +76,12 @@ const PriceSection = () => {
             </h3>
             
             <div className="mb-6">
-              <div className="text-5xl md:text-7xl font-black gradient-text-accent mb-4">
-                R$ {currentPrice}
+              {/* Destaque do Parcelado */}
+              <div className="text-3xl md:text-4xl font-black gradient-text-accent mb-2">
+                12x de R$ {installmentValue}
               </div>
               <div className="text-lg text-muted-foreground mb-4">
-                ou 12x de R$ {(currentPrice / 12).toFixed(2)}
+                à vista R$ {currentPrice}
               </div>
             </div>
 
@@ -90,7 +94,7 @@ const PriceSection = () => {
               </div>
             </div>
 
-            <div className="space-y-3 text-sm text-muted-foreground">
+            <div className="space-y-3 text-sm text-muted-foreground mb-6">
               <div className="flex items-center justify-center gap-2">
                 <ArrowRight className="w-4 h-4 text-tech-blue" />
                 <span>Acesso imediato após o pagamento</span>
@@ -104,6 +108,14 @@ const PriceSection = () => {
                 <span>Pagamento 100% seguro</span>
               </div>
             </div>
+
+            {/* Botão no card */}
+            <button
+              onClick={handlePurchase}
+              className="cta-button w-full px-8 py-4 text-lg font-bold text-white border-0 transition-all duration-300 rounded-lg"
+            >
+              GARANTIR MINHA VAGA AGORA
+            </button>
           </Card>
         </div>
 
