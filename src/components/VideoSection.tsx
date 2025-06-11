@@ -11,7 +11,7 @@ const VideoSection = () => {
       description: "Aprenda a criar clones de voz profissionais"
     },
     {
-      id: "dQw4w9WgXcQ",
+      id: "lPx8tTx3KaE",
       title: "Vídeos Animados com VEO 3",
       description: "Criação de vídeos animados usando IA"
     },
