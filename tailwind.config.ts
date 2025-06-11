@@ -58,8 +58,10 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				tech: {
-					green: 'hsl(var(--tech-green))',
 					blue: 'hsl(var(--tech-blue))',
+					purple: 'hsl(var(--tech-purple))',
+					yellow: 'hsl(var(--tech-yellow))',
+					red: 'hsl(var(--tech-red))',
 				}
 			},
 			borderRadius: {
