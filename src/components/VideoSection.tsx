@@ -6,12 +6,12 @@ import { Play } from 'lucide-react';
 const VideoSection = () => {
   const videos = [
     {
-      id: "6gpp4wwXjOc",
+      id: "ySXnIZIddpM",
       title: "Clone de Voz com IA - Tutorial Completo",
       description: "Aprenda a criar clones de voz profissionais"
     },
     {
-      id: "dQw4w9WgXcQ", 
+      id: "3-sygPKI0XA", 
       title: "Vídeos Animados com VEO 3",
       description: "Criação de vídeos animados usando IA"
     },
