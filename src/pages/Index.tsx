@@ -220,7 +220,8 @@ const Index = () => {
               Este é um produto digital. Você receberá os acessos por e-mail em até 24 horas.
             </p>
             <p className="text-base">
-              Dúvidas? WhatsApp: [SEU NÚMERO]
+              © 2024 Do Prompt ao Pix. Todos os direitos reservados.
+              Este site não é afiliado ao Google ou à ferramenta VEO 3. Os resultados podem variar e dependem do esforço individual.
             </p>
           </div>
         </footer>
