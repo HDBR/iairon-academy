@@ -1,4 +1,3 @@
-
 import React from 'react';
 import UrgencyBar from '@/components/UrgencyBar';
 import VideoSection from '@/components/VideoSection';
@@ -6,6 +5,8 @@ import MentorSection from '@/components/MentorSection';
 import FeatureCard from '@/components/FeatureCard';
 import TsunamiSection from '@/components/TsunamiSection';
 import PriceSection from '@/components/PriceSection';
+import CertificateSection from '@/components/CertificateSection';
+import OpportunitiesSection from '@/components/OpportunitiesSection';
 import BackgroundEffects from '@/components/BackgroundEffects';
 import { Card } from '@/components/ui/card';
 import { Shield, Star, Zap, TrendingUp, Users, Play } from 'lucide-react';
@@ -167,7 +168,13 @@ const Index = () => {
           </div>
         </section>
 
-        {/* 4. Guarantee Section */}
+        {/* 4. Certificate Section */}
+        <CertificateSection />
+
+        {/* 5. Opportunities Section */}
+        <OpportunitiesSection />
+
+        {/* 6. Guarantee Section */}
         <section className="section-spacing container-padding">
           <div className="section-divider mb-12"></div>
           
@@ -185,13 +192,13 @@ const Index = () => {
           </div>
         </section>
 
-        {/* 5. Tsunami Section */}
+        {/* 7. Tsunami Section */}
         <TsunamiSection />
 
-        {/* 6. Price Section */}
+        {/* 8. Price Section */}
         <PriceSection />
 
-        {/* 7. Mentor Section */}
+        {/* 9. Mentor Section */}
         <MentorSection />
 
         {/* Footer */}

@@ -20,7 +20,7 @@ const PriceSection = () => {
   const totalValue = 3382;
   const currentPrice = 497;
   const savings = totalValue - currentPrice;
-  const installmentValue = (currentPrice / 12).toFixed(2);
+  const installmentValue = (currentPrice / 12).toFixed(2).replace('.', ',');
 
   const handlePurchase = () => {
     window.open('https://payfast.greenn.com.br/122280', '_blank');
