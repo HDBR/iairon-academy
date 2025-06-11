@@ -3,48 +3,53 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
-/* Custom Cyberpunk Design System */
+/* Modern Design System */
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 180 100% 85%;
+    --background: 0 0% 3%;
+    --foreground: 0 0% 95%;
 
-    --card: 200 20% 8%;
-    --card-foreground: 180 100% 85%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 200 20% 8%;
-    --popover-foreground: 180 100% 85%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 185 100% 50%;
-    --primary-foreground: 0 0% 4%;
+    --primary: 0 0% 95%;
+    --primary-foreground: 0 0% 3%;
 
-    --secondary: 185 80% 15%;
-    --secondary-foreground: 180 100% 85%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 200 20% 12%;
-    --muted-foreground: 180 50% 65%;
+    --muted: 0 0% 8%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 185 100% 50%;
-    --accent-foreground: 0 0% 4%;
+    --accent: 120 100% 50%;
+    --accent-foreground: 0 0% 3%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 185 60% 25%;
-    --input: 185 60% 20%;
-    --ring: 185 100% 50%;
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 120 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 8px;
 
-    /* Custom Cyberpunk Colors */
-    --cyber-blue: 185 100% 50%;
-    --cyber-blue-dark: 185 80% 30%;
-    --cyber-blue-light: 185 100% 70%;
-    --cyber-green: 120 100% 50%;
-    --cyber-purple: 270 100% 70%;
-    --neon-glow: 185 100% 50%;
+    /* Minimal color palette */
+    --tech-green: 120 100% 50%;
+    --tech-blue: 217 91% 60%;
+    --gray-900: 0 0% 3%;
+    --gray-800: 0 0% 6%;
+    --gray-700: 0 0% 10%;
+    --gray-600: 0 0% 15%;
+    --gray-500: 0 0% 25%;
+    --gray-400: 0 0% 45%;
+    --gray-300: 0 0% 65%;
+    --gray-200: 0 0% 85%;
+    --gray-100: 0 0% 95%;
   }
 }
 
@@ -54,118 +59,61 @@
   }
 
   body {
-    @apply bg-background text-foreground font-rajdhani;
+    @apply bg-background text-foreground font-inter antialiased;
     background-image: 
-      radial-gradient(circle at 20% 50%, hsl(185 100% 50% / 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(270 100% 70% / 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 40% 80%, hsl(120 100% 50% / 0.05) 0%, transparent 50%);
+      radial-gradient(circle at 50% 50%, hsl(var(--tech-green) / 0.03) 0%, transparent 50%);
   }
 }
 
-/* Cyberpunk Components */
+/* Modern Components */
 @layer components {
-  .cyber-glow {
-    box-shadow: 
-      0 0 20px hsl(var(--cyber-blue) / 0.3),
-      0 0 40px hsl(var(--cyber-blue) / 0.2),
-      0 0 60px hsl(var(--cyber-blue) / 0.1);
+  .tech-border {
+    border: 1px solid hsl(var(--border));
+    background: hsl(var(--card));
   }
 
-  .cyber-text-glow {
-    text-shadow: 
-      0 0 10px hsl(var(--cyber-blue) / 0.8),
-      0 0 20px hsl(var(--cyber-blue) / 0.6),
-      0 0 30px hsl(var(--cyber-blue) / 0.4);
+  .tech-glow {
+    box-shadow: 0 0 0 1px hsl(var(--tech-green) / 0.1);
   }
 
-  .cyber-border {
-    border: 1px solid hsl(var(--cyber-blue) / 0.5);
-    background: linear-gradient(135deg, 
-      hsl(var(--background)) 0%, 
-      hsl(var(--cyber-blue) / 0.05) 100%);
+  .tech-glow-hover:hover {
+    box-shadow: 0 0 0 1px hsl(var(--tech-green) / 0.3);
   }
 
-  .holographic {
-    background: linear-gradient(
-      45deg,
-      hsl(var(--cyber-blue) / 0.1) 0%,
-      hsl(var(--cyber-purple) / 0.1) 25%,
-      hsl(var(--cyber-green) / 0.1) 50%,
-      hsl(var(--cyber-blue) / 0.1) 75%,
-      hsl(var(--cyber-purple) / 0.1) 100%
-    );
-    background-size: 400% 400%;
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--foreground)), hsl(var(--tech-green)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
-  .urgency-bar {
-    background: linear-gradient(90deg, 
-      hsl(var(--cyber-blue)) 0%,
-      hsl(var(--cyber-green)) 50%,
-      hsl(var(--cyber-blue)) 100%);
-    background-size: 200% 100%;
+  .accent-border {
+    border-left: 2px solid hsl(var(--tech-green));
   }
 
-  .price-highlight {
-    background: linear-gradient(135deg,
-      hsl(var(--cyber-blue) / 0.2) 0%,
-      hsl(var(--cyber-green) / 0.2) 100%);
-    border: 2px solid hsl(var(--cyber-blue));
+  .price-card {
+    background: linear-gradient(135deg, hsl(var(--card)), hsl(var(--muted)));
+    border: 1px solid hsl(var(--border));
   }
 }
 
-/* Animations */
+/* Subtle Animations */
 @layer utilities {
-  @keyframes cyber-pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.7; transform: scale(1.02); }
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
-  @keyframes holographic-shift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  @keyframes pulse-subtle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
   }
 
-  @keyframes urgency-slide {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 200% 50%; }
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out;
   }
 
-  @keyframes cyber-glow-pulse {
-    0%, 100% { 
-      box-shadow: 
-        0 0 20px hsl(var(--cyber-blue) / 0.3),
-        0 0 40px hsl(var(--cyber-blue) / 0.2); 
-    }
-    50% { 
-      box-shadow: 
-        0 0 30px hsl(var(--cyber-blue) / 0.5),
-        0 0 60px hsl(var(--cyber-blue) / 0.3); 
-    }
-  }
-
-  @keyframes floating {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-  }
-
-  .animate-cyber-pulse {
-    animation: cyber-pulse 2s ease-in-out infinite;
-  }
-
-  .animate-holographic {
-    animation: holographic-shift 4s ease-in-out infinite;
-  }
-
-  .animate-urgency {
-    animation: urgency-slide 3s linear infinite;
-  }
-
-  .animate-cyber-glow {
-    animation: cyber-glow-pulse 3s ease-in-out infinite;
-  }
-
-  .animate-floating {
-    animation: floating 3s ease-in-out infinite;
+  .animate-pulse-subtle {
+    animation: pulse-subtle 3s ease-in-out infinite;
   }
 }

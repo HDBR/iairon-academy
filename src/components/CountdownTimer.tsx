@@ -36,35 +36,35 @@ const CountdownTimer = () => {
   const formatTime = (time: number) => time.toString().padStart(2, '0');
 
   return (
-    <div className="flex items-center justify-center space-x-4 py-8">
+    <div className="flex items-center justify-center space-x-6 py-8">
       <div className="text-center">
-        <div className="cyber-border p-4 rounded-lg animate-cyber-glow">
-          <div className="text-3xl md:text-5xl font-orbitron font-bold cyber-text-glow">
+        <div className="tech-border p-4 rounded-lg">
+          <div className="text-3xl md:text-4xl font-mono font-bold text-foreground">
             {formatTime(timeLeft.hours)}
           </div>
-          <div className="text-sm text-muted-foreground mt-1">HORAS</div>
+          <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Horas</div>
         </div>
       </div>
       
-      <div className="text-4xl font-orbitron cyber-text-glow animate-cyber-pulse">:</div>
+      <div className="text-2xl font-mono text-muted-foreground">:</div>
       
       <div className="text-center">
-        <div className="cyber-border p-4 rounded-lg animate-cyber-glow">
-          <div className="text-3xl md:text-5xl font-orbitron font-bold cyber-text-glow">
+        <div className="tech-border p-4 rounded-lg">
+          <div className="text-3xl md:text-4xl font-mono font-bold text-foreground">
             {formatTime(timeLeft.minutes)}
           </div>
-          <div className="text-sm text-muted-foreground mt-1">MINUTOS</div>
+          <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Minutos</div>
         </div>
       </div>
       
-      <div className="text-4xl font-orbitron cyber-text-glow animate-cyber-pulse">:</div>
+      <div className="text-2xl font-mono text-muted-foreground">:</div>
       
       <div className="text-center">
-        <div className="cyber-border p-4 rounded-lg animate-cyber-glow">
-          <div className="text-3xl md:text-5xl font-orbitron font-bold cyber-text-glow">
+        <div className="tech-border p-4 rounded-lg">
+          <div className="text-3xl md:text-4xl font-mono font-bold text-foreground">
             {formatTime(timeLeft.seconds)}
           </div>
-          <div className="text-sm text-muted-foreground mt-1">SEGUNDOS</div>
+          <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Segundos</div>
         </div>
       </div>
     </div>

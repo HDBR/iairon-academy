@@ -20,8 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'orbitron': ['Orbitron', 'monospace'],
-				'rajdhani': ['Rajdhani', 'sans-serif'],
+				'inter': ['Inter', 'sans-serif'],
+				'mono': ['JetBrains Mono', 'monospace'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -57,12 +57,9 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				cyber: {
-					blue: 'hsl(var(--cyber-blue))',
-					'blue-dark': 'hsl(var(--cyber-blue-dark))',
-					'blue-light': 'hsl(var(--cyber-blue-light))',
-					green: 'hsl(var(--cyber-green))',
-					purple: 'hsl(var(--cyber-purple))',
+				tech: {
+					green: 'hsl(var(--tech-green))',
+					blue: 'hsl(var(--tech-blue))',
 				}
 			},
 			borderRadius: {
