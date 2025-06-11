@@ -4,11 +4,16 @@ import { Button } from '@/components/ui/button';
 import { Zap } from 'lucide-react';
 
 const PurchaseButton = () => {
+  const handlePurchase = () => {
+    window.open('https://payfast.greenn.com.br/122280', '_blank');
+  };
+
   return (
-    <div className="text-center py-12">
+    <div className="text-center">
       <Button 
+        onClick={handlePurchase}
         size="lg" 
-        className="cta-button w-full md:w-auto px-16 py-6 text-xl font-bold text-white border-0 transition-all duration-300 mb-6"
+        className="cta-button w-full md:w-auto px-12 py-6 text-lg font-bold text-white border-0 transition-all duration-300 mb-6"
       >
         <Zap className="w-6 h-6 mr-3" />
         GARANTIR MINHA VAGA NO LABVIDIA
