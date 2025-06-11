@@ -1,4 +1,3 @@
-
 import React from 'react';
 import UrgencyBar from '@/components/UrgencyBar';
 import VideoSection from '@/components/VideoSection';
@@ -97,7 +96,7 @@ const Index = () => {
                 <img 
                   src="/lovable-uploads/6a7a0740-082a-461e-a486-8ef7542d838e.png" 
                   alt="LABVIDIA Logo" 
-                  className="mx-auto max-w-lg w-full h-auto"
+                  className="mx-auto max-w-2xl w-full h-auto"
                 />
               </div>
               
