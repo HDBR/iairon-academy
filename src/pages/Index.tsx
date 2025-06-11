@@ -1,4 +1,3 @@
-
 import React from 'react';
 import UrgencyBar from '@/components/UrgencyBar';
 import VideoSection from '@/components/VideoSection';
@@ -98,7 +97,7 @@ const Index = () => {
                 <img 
                   src="/lovable-uploads/6a7a0740-082a-461e-a486-8ef7542d838e.png" 
                   alt="LABVIDIA Logo Background" 
-                  className="absolute inset-0 mx-auto w-full max-w-6xl h-auto opacity-20 -top-8 z-0"
+                  className="absolute inset-0 mx-auto w-full max-w-6xl h-auto opacity-30 top-12 z-0"
                 />
                 <div className="relative z-10">
                   <p className="text-xl md:text-2xl text-muted-foreground font-light mb-6 max-w-3xl mx-auto">
