@@ -88,11 +88,9 @@ const Index = () => {
               </div>
               
               <div className="mb-6">
-                <img 
-                  src="https://i.ibb.co/TqHv4dj/logo.png" 
-                  alt="LABVIDIA" 
-                  className="mx-auto h-20 md:h-24 lg:h-28 w-auto"
-                />
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tight">
+                  <span className="gradient-text">LABVIDIA</span>
+                </h1>
               </div>
               
               <p className="text-xl md:text-2xl text-muted-foreground font-light mb-6 max-w-3xl mx-auto">
