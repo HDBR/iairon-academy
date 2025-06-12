@@ -61,7 +61,7 @@ const MentorSection = () => {
               <div className="relative">
                 <Avatar className="w-48 h-48 md:w-64 md:h-64 border-4 border-gradient-to-br from-tech-blue to-tech-purple">
                   <AvatarImage 
-                    src="/placeholder.svg" 
+                    src="http://veo3.iairon.com.br/images/pettrus.webp" 
                     alt="Pettrus Vaz" 
                     className="object-cover"
                   />
