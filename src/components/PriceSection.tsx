@@ -18,9 +18,9 @@ const PriceSection = () => {
   ];
 
   const totalValue = 3382;
-  const currentPrice = 497;
+  const currentPrice = 697;
   const savings = totalValue - currentPrice;
-  const installmentValue = "51,10";
+  const installmentValue = "71,66";
 
   const handlePurchase = () => {
     window.open('https://payfast.greenn.com.br/122280/offer/hpZP22', '_blank');
@@ -81,7 +81,7 @@ const PriceSection = () => {
                 12x de R$ {installmentValue}
               </div>
               <div className="text-lg text-muted-foreground mb-4">
-                à vista R$ {currentPrice}
+                à vista R$ {currentPrice},00
               </div>
             </div>
 
@@ -90,7 +90,7 @@ const PriceSection = () => {
                 💸 Economia de R$ {savings.toLocaleString()}
               </div>
               <div className="text-sm text-muted-foreground mt-1">
-                Mais de 85% de desconto!
+                Mais de 79% de desconto!
               </div>
             </div>
 
