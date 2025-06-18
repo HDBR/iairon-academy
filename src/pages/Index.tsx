@@ -10,7 +10,8 @@ import CertificateSection from '@/components/CertificateSection';
 import OpportunitiesSection from '@/components/OpportunitiesSection';
 import BackgroundEffects from '@/components/BackgroundEffects';
 import { Card } from '@/components/ui/card';
-import { Shield, Star, Zap, TrendingUp, Users, Play } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Shield, Star, Zap, TrendingUp, Users, Play, ArrowDown } from 'lucide-react';
 
 const Index = () => {
   const features = [
@@ -79,6 +80,17 @@ const Index = () => {
     }
   ];
 
+  const scrollToPricing = () => {
+    const pricingSection = document.querySelector('#pricing-section');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handlePurchase = () => {
+    window.open('https://payfast.greenn.com.br/122280/offer/hpZP22', '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-background relative">
       <BackgroundEffects />
@@ -90,7 +102,7 @@ const Index = () => {
           <div className="container mx-auto text-center max-w-5xl">
             <div className="mb-12">
               <div className="inline-block glass-card px-6 py-3 rounded-full mb-8 animate-shimmer">
-                <span className="text-tech-blue font-medium">🚀 Primeira turma exclusiva</span>
+                <span className="text-tech-blue font-medium">🚀 TURMA EXCLUSIVA</span>
               </div>
               
               <div className="mb-4">
@@ -113,7 +125,7 @@ const Index = () => {
                 </h2>
               </div>
 
-              <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
+              <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground mb-8">
                 <div className="flex items-center gap-2">
                   <Users className="w-4 h-4 text-tech-blue" />
                   <span>Turma limitada</span>
@@ -126,6 +138,28 @@ const Index = () => {
                   <TrendingUp className="w-4 h-4 text-tech-blue" />
                   <span>Projetos reais</span>
                 </div>
+              </div>
+
+              {/* Botões de CTA na Hero */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <Button 
+                  onClick={handlePurchase}
+                  size="lg" 
+                  className="cta-button px-8 py-4 text-lg font-bold text-white border-0 transition-all duration-300"
+                >
+                  <Zap className="w-6 h-6 mr-3" />
+                  GARANTIR MINHA VAGA AGORA
+                </Button>
+                
+                <Button 
+                  onClick={scrollToPricing}
+                  variant="outline"
+                  size="lg" 
+                  className="glass-card px-8 py-4 text-lg font-medium border-tech-blue/30 hover:bg-tech-blue/10 transition-all duration-300"
+                >
+                  <ArrowDown className="w-5 h-5 mr-2" />
+                  Ver Parcelamento
+                </Button>
               </div>
             </div>
           </div>
@@ -206,7 +240,9 @@ const Index = () => {
         <TsunamiSection />
 
         {/* 8. Price Section */}
-        <PriceSection />
+        <div id="pricing-section">
+          <PriceSection />
+        </div>
 
         {/* 9. Mentor Section */}
         <MentorSection />
