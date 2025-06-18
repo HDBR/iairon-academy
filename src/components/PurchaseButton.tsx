@@ -5,7 +5,7 @@ import { Zap } from 'lucide-react';
 
 const PurchaseButton = () => {
   const handlePurchase = () => {
-    window.open('https://payfast.greenn.com.br/122280', '_blank');
+    window.open('https://payfast.greenn.com.br/122280/offer/hpZP22', '_blank');
   };
 
   return (
