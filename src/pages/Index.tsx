@@ -16,7 +16,7 @@ import { Shield, Star, Zap, TrendingUp, Users, Play, ArrowDown } from 'lucide-re
 const Index = () => {
   const features = [
     {
-      title: "4 Imersões Ao Vivo no Zoom",
+      title: "Imersões Ao Vivo no Zoom",
       description: "Mentorias de longa duração onde desenvolveremos suas habilidades com VEO 3 e outras ferramentas de IA"
     },
     {
