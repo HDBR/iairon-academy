@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Check, ArrowRight } from 'lucide-react';
@@ -122,7 +123,7 @@ const PriceSection = () => {
         
         <div className="text-center mb-8">
           <p className="text-xl font-bold text-tech-red">
-            Depois da meia-noite, volta para R$ 997!
+            Todos os bônus estão disponíveis!!
           </p>
         </div>
 
