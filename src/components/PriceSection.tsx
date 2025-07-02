@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Check, ArrowRight } from 'lucide-react';
@@ -18,12 +17,12 @@ const PriceSection = () => {
   ];
 
   const totalValue = 3382;
-  const currentPrice = 747;
+  const currentPrice = 797;
   const savings = totalValue - currentPrice;
-  const installmentValue = "76,80";
+  const installmentValue = "81,94";
 
   const handlePurchase = () => {
-    window.open('https://payfast.greenn.com.br/122280/offer/YY74fW', '_blank');
+    window.open('https://payfast.greenn.com.br/122280/offer/FlcBck', '_blank');
   };
 
   return (
@@ -90,7 +89,7 @@ const PriceSection = () => {
                 💸 Economia de R$ {savings.toLocaleString()}
               </div>
               <div className="text-sm text-muted-foreground mt-1">
-                Mais de 77% de desconto!
+                Mais de 76% de desconto!
               </div>
             </div>
 

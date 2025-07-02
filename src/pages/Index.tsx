@@ -88,7 +88,7 @@ const Index = () => {
   };
 
   const handlePurchase = () => {
-    window.open('https://payfast.greenn.com.br/122280/offer/YY74fW', '_blank');
+    window.open('https://payfast.greenn.com.br/122280/offer/FlcBck', '_blank');
   };
 
   return (
