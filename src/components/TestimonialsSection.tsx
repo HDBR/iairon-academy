@@ -95,23 +95,43 @@ export const TestimonialsSection = () => {
           </p>
         </div>
 
-        {/* Testimonials Mural */}
+        {/* Testimonials Mural - Masonry Style */}
         <div className="relative">
           <div className="overflow-hidden">
-            <div className="flex flex-wrap animate-scroll hover:[animation-play-state:paused] h-[400px] md:h-[500px] w-[200%]">
-              {duplicatedTestimonials.map((testimonial, index) => (
-                <div 
-                  key={`${testimonial.id}-${index}`}
-                  className="group transition-all duration-300 hover:scale-105 p-1"
-                >
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.alt}
-                    className="w-[160px] md:w-[180px] h-auto object-cover rounded-md shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/20"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
+            <div className="animate-scroll hover:[animation-play-state:paused] w-[200%]">
+              <div className="columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-2 space-y-2">
+                {duplicatedTestimonials.map((testimonial, index) => {
+                  // Vary image sizes for organic look
+                  const sizeVariants = [
+                    'w-full',
+                    'w-4/5 mx-auto', 
+                    'w-5/6 mx-auto',
+                    'w-full'
+                  ];
+                  const heightVariants = [
+                    'h-auto',
+                    'h-auto', 
+                    'h-auto',
+                    'h-auto'
+                  ];
+                  const sizeClass = sizeVariants[index % sizeVariants.length];
+                  const heightClass = heightVariants[index % heightVariants.length];
+                  
+                  return (
+                    <div 
+                      key={`${testimonial.id}-${index}`}
+                      className="break-inside-avoid mb-2 group transition-all duration-300 hover:scale-[1.02]"
+                    >
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.alt}
+                        className={`${sizeClass} ${heightClass} object-cover rounded-lg shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary/20 border border-white/10`}
+                        loading="lazy"
+                      />
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
           
