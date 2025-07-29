@@ -99,7 +99,7 @@ export const TestimonialsSection = () => {
         <div className="relative">
           <div className="overflow-hidden">
             <div className="animate-scroll hover:[animation-play-state:paused] w-[200%]">
-              <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6 2xl:columns-7 gap-2 space-y-2">
+              <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6 2xl:columns-7 gap-x-px gap-y-2 space-y-2">
                 {duplicatedTestimonials.map((testimonial, index) => {
                   return (
                     <div 
