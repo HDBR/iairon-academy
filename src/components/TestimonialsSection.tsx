@@ -109,7 +109,7 @@ export const TestimonialsSection = () => {
                       <img
                         src={testimonial.image}
                         alt={testimonial.alt}
-                        className="w-full h-auto object-cover rounded-lg shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary/20 border border-white/10 max-w-[140px] mx-auto"
+                        className="w-full h-auto object-cover rounded-lg shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary/20 border border-white/10"
                         loading="lazy"
                       />
                     </div>
