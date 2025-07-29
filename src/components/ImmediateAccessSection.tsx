@@ -51,17 +51,12 @@ export const ImmediateAccessSection = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {images.map((image, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                  <div className="relative group">
-                    <div className="glass-card p-2 h-full hover:scale-105 transition-all duration-300">
-                      <img
-                        src={image}
-                        alt={`Conteúdo ${index + 1}`}
-                        className="w-full max-h-72 md:max-h-80 object-contain rounded-lg shadow-lg"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
-                    </div>
-                  </div>
+                  <img
+                    src={image}
+                    alt={`Conteúdo ${index + 1}`}
+                    className="w-full object-contain"
+                    loading="lazy"
+                  />
                 </CarouselItem>
               ))}
             </CarouselContent>
