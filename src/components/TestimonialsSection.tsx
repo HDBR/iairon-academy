@@ -11,6 +11,46 @@ const testimonials = [
     id: 2,
     image: "/lovable-uploads/6a7a0740-082a-461e-a486-8ef7542d838e.png",
     alt: "Depoimento de aluno sobre faturamento"
+  },
+  {
+    id: 3,
+    image: "/lovable-uploads/testimonial-3.png",
+    alt: "Depoimento de aluno sobre transformação na carreira"
+  },
+  {
+    id: 4,
+    image: "/lovable-uploads/testimonial-4.png",
+    alt: "Depoimento de aluno sobre primeiros resultados"
+  },
+  {
+    id: 5,
+    image: "/lovable-uploads/testimonial-5.png",
+    alt: "Depoimento de aluno sobre ganhos financeiros"
+  },
+  {
+    id: 6,
+    image: "/lovable-uploads/testimonial-6.png",
+    alt: "Depoimento de aluno sobre metodologia eficiente"
+  },
+  {
+    id: 7,
+    image: "/lovable-uploads/testimonial-7.png",
+    alt: "Depoimento de aluno sobre suporte excepcional"
+  },
+  {
+    id: 8,
+    image: "/lovable-uploads/testimonial-8.png",
+    alt: "Depoimento de aluno sobre rapidez dos resultados"
+  },
+  {
+    id: 9,
+    image: "/lovable-uploads/testimonial-9.png",
+    alt: "Depoimento de aluno sobre qualidade do conteúdo"
+  },
+  {
+    id: 10,
+    image: "/lovable-uploads/testimonial-10.png",
+    alt: "Depoimento de aluno sobre mudança de vida"
   }
 ];
 
@@ -29,7 +69,7 @@ export const TestimonialsSection = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-12">
           {testimonials.map((testimonial) => (
             <Card 
               key={testimonial.id} 
