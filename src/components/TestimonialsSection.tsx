@@ -79,8 +79,13 @@ const testimonials = [
 ];
 
 export const TestimonialsSection = () => {
-  // Duplicate testimonials for infinite scroll effect
-  const duplicatedTestimonials = [...testimonials, ...testimonials];
+  // Split testimonials into two rows
+  const firstRow = testimonials.slice(0, 8);
+  const secondRow = testimonials.slice(8, 15);
+  
+  // Duplicate for infinite scroll effect
+  const duplicatedFirstRow = [...firstRow, ...firstRow];
+  const duplicatedSecondRow = [...secondRow, ...secondRow];
 
   return (
     <section className="py-16 px-4 relative overflow-hidden">
@@ -95,13 +100,33 @@ export const TestimonialsSection = () => {
           </p>
         </div>
 
-        {/* Testimonials Carousel */}
-        <div className="relative">
+        {/* Two-Level Testimonials Carousel */}
+        <div className="relative space-y-6">
+          {/* First Row - Left to Right */}
           <div className="overflow-hidden">
             <div className="flex gap-6 animate-scroll hover:[animation-play-state:paused]">
-              {duplicatedTestimonials.map((testimonial, index) => (
+              {duplicatedFirstRow.map((testimonial, index) => (
                 <div 
-                  key={`${testimonial.id}-${index}`}
+                  key={`first-${testimonial.id}-${index}`}
+                  className="flex-shrink-0 group transition-all duration-300 hover:scale-105"
+                >
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.alt}
+                    className="w-[280px] h-auto object-cover rounded-lg shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary/20"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Second Row - Right to Left */}
+          <div className="overflow-hidden">
+            <div className="flex gap-6 animate-scroll-reverse hover:[animation-play-state:paused]">
+              {duplicatedSecondRow.map((testimonial, index) => (
+                <div 
+                  key={`second-${testimonial.id}-${index}`}
                   className="flex-shrink-0 group transition-all duration-300 hover:scale-105"
                 >
                   <img
