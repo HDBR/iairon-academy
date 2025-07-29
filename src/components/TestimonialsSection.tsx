@@ -79,13 +79,8 @@ const testimonials = [
 ];
 
 export const TestimonialsSection = () => {
-  // Split testimonials into two rows
-  const firstRow = testimonials.slice(0, 8);
-  const secondRow = testimonials.slice(8, 15);
-  
-  // Duplicate for infinite scroll effect
-  const duplicatedFirstRow = [...firstRow, ...firstRow];
-  const duplicatedSecondRow = [...secondRow, ...secondRow];
+  // Duplicate testimonials for infinite scroll effect
+  const duplicatedTestimonials = [...testimonials, ...testimonials];
 
   return (
     <section className="py-16 px-4 relative overflow-hidden">
@@ -100,45 +95,29 @@ export const TestimonialsSection = () => {
           </p>
         </div>
 
-        {/* Two-Level Testimonials Carousel */}
-        <div className="relative space-y-1">
-          {/* First Row - Left to Right */}
+        {/* Testimonials Mural */}
+        <div className="relative">
           <div className="overflow-hidden">
-            <div className="flex gap-0.5 animate-scroll hover:[animation-play-state:paused]">
-              {duplicatedFirstRow.map((testimonial, index) => (
+            <div className="flex flex-wrap animate-scroll hover:[animation-play-state:paused] h-[400px] md:h-[500px] w-[200%]">
+              {duplicatedTestimonials.map((testimonial, index) => (
                 <div 
-                  key={`first-${testimonial.id}-${index}`}
-                  className="flex-shrink-0 group transition-all duration-300 hover:scale-105"
+                  key={`${testimonial.id}-${index}`}
+                  className="group transition-all duration-300 hover:scale-105 p-1"
                 >
                   <img
                     src={testimonial.image}
                     alt={testimonial.alt}
-                    className="w-[240px] md:w-[260px] h-auto object-cover rounded-lg shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary/20"
+                    className="w-[160px] md:w-[180px] h-auto object-cover rounded-md shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/20"
                     loading="lazy"
                   />
                 </div>
               ))}
             </div>
           </div>
-
-          {/* Second Row - Right to Left */}
-          <div className="overflow-hidden">
-            <div className="flex gap-0.5 animate-scroll-reverse hover:[animation-play-state:paused]">
-              {duplicatedSecondRow.map((testimonial, index) => (
-                <div 
-                  key={`second-${testimonial.id}-${index}`}
-                  className="flex-shrink-0 group transition-all duration-300 hover:scale-105"
-                >
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.alt}
-                    className="w-[240px] md:w-[260px] h-auto object-cover rounded-lg shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary/20"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+          
+          {/* Side gradient overlays */}
+          <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-background to-transparent pointer-events-none"></div>
+          <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-background to-transparent pointer-events-none"></div>
           
           {/* Bottom gradient overlay */}
           <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none"></div>
