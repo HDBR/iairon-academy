@@ -101,22 +101,6 @@ export const TestimonialsSection = () => {
             <div className="animate-scroll hover:[animation-play-state:paused] w-[200%]">
               <div className="columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-2 space-y-2">
                 {duplicatedTestimonials.map((testimonial, index) => {
-                  // Vary image sizes for organic look
-                  const sizeVariants = [
-                    'w-full',
-                    'w-4/5 mx-auto', 
-                    'w-5/6 mx-auto',
-                    'w-full'
-                  ];
-                  const heightVariants = [
-                    'h-auto',
-                    'h-auto', 
-                    'h-auto',
-                    'h-auto'
-                  ];
-                  const sizeClass = sizeVariants[index % sizeVariants.length];
-                  const heightClass = heightVariants[index % heightVariants.length];
-                  
                   return (
                     <div 
                       key={`${testimonial.id}-${index}`}
@@ -125,7 +109,7 @@ export const TestimonialsSection = () => {
                       <img
                         src={testimonial.image}
                         alt={testimonial.alt}
-                        className={`${sizeClass} ${heightClass} object-cover rounded-lg shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary/20 border border-white/10`}
+                        className="w-full max-w-[240px] h-auto object-cover rounded-lg shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary/20 border border-white/10"
                         loading="lazy"
                       />
                     </div>
