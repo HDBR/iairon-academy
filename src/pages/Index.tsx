@@ -10,6 +10,7 @@ import CertificateSection from '@/components/CertificateSection';
 import OpportunitiesSection from '@/components/OpportunitiesSection';
 import BackgroundEffects from '@/components/BackgroundEffects';
 import { ImmediateAccessSection } from '@/components/ImmediateAccessSection';
+import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Shield, Star, Zap, TrendingUp, Users, Play, ArrowDown } from 'lucide-react';
@@ -172,7 +173,10 @@ const Index = () => {
         {/* 2. Immediate Access Section */}
         <ImmediateAccessSection />
 
-        {/* 3. Features Section */}
+        {/* 3. Testimonials Section */}
+        <TestimonialsSection />
+
+        {/* 4. Features Section */}
         <section className="section-spacing container-padding">
           <div className="section-divider mb-12"></div>
           
@@ -193,7 +197,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* 4. Bonuses Section */}
+        {/* 5. Bonuses Section */}
         <section className="section-spacing container-padding">
           <div className="section-divider mb-12"></div>
           
@@ -216,13 +220,13 @@ const Index = () => {
           </div>
         </section>
 
-        {/* 5. Certificate Section */}
+        {/* 6. Certificate Section */}
         <CertificateSection />
 
-        {/* 6. Opportunities Section */}
+        {/* 7. Opportunities Section */}
         <OpportunitiesSection />
 
-        {/* 7. Guarantee Section */}
+        {/* 8. Guarantee Section */}
         <section className="section-spacing container-padding">
           <div className="section-divider mb-12"></div>
           
@@ -240,15 +244,15 @@ const Index = () => {
           </div>
         </section>
 
-        {/* 8. Tsunami Section */}
+        {/* 9. Tsunami Section */}
         <TsunamiSection />
 
-        {/* 9. Price Section */}
+        {/* 10. Price Section */}
         <div id="pricing-section">
           <PriceSection />
         </div>
 
-        {/* 10. Mentor Section */}
+        {/* 11. Mentor Section */}
         <MentorSection />
 
         {/* Footer */}
