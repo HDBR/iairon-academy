@@ -104,12 +104,12 @@ export const TestimonialsSection = () => {
                   return (
                     <div 
                       key={`${testimonial.id}-${index}`}
-                      className="break-inside-avoid mb-3 group transition-all duration-300 hover:scale-[1.02]"
+                      className="break-inside-avoid group transition-all duration-300 hover:scale-[1.02]"
                     >
                       <img
                         src={testimonial.image}
                         alt={testimonial.alt}
-                        className="w-full max-w-[200px] h-auto object-cover rounded-lg shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary/20 border border-white/10"
+                        className="w-full h-auto object-cover shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary/20 border border-white/10"
                         loading="lazy"
                       />
                     </div>
