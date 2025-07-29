@@ -1,38 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Alan Velodrome",
-    role: "Fotógrafo",
-    content: "Acabei de fechar com um cliente que faço tráfego pago aqui da cidade, um ensaio fotográfico dos hambúrgueres do bar dele, fotógrafo cobrou R$1400, cobrei R$800 e fechei! Olha que estou fazendo pelo GPT ainda hein. Já pagou o curso! Ta aí as frutas baixas. 🔥👏 Em 10 minutos ajustando gerei a primeira foto e foi aprovado!",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
-    rating: 5,
-    highlight: "R$800 em 10 minutos"
+    id: 1,
+    image: "/lovable-uploads/563c58f9-4f85-4709-9e09-f292955d81db.png",
+    alt: "Depoimento de aluno sobre resultados com IA"
   },
   {
-    name: "Marcos Silva",
-    role: "Designer",
-    content: "Eu havia comprado uma pós em IA de outra empresa. Comecei as aulas. Vi que era muita teoria e pouca prática. Estava querendo desistir e pedi reembolso. Quando vi o LABVIDIA, pensei: vou tentar mais uma vez. E foi a melhor decisão! Muito prático e direto ao ponto.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
-    rating: 5,
-    highlight: "Muito prático e direto"
-  },
-  {
-    name: "Carla Mendes",
-    role: "Produtora de Conteúdo",
-    content: "Consegui criar vídeos profissionais que antes custavam milhares para produzir. O VEO 3 é revolucionário e o curso me ensinou tudo que precisava saber. Já recuperei o investimento na primeira semana!",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
-    rating: 5,
-    highlight: "Recuperei o investimento na primeira semana"
-  },
-  {
-    name: "Roberto Santos",
-    role: "Empreendedor",
-    content: "O LABVIDIA não é só sobre tecnologia, é sobre transformar sua forma de trabalhar. Hoje uso IA para 90% dos meus vídeos e triplicuei minha produtividade. O futuro chegou e eu estava preparado!",
-    avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face",
-    rating: 5,
-    highlight: "Triplicuei minha produtividade"
+    id: 2,
+    image: "/lovable-uploads/6a7a0740-082a-461e-a486-8ef7542d838e.png",
+    alt: "Depoimento de aluno sobre faturamento"
   }
 ];
 
@@ -43,67 +21,29 @@ export const TestimonialsSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
-            Depoimentos dos Nossos Alunos
+            O que nossos alunos estão falando
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Veja os resultados reais de quem já está dominando o VEO 3 e faturando alto com IA
+            Veja os resultados reais dos nossos alunos direto das conversas
           </p>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
-          {testimonials.map((testimonial, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {testimonials.map((testimonial) => (
             <Card 
-              key={index} 
-              className="glass-card glass-card-hover border-primary/20 p-8 relative group transition-all duration-300 hover:scale-[1.02]"
+              key={testimonial.id} 
+              className="glass-card glass-card-hover border-primary/20 p-4 relative group transition-all duration-300 hover:scale-[1.02] overflow-hidden"
             >
               <CardContent className="p-0">
-                {/* Quote Icon */}
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-primary to-primary-glow rounded-full flex items-center justify-center shadow-lg">
-                  <Quote className="w-6 h-6 text-white" />
-                </div>
-
-                {/* Rating */}
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-
-                {/* Content */}
-                <p className="text-muted-foreground text-lg leading-relaxed mb-6 font-medium">
-                  "{testimonial.content}"
-                </p>
-
-                {/* Highlight */}
-                {testimonial.highlight && (
-                  <div className="inline-block glass-card px-4 py-2 rounded-full mb-6">
-                    <span className="text-primary font-bold text-sm">
-                      ✨ {testimonial.highlight}
-                    </span>
-                  </div>
-                )}
-
-                {/* Author */}
-                <div className="flex items-center gap-4">
-                  <div className="relative">
-                    <img
-                      src={testimonial.avatar}
-                      alt={testimonial.name}
-                      className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20"
-                    />
-                    <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-background flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-foreground text-lg">
-                      {testimonial.name}
-                    </h4>
-                    <p className="text-primary text-sm font-medium">
-                      {testimonial.role}
-                    </p>
-                  </div>
+                {/* Screenshot */}
+                <div className="relative rounded-lg overflow-hidden">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.alt}
+                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </CardContent>
             </Card>
