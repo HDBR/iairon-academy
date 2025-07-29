@@ -99,17 +99,17 @@ export const TestimonialsSection = () => {
         <div className="relative">
           <div className="overflow-hidden">
             <div className="animate-scroll hover:[animation-play-state:paused] w-[200%]">
-              <div className="columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-px space-y-px">
+              <div className="columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-1 space-y-1">
                 {duplicatedTestimonials.map((testimonial, index) => {
                   return (
                     <div 
                       key={`${testimonial.id}-${index}`}
-                      className="break-inside-avoid mb-0.5 group transition-all duration-300 hover:scale-[1.02]"
+                      className="break-inside-avoid mb-2 group transition-all duration-300 hover:scale-[1.02]"
                     >
                       <img
                         src={testimonial.image}
                         alt={testimonial.alt}
-                        className="w-full max-w-[240px] h-auto object-cover rounded shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary/20 border border-white/10"
+                        className="w-full max-w-[240px] h-auto object-cover rounded-lg shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary/20 border border-white/10"
                         loading="lazy"
                       />
                     </div>
