@@ -15,7 +15,8 @@ const images = [
   "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/banner%20curso%20%281%29.webp",
   "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%20veo3.webp",
   "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/Sites%20com%20IA.webp",
-  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/edicao%20com%20IA.webp"
+  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/edicao%20com%20IA.webp",
+  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/ia%20para%20produtos%20fisicos_.webp"
 ];
 
 export const ImmediateAccessSection = () => {
