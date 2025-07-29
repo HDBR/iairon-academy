@@ -1,5 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import React from "react";
 
 const testimonials = [
   {
@@ -80,6 +79,9 @@ const testimonials = [
 ];
 
 export const TestimonialsSection = () => {
+  // Duplicate testimonials for infinite scroll effect
+  const duplicatedTestimonials = [...testimonials, ...testimonials];
+
   return (
     <section className="py-16 px-4 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -93,44 +95,31 @@ export const TestimonialsSection = () => {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-12">
-          {testimonials.map((testimonial) => (
-            <Card 
-              key={testimonial.id} 
-              className="glass-card glass-card-hover border-primary/20 p-4 relative group transition-all duration-300 hover:scale-[1.02] overflow-hidden"
-            >
-              <CardContent className="p-0">
-                {/* Screenshot */}
-                <div className="relative rounded-lg overflow-hidden">
+        {/* Testimonials Carousel */}
+        <div className="relative">
+          <div className="overflow-hidden">
+            <div className="flex gap-6 animate-scroll hover:[animation-play-state:paused]">
+              {duplicatedTestimonials.map((testimonial, index) => (
+                <div 
+                  key={`${testimonial.id}-${index}`}
+                  className="flex-shrink-0 group transition-all duration-300 hover:scale-105"
+                >
                   <img
                     src={testimonial.image}
                     alt={testimonial.alt}
-                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="w-[280px] h-auto object-cover rounded-lg shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary/20"
+                    loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center glass-card p-8 rounded-2xl border-primary/20">
-          <p className="text-xl font-bold text-foreground mb-2">
-            Quer ser o próximo caso de sucesso?
-          </p>
-          <p className="text-muted-foreground mb-6">
-            Junte-se a centenas de alunos que já estão transformando suas carreiras
-          </p>
-          <div className="flex items-center justify-center gap-2 text-primary font-medium">
-            <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-            <span>4.9/5 estrelas</span>
-            <span className="text-muted-foreground">•</span>
-            <span>500+ alunos ativos</span>
+              ))}
+            </div>
           </div>
+          
+          {/* Bottom gradient overlay */}
+          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none"></div>
         </div>
       </div>
+      
     </section>
   );
 };
