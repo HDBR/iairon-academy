@@ -83,8 +83,8 @@ export const TestimonialsSection = () => {
   const duplicatedTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section className="py-16 px-4 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-16 relative overflow-hidden">
+      <div className="w-full px-4">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
@@ -99,7 +99,7 @@ export const TestimonialsSection = () => {
         <div className="relative">
           <div className="overflow-hidden">
             <div className="animate-scroll hover:[animation-play-state:paused] w-[200%]">
-              <div className="columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-2 space-y-2">
+              <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6 2xl:columns-7 gap-2 space-y-2">
                 {duplicatedTestimonials.map((testimonial, index) => {
                   return (
                     <div 
