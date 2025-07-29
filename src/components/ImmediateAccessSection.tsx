@@ -20,7 +20,7 @@ const images = [
 
 export const ImmediateAccessSection = () => {
   const plugin = useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: true })
+    Autoplay({ delay: 1500, stopOnInteraction: false, stopOnMouseEnter: true })
   );
 
   return (
@@ -47,6 +47,8 @@ export const ImmediateAccessSection = () => {
               align: "start",
               loop: true,
               containScroll: "trimSnaps",
+              dragFree: true,
+              duration: 20,
             }}
           >
             <CarouselContent className="-ml-1">
