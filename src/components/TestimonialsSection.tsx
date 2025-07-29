@@ -101,10 +101,10 @@ export const TestimonialsSection = () => {
         </div>
 
         {/* Two-Level Testimonials Carousel */}
-        <div className="relative space-y-6">
+        <div className="relative space-y-2">
           {/* First Row - Left to Right */}
           <div className="overflow-hidden">
-            <div className="flex gap-6 animate-scroll hover:[animation-play-state:paused]">
+            <div className="flex gap-2 animate-scroll hover:[animation-play-state:paused]">
               {duplicatedFirstRow.map((testimonial, index) => (
                 <div 
                   key={`first-${testimonial.id}-${index}`}
@@ -123,7 +123,7 @@ export const TestimonialsSection = () => {
 
           {/* Second Row - Right to Left */}
           <div className="overflow-hidden">
-            <div className="flex gap-6 animate-scroll-reverse hover:[animation-play-state:paused]">
+            <div className="flex gap-2 animate-scroll-reverse hover:[animation-play-state:paused]">
               {duplicatedSecondRow.map((testimonial, index) => (
                 <div 
                   key={`second-${testimonial.id}-${index}`}
