@@ -40,29 +40,36 @@ export const ImmediateAccessSection = () => {
         <div className="relative">
           <Carousel
             plugins={[plugin.current]}
-            className="w-full max-w-5xl mx-auto"
+            className="w-full max-w-7xl mx-auto"
             onMouseEnter={plugin.current.stop}
             onMouseLeave={plugin.current.reset}
             opts={{
               align: "start",
               loop: true,
+              containScroll: "trimSnaps",
             }}
           >
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent className="-ml-1">
               {images.map((image, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                  <img
-                    src={image}
-                    alt={`Conteúdo ${index + 1}`}
-                    className="w-full object-contain"
-                    loading="lazy"
-                  />
+                <CarouselItem key={index} className="pl-1 min-w-0" style={{ flexBasis: 'auto' }}>
+                  <div className="w-[280px] sm:w-[320px] md:w-[360px] lg:w-[400px]">
+                    <img
+                      src={image}
+                      alt={`Conteúdo ${index + 1}`}
+                      className="w-full h-auto object-contain"
+                      loading="lazy"
+                    />
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12 bg-background/80 hover:bg-background border-primary/20 text-primary hover:text-primary-foreground hover:bg-primary" />
-            <CarouselNext className="hidden md:flex -right-12 bg-background/80 hover:bg-background border-primary/20 text-primary hover:text-primary-foreground hover:bg-primary" />
+            <CarouselPrevious className="hidden md:flex -left-12 bg-background/80 hover:bg-background border-primary/20 text-primary hover:text-primary-foreground hover:bg-primary z-10" />
+            <CarouselNext className="hidden md:flex -right-12 bg-background/80 hover:bg-background border-primary/20 text-primary hover:text-primary-foreground hover:bg-primary z-10" />
           </Carousel>
+          
+          {/* Gradient overlays for fade effect */}
+          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background via-background/80 to-transparent pointer-events-none z-10" />
+          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background via-background/80 to-transparent pointer-events-none z-10" />
         </div>
 
         {/* Bottom gradient effect */}
