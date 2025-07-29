@@ -79,8 +79,29 @@ const testimonials = [
 ];
 
 export const TestimonialsSection = () => {
-  // Duplicate testimonials for infinite scroll effect
-  const duplicatedTestimonials = [...testimonials, ...testimonials];
+  // Distribute testimonials across columns for balanced vertical scrolling
+  const createColumns = (items: typeof testimonials, numCols: number) => {
+    const columns: typeof testimonials[] = Array.from({ length: numCols }, () => []);
+    items.forEach((item, index) => {
+      columns[index % numCols].push(item);
+    });
+    return columns;
+  };
+
+  // Create responsive column layout
+  const getColumns = () => {
+    if (typeof window !== 'undefined') {
+      if (window.innerWidth >= 1536) return createColumns(testimonials, 6); // 2xl
+      if (window.innerWidth >= 1280) return createColumns(testimonials, 5); // xl
+      if (window.innerWidth >= 1024) return createColumns(testimonials, 4); // lg
+      if (window.innerWidth >= 768) return createColumns(testimonials, 3);  // md
+      if (window.innerWidth >= 640) return createColumns(testimonials, 2);  // sm
+      return createColumns(testimonials, 2); // default
+    }
+    return createColumns(testimonials, 4); // fallback
+  };
+
+  const columns = getColumns();
 
   return (
     <section className="py-16 relative overflow-hidden">
@@ -95,39 +116,67 @@ export const TestimonialsSection = () => {
           </p>
         </div>
 
-        {/* Testimonials Mural - Masonry Style */}
+        {/* Testimonials Carousel - Vertical Columns */}
         <div className="relative">
           <div className="overflow-hidden h-[600px]">
-            <div className="animate-scroll hover:[animation-play-state:paused] w-[200%]">
-              <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6 2xl:columns-7 [column-gap:0.5rem]">
-                {duplicatedTestimonials.map((testimonial, index) => {
-                  return (
-                    <div 
-                      key={`${testimonial.id}-${index}`}
-                      className="break-inside-avoid group transition-all duration-300 hover:scale-[1.01] mb-3"
-                    >
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.alt}
-                        className="w-full h-auto object-cover rounded-lg shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary/20 border border-white/10"
-                        loading="lazy"
-                      />
-                    </div>
-                  );
-                })}
-              </div>
+            <div className="flex gap-2 h-full">
+              {columns.map((column, colIndex) => {
+                // Create infinite scroll by tripling the content
+                const infiniteColumn = [...column, ...column, ...column];
+                
+                return (
+                  <div
+                    key={colIndex}
+                    className="flex-1 flex flex-col gap-3"
+                    style={{
+                      animation: `scroll-vertical-${colIndex % 3} ${25 + colIndex * 2}s linear infinite`,
+                      animationDirection: colIndex % 2 === 0 ? 'normal' : 'reverse'
+                    }}
+                  >
+                    {infiniteColumn.map((testimonial, index) => (
+                      <div
+                        key={`${testimonial.id}-${colIndex}-${index}`}
+                        className="group transition-all duration-300 hover:scale-[1.02] hover:[animation-play-state:paused]"
+                      >
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.alt}
+                          className="w-full h-auto object-cover rounded-lg shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary/20 border border-white/10 max-w-[140px] mx-auto"
+                          loading="lazy"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                );
+              })}
             </div>
           </div>
           
-          {/* Side gradient overlays */}
-          <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-background to-transparent pointer-events-none"></div>
-          <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-background to-transparent pointer-events-none"></div>
+          {/* Top gradient overlay */}
+          <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-background to-transparent pointer-events-none z-10"></div>
           
           {/* Bottom gradient overlay */}
-          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none"></div>
+          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none z-10"></div>
         </div>
       </div>
-      
+
+      {/* Add custom keyframes for vertical scrolling */}
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes scroll-vertical-0 {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-66.666%); }
+          }
+          @keyframes scroll-vertical-1 {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-66.666%); }
+          }
+          @keyframes scroll-vertical-2 {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-66.666%); }
+          }
+        `
+      }} />
     </section>
   );
 };
