@@ -14,6 +14,7 @@ import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Shield, Star, Zap, TrendingUp, Users, Play, ArrowDown } from 'lucide-react';
+import bgHero from '@/assets/bg-hero.webp';
 
 const Index = () => {
   const features = [
@@ -95,10 +96,20 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background relative">
+      {/* Background Hero Image */}
+      <div 
+        className="fixed top-0 left-0 w-full h-screen bg-cover bg-center bg-no-repeat opacity-20 z-0"
+        style={{
+          backgroundImage: `url(${bgHero})`,
+          backgroundAttachment: 'fixed',
+          backgroundPosition: 'top center'
+        }}
+      />
+      
       <BackgroundEffects />
       <UrgencyBar />
       
-      <div className="main-content">
+      <div className="main-content relative z-10">
         {/* Hero Section with Video */}
         <section className="pt-16 pb-8 container-padding relative overflow-hidden">
           <div className="container mx-auto text-center max-w-5xl">
