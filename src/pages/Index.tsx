@@ -167,11 +167,11 @@ const Index = () => {
           </div>
         </section>
 
-        {/* 1. Video Section */}
-        <VideoSection />
-
-        {/* 2. Immediate Access Section */}
+        {/* 1. Immediate Access Section */}
         <ImmediateAccessSection />
+
+        {/* 2. Video Section */}
+        <VideoSection />
 
         {/* 3. Testimonials Section */}
         <TestimonialsSection />
