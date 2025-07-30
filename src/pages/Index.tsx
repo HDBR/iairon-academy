@@ -226,20 +226,44 @@ const Index = () => {
         {/* 7. Opportunities Section */}
         <OpportunitiesSection />
 
-        {/* 8. Guarantee Section */}
+        {/* 8. Results Guarantee Section */}
         <section className="section-spacing container-padding">
           <div className="section-divider mb-12"></div>
           
           <div className="container mx-auto text-center max-w-4xl">
-            <Card className="glass-card p-8 md:p-12 border-tech-blue/30">
-              <Shield className="w-16 h-16 text-tech-blue mx-auto mb-8" />
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 gradient-text-accent">
-                Garantia Blindada de 7 Dias
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Se por qualquer motivo você não ficar satisfeito, devolvemos 100% do seu dinheiro em até 7 dias. 
-                Sem perguntas, sem burocracia!
-              </p>
+            <Card className="glass-card p-8 md:p-12 border-tech-purple/30 relative overflow-hidden">
+              {/* Background gradient effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-tech-purple/10 via-tech-blue/5 to-transparent"></div>
+              
+              <div className="relative z-10">
+                <div className="flex items-center justify-center mb-6">
+                  <div className="bg-gradient-to-r from-tech-purple to-tech-blue p-4 rounded-full">
+                    <Zap className="w-12 h-12 text-white" />
+                  </div>
+                </div>
+                
+                <h2 className="text-2xl md:text-3xl font-bold mb-6 gradient-text-accent">
+                  💥 Esquece essa de "garantia de 7 dias"...
+                </h2>
+                
+                <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                  <p className="text-xl font-semibold text-foreground">
+                    Em 7 dias, você não vai querer seu dinheiro de volta. 
+                    <span className="gradient-text-accent"> Vai querer investir de novo.</span>
+                  </p>
+                  
+                  <p>
+                    <strong className="text-foreground">Por quê?</strong> Porque eu vou te entregar um plano de ação completo, 
+                    com passo a passo real de como vender sites com IA e recuperar seu investimento logo na primeira venda.
+                  </p>
+                  
+                  <div className="glass-card px-6 py-4 rounded-lg inline-block">
+                    <p className="text-tech-blue font-bold text-lg">
+                      👉 Resultado rápido. Nada de enrolação.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </Card>
           </div>
         </section>
