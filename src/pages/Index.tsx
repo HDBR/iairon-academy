@@ -98,7 +98,7 @@ const Index = () => {
     <div className="min-h-screen bg-background relative">
       {/* Background Hero Image */}
       <div 
-        className="fixed top-0 left-0 w-full h-screen bg-cover bg-center bg-no-repeat opacity-20 z-0"
+        className="fixed top-0 left-0 w-full h-screen bg-cover bg-center bg-no-repeat opacity-100 z-0"
         style={{
           backgroundImage: `url(${bgHero})`,
           backgroundAttachment: 'fixed',
