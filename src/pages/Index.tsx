@@ -15,6 +15,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Shield, Star, Zap, TrendingUp, Users, Play, ArrowDown } from 'lucide-react';
 import bgHero from '@/assets/bg-hero.webp';
+import superpackParallax from '@/assets/superpack-parallax.webp';
 
 const Index = () => {
   const features = [
@@ -281,6 +282,20 @@ const Index = () => {
 
         {/* 9. Tsunami Section */}
         <TsunamiSection />
+
+        {/* Parallax Image Section */}
+        <section 
+          className="h-[60vh] relative overflow-hidden"
+          style={{
+            backgroundImage: `url(${superpackParallax})`,
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'center center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+          }}
+        >
+          <div className="absolute inset-0 bg-black/20"></div>
+        </section>
 
         {/* 10. Price Section */}
         <div id="pricing-section">
