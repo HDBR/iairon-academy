@@ -9,6 +9,7 @@ import PriceSection from '@/components/PriceSection';
 import CertificateSection from '@/components/CertificateSection';
 import OpportunitiesSection from '@/components/OpportunitiesSection';
 import BackgroundEffects from '@/components/BackgroundEffects';
+import WeeklyTutorialsSection from '@/components/WeeklyTutorialsSection';
 import { ImmediateAccessSection } from '@/components/ImmediateAccessSection';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { Card } from '@/components/ui/card';
@@ -209,7 +210,10 @@ const Index = () => {
           </div>
         </section>
 
-        {/* 5. Bonuses Section */}
+        {/* 5. Weekly Tutorials Section */}
+        <WeeklyTutorialsSection />
+
+        {/* 6. Bonuses Section */}
         <section className="section-spacing container-padding">
           <div className="section-divider mb-12"></div>
           
