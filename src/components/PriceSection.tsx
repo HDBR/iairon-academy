@@ -54,7 +54,7 @@ const PriceSection = () => {
                 key={index} 
                 className={`flex items-start justify-between gap-4 p-3 rounded-lg ${
                   item.isOneMonth 
-                    ? 'bg-purple-50/50 border border-purple-100/50' 
+                    ? 'bg-tech-purple/5 border border-tech-purple/20' 
                     : 'bg-muted/20'
                 }`}
               >
