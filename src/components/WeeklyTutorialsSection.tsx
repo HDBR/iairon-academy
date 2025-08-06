@@ -65,9 +65,7 @@ const WeeklyTutorialsSection = () => {
             ✨ Tutorias Ao Vivo Semanais no Zoom ✨
           </h2>
           
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
-            Acompanhamento personalizado para acelerar seus resultados com especialistas
-          </p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">O único treinamento que te dar acompanhamento personalizado diário para acelerar seus resultados na IA com especialistas AO VIVO!</p>
         </div>
 
         {/* Weekly Calendar */}
