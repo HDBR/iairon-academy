@@ -1,4 +1,3 @@
-
 import React from 'react';
 import UrgencyBar from '@/components/UrgencyBar';
 import VideoSection from '@/components/VideoSection';
@@ -81,7 +80,33 @@ const Index = () => {
     },
     {
       title: "BÔNUS #3: Arsenal de PROMPTS e ASSISTENTES",
-      description: "Arsenal de PROMPTS e ASSISTENTES do Pettrus! (Gerador de prompts para VEO3, Gerador de prompts pra fotos com IA, Gerador de conteúdo para carrossel VIRAL, Gerador de prompts para artes e próximos assistentes)",
+      description: (
+        <div>
+          <p className="mb-3">Arsenal completo de PROMPTS e ASSISTENTES do Pettrus:</p>
+          <div className="space-y-2 text-sm">
+            <div className="flex items-center gap-2">
+              <span>🎬</span>
+              <span><strong>Gerador de prompts para VEO3</strong> - Criação otimizada de vídeos</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>🖼️</span>
+              <span><strong>Gerador de prompts para fotos IA</strong> - Imagens profissionais</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>📱</span>
+              <span><strong>Gerador de conteúdo VIRAL</strong> - Carrosséis que convertem</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>🎨</span>
+              <span><strong>Gerador de prompts para artes</strong> - Criações artísticas</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>🤖</span>
+              <span><strong>Próximos assistentes</strong> - Ferramentas exclusivas em desenvolvimento</span>
+            </div>
+          </div>
+        </div>
+      ),
       value: "Valor: R$ 1.000 | Seu preço: GRÁTIS"
     },
     {
