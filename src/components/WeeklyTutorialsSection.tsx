@@ -146,34 +146,6 @@ const WeeklyTutorialsSection = () => {
           })}
         </div>
 
-        {/* Active Tutorial Details */}
-        <div className="glass-card p-8 border border-tech-blue/20 max-w-4xl mx-auto">
-          <div className="text-center">
-            <div className={`inline-flex p-4 rounded-full bg-gradient-to-r ${tutorials[activeDay].color} mb-6`}>
-              {React.createElement(tutorials[activeDay].icon, { className: "w-8 h-8 text-white" })}
-            </div>
-            
-            <h3 className="text-2xl font-bold gradient-text mb-4">
-              {tutorials[activeDay].title}
-            </h3>
-            
-            <div className="flex items-center justify-center gap-6 mb-6 text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <Calendar className="w-5 h-5" />
-                <span>{tutorials[activeDay].day}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5" />
-                <span>{tutorials[activeDay].time}</span>
-              </div>
-            </div>
-            
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {tutorials[activeDay].recommendation}
-            </p>
-          </div>
-        </div>
-
         {/* Value Anchor */}
         <div className="glass-card p-8 max-w-2xl mx-auto mt-12 border border-tech-purple/20">
           <div className="text-center">
