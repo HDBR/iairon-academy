@@ -71,8 +71,8 @@ const WeeklyTutorialsSection = () => {
             </Badge>
           </div>
           
-          <h2 className="heading-xl gradient-text mb-6">
-            Tutorias Ao Vivo Semanais no Zoom
+          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6 animate-pulse drop-shadow-lg">
+            ✨ Tutorias Ao Vivo Semanais no Zoom ✨
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
