@@ -1,4 +1,3 @@
-
 import React from 'react';
 import UrgencyBar from '@/components/UrgencyBar';
 import VideoSection from '@/components/VideoSection';
@@ -45,43 +44,48 @@ const Index = () => {
   const bonuses = [
     {
       title: "BÔNUS #1: IAIRON ACADEMY",
-      description: "Acesso completo a TODOS os meus treinamentos: clones, assistentes GPT, agentes para responder DM com IA, vídeos animados estilo desenho e muito mais!",
-      value: "Valor: R$ 497/ano | Seu preço: GRÁTIS"
-    },
-    {
-      title: "BÔNUS #3: Arsenal de Prompts e Assistentes",
-      description: "Acesso aos meus prompts secretos e assistentes geradores para fotos, vídeos VEO3 e muito mais. Material que NUNCA foi vendido!",
-      value: "Valor: R$ 297 | Seu preço: GRÁTIS"
-    },
-    {
-      title: "BÔNUS #4: Imersões Presenciais VIP",
-      description: "50% de desconto nas minhas imersões presenciais em Alphaville, Minas, Recife e Rio!",
-      value: "Valor: R$ 500 | Seu preço: GRÁTIS"
-    },
-    {
-      title: "BÔNUS #5: HUBBIA - Acesso Antecipado",
-      description: "Seja um dos primeiros a acessar a HUBBIA, nossa central de IAs que substitui várias ferramentas! Ganhe 1 mês completamente GRÁTIS!",
-      value: "Valor: R$ 97/mês | Seu preço: GRÁTIS no 1º mês"
-    },
-    {
-      title: "BÔNUS #6: Processo de Clones Profissionais",
-      description: "Acesso ao meu processo completo de estruturação de clones para conteúdos e anúncios. O mesmo que vendo por R$ 8.000!",
+      description: "Acesso completo aos cursos da IAIRON ACADEMY (Clones sentinela, Fotos com IA, Desenhos animados com IA, AIGRAM e Agentes Express)!",
       value: "Valor: R$ 497 | Seu preço: GRÁTIS"
-    },
-    {
-      title: "BÔNUS #7: Imersão \"Lançamento 100% IA\"",
-      description: "Descubra como eu fiz ESTE lançamento inteiro com apenas 1 pessoa e 100% IA! Copy, criativos, página, automação, conteúdos!",
-      value: "Valor: R$ 297 | Seu preço: GRÁTIS"
-    },
-    {
-      title: "BÔNUS #8: Sorteio entre os membros",
-      description: "Desenvolvimento de Funil de aquisição 100% com IA, onde vou ensinar como montar uma estrutura de funil para aquisição de cliente ou venda de infoproduto 100% com IA",
-      value: "Valor: Inestimável | Seu preço: GRÁTIS"
     },
     {
       title: "BÔNUS #2: Desconto em próximos produtos",
       description: "Desconto nos próximos produtos que lançarei em 2025",
       value: "Valor: R$ 200+ | Seu preço: GRÁTIS"
+    },
+    {
+      title: "BÔNUS #3: Arsenal de PROMPTS e ASSISTENTES",
+      description: "Arsenal de PROMPTS e ASSISTENTES do Pettrus! (Gerador de prompts para VEO3, Gerador de prompts pra fotos com IA, Gerador de conteúdo para carrossel VIRAL, Gerador de prompts para artes e próximos assistentes)",
+      value: "Valor: R$ 1.000 | Seu preço: GRÁTIS"
+    },
+    {
+      title: "BÔNUS #4: Imersões Presenciais VIP",
+      description: "Desconto de 50% em qualquer evento presencial organizado pelo Pettrus para membros durante 1 ano!",
+      value: "Valor: Incalculável | Seu preço: GRÁTIS"
+    },
+    {
+      title: "BÔNUS #5: HUBBIA - Acesso Antecipado",
+      description: "Acesso antecipado da HUBBIA com 1 mês grátis*! (Com uma quantidade de créditos disponível para uso)",
+      value: "Valor: R$ 97/mês | Seu preço: GRÁTIS no 1º mês"
+    },
+    {
+      title: "BÔNUS #6: 4 Formas de Ganhar Dinheiro com IA",
+      description: "4 formas de ganhar dinheiro com IA em 7 dias!",
+      value: "Valor: R$ 497 | Seu preço: GRÁTIS"
+    },
+    {
+      title: "BÔNUS #7: Sites com IA - Estratégia Completa",
+      description: "Sites com IA - Faça a partir de 3 salários mínimos por mês! Acesso a toda estratégia pronta para você executar!",
+      value: "Valor: R$ 500 | Seu preço: GRÁTIS"
+    },
+    {
+      title: "BÔNUS #8: Consultoria Individual VIP",
+      description: "Os 5 primeiros terão uma consultoria individual com o Pettrus de 1 hora no zoom!",
+      value: "Valor: R$ 3.000 | Seu preço: GRÁTIS"
+    },
+    {
+      title: "BÔNUS #9: Ingresso VIP Evento Presencial",
+      description: "Ingresso VIP para o evento presencial do Pettrus (VÍDEOS COM IA e Negócios) que vai acontecer em SP entre Agosto e Setembro!",
+      value: "Valor: R$ 500 | Seu preço: GRÁTIS"
     }
   ];
 

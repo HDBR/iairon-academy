@@ -2,7 +2,6 @@ import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Check, ArrowRight } from 'lucide-react';
 import CountdownTimer from './CountdownTimer';
-import PurchaseButton from './PurchaseButton';
 
 const PriceSection = () => {
   const valueBreakdown = [
@@ -150,7 +149,15 @@ const PriceSection = () => {
           </p>
         </div>
 
-        <PurchaseButton />
+        {/* Botão final de compra */}
+        <div className="text-center">
+          <button
+            onClick={handlePurchase}
+            className="cta-button px-8 py-4 text-lg font-bold text-white border-0 transition-all duration-300 rounded-lg"
+          >
+            GARANTIR MINHA VAGA AGORA
+          </button>
+        </div>
       </div>
     </section>
   );
