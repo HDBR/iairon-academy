@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Check, ArrowRight } from 'lucide-react';
@@ -49,7 +48,7 @@ const PriceSection = () => {
             Se você comprasse tudo separadamente:
           </h3>
           
-          <div className="space-y-4 mb-6 max-h-96 overflow-y-auto pr-2">
+          <div className="space-y-4 mb-6">
             {valueBreakdown.map((item, index) => (
               <div key={index} className="flex items-start justify-between gap-4 p-3 rounded-lg bg-muted/20">
                 <div className="flex items-start gap-3 flex-1">
