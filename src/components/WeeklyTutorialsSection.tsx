@@ -2,66 +2,56 @@ import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, Users, Brain, TrendingUp, Zap } from 'lucide-react';
-
 const WeeklyTutorialsSection = () => {
   const [activeDay, setActiveDay] = useState(0);
-
-  const tutorials = [
-    {
-      day: "Segunda",
-      title: "Marketing, Tráfego e Posicionamento",
-      time: "19h às 21h30",
-      recommendation: "Para quem quer dominar estratégias de marketing digital e posicionamento de marca",
-      icon: TrendingUp,
-      color: "from-tech-blue to-tech-purple"
-    },
-    {
-      day: "Terça",
-      title: "Tutoria Google Flow",
-      time: "19h às 21h30",
-      recommendation: "Para quem quer automatizar processos e otimizar fluxos de trabalho",
-      icon: Zap,
-      color: "from-tech-purple to-tech-blue"
-    },
-    {
-      day: "Quinta",
-      title: "Tutoria Google Flow",
-      time: "19h às 21h30",
-      recommendation: "Continuação e aprofundamento em automações Google",
-      icon: Zap,
-      color: "from-tech-blue to-tech-purple"
-    },
-    {
-      day: "Sexta",
-      title: "IA do Zero",
-      time: "19h às 21h30",
-      recommendation: "Para quem não sabe nada de IA e está começando do zero - ideal para iniciantes",
-      icon: Brain,
-      color: "from-tech-purple to-tech-blue"
-    },
-    {
-      day: "Sábado",
-      title: "Imersão com Pettrus",
-      time: "7+ horas de duração",
-      recommendation: "Para quem quer uma experiência imersiva e resultados acelerados",
-      icon: Users,
-      color: "from-tech-blue to-tech-purple",
-      special: true
-    }
-  ];
+  const tutorials = [{
+    day: "Segunda",
+    title: "Marketing, Tráfego e Posicionamento",
+    time: "19h às 21h30",
+    recommendation: "Para quem quer dominar estratégias de marketing digital e posicionamento de marca",
+    icon: TrendingUp,
+    color: "from-tech-blue to-tech-purple"
+  }, {
+    day: "Terça",
+    title: "Tutoria Google Flow",
+    time: "19h às 21h30",
+    recommendation: "Para quem quer automatizar processos e otimizar fluxos de trabalho",
+    icon: Zap,
+    color: "from-tech-purple to-tech-blue"
+  }, {
+    day: "Quinta",
+    title: "Tutoria Google Flow",
+    time: "19h às 21h30",
+    recommendation: "Continuação e aprofundamento em automações Google",
+    icon: Zap,
+    color: "from-tech-blue to-tech-purple"
+  }, {
+    day: "Sexta",
+    title: "IA do Zero",
+    time: "19h às 21h30",
+    recommendation: "Para quem não sabe nada de IA e está começando do zero - ideal para iniciantes",
+    icon: Brain,
+    color: "from-tech-purple to-tech-blue"
+  }, {
+    day: "Sábado",
+    title: "Imersão com Pettrus",
+    time: "7+ horas de duração",
+    recommendation: "Para quem quer uma experiência imersiva e resultados acelerados",
+    icon: Users,
+    color: "from-tech-blue to-tech-purple",
+    special: true
+  }];
 
   // Auto-rotate animation
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveDay((prev) => (prev + 1) % tutorials.length);
+      setActiveDay(prev => (prev + 1) % tutorials.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-
   const totalValue = 20 * 200; // 20 encontros × R$ 200
 
-  return (
-    <section className="section-spacing bg-gradient-to-b from-background/50 to-background">
+  return <section className="section-spacing bg-gradient-to-b from-background/50 to-background">
       <div className="container-padding">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
@@ -83,30 +73,15 @@ const WeeklyTutorialsSection = () => {
         {/* Weekly Calendar */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
           {tutorials.map((tutorial, index) => {
-            const Icon = tutorial.icon;
-            const isActive = activeDay === index;
-            
-            return (
-              <Card
-                key={tutorial.day}
-                className={`glass-card glass-card-hover p-6 transition-all duration-500 cursor-pointer relative overflow-hidden ${
-                  isActive 
-                    ? 'border-tech-blue/50 shadow-lg shadow-tech-blue/20 scale-105' 
-                    : 'border-tech-blue/20 hover:border-tech-blue/40'
-                } ${tutorial.special ? 'md:col-span-2 lg:col-span-1' : ''}`}
-                onClick={() => setActiveDay(index)}
-              >
+          const Icon = tutorial.icon;
+          const isActive = activeDay === index;
+          return <Card key={tutorial.day} className={`glass-card glass-card-hover p-6 transition-all duration-500 cursor-pointer relative overflow-hidden ${isActive ? 'border-tech-blue/50 shadow-lg shadow-tech-blue/20 scale-105' : 'border-tech-blue/20 hover:border-tech-blue/40'} ${tutorial.special ? 'md:col-span-2 lg:col-span-1' : ''}`} onClick={() => setActiveDay(index)}>
                 {/* Background gradient overlay when active */}
-                {isActive && (
-                  <div className={`absolute inset-0 bg-gradient-to-br ${tutorial.color} opacity-5 animate-pulse`} />
-                )}
+                {isActive && <div className={`absolute inset-0 bg-gradient-to-br ${tutorial.color} opacity-5 animate-pulse`} />}
                 
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-4">
-                    <Badge 
-                      variant="outline" 
-                      className={`${isActive ? 'border-tech-blue/50 text-tech-blue' : 'border-tech-blue/30'}`}
-                    >
+                    <Badge variant="outline" className={`${isActive ? 'border-tech-blue/50 text-tech-blue' : 'border-tech-blue/30'}`}>
                       {tutorial.day}
                     </Badge>
                     <div className={`p-2 rounded-full bg-gradient-to-r ${tutorial.color} ${isActive ? 'animate-pulse' : ''}`}>
@@ -127,52 +102,19 @@ const WeeklyTutorialsSection = () => {
                     {tutorial.recommendation}
                   </p>
 
-                  {tutorial.special && (
-                    <Badge 
-                      variant="outline" 
-                      className="mt-4 bg-tech-purple/10 border-tech-purple/30 text-tech-purple"
-                    >
+                  {tutorial.special && <Badge variant="outline" className="mt-4 bg-tech-purple/10 border-tech-purple/30 text-tech-purple">
                       Imersão Especial
-                    </Badge>
-                  )}
+                    </Badge>}
                 </div>
 
                 {/* Active indicator */}
-                {isActive && (
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-tech-blue to-tech-purple animate-pulse" />
-                )}
-              </Card>
-            );
-          })}
+                {isActive && <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-tech-blue to-tech-purple animate-pulse" />}
+              </Card>;
+        })}
         </div>
 
         {/* Active Tutorial Details */}
-        <div className="glass-card p-8 border border-tech-blue/20 max-w-4xl mx-auto">
-          <div className="text-center">
-            <div className={`inline-flex p-4 rounded-full bg-gradient-to-r ${tutorials[activeDay].color} mb-6`}>
-              {React.createElement(tutorials[activeDay].icon, { className: "w-8 h-8 text-white" })}
-            </div>
-            
-            <h3 className="text-2xl font-bold gradient-text mb-4">
-              {tutorials[activeDay].title}
-            </h3>
-            
-            <div className="flex items-center justify-center gap-6 mb-6 text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <Calendar className="w-5 h-5" />
-                <span>{tutorials[activeDay].day}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5" />
-                <span>{tutorials[activeDay].time}</span>
-              </div>
-            </div>
-            
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {tutorials[activeDay].recommendation}
-            </p>
-          </div>
-        </div>
+        
 
         {/* Value Anchor */}
         <div className="glass-card p-8 max-w-2xl mx-auto mt-12 border border-tech-purple/20">
@@ -203,8 +145,6 @@ const WeeklyTutorialsSection = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default WeeklyTutorialsSection;
