@@ -75,32 +75,9 @@ const WeeklyTutorialsSection = () => {
             Tutorias Ao Vivo Semanais no Zoom
           </h2>
           
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
             Acompanhamento personalizado para acelerar seus resultados com especialistas
           </p>
-
-          {/* Value Anchor */}
-          <div className="glass-card p-8 max-w-2xl mx-auto mb-12 border border-tech-purple/20">
-            <div className="text-center">
-              <p className="text-lg text-muted-foreground mb-4">
-                Se fosse cobrar R$ 200,00 por cada encontro, isso daria:
-              </p>
-              <div className="flex items-center justify-center gap-4 mb-4">
-                <span className="text-3xl font-bold text-red-500 line-through">
-                  R$ {totalValue.toLocaleString('pt-BR')}
-                </span>
-                <span className="text-4xl font-bold gradient-text-accent">
-                  R$ 0,00
-                </span>
-              </div>
-              <Badge variant="outline" className="bg-green-500/10 border-green-500/30 text-green-400">
-                Incluído no seu acesso
-              </Badge>
-              <p className="text-sm text-muted-foreground mt-3">
-                Baseado em 20 encontros mensais
-              </p>
-            </div>
-          </div>
         </div>
 
         {/* Weekly Calendar */}
@@ -193,6 +170,29 @@ const WeeklyTutorialsSection = () => {
             
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {tutorials[activeDay].recommendation}
+            </p>
+          </div>
+        </div>
+
+        {/* Value Anchor */}
+        <div className="glass-card p-8 max-w-2xl mx-auto mt-12 border border-tech-purple/20">
+          <div className="text-center">
+            <p className="text-lg text-muted-foreground mb-4">
+              Se fosse cobrar R$ 200,00 por cada encontro, isso daria:
+            </p>
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <span className="text-3xl font-bold text-red-500 line-through">
+                R$ {totalValue.toLocaleString('pt-BR')}
+              </span>
+              <span className="text-4xl font-bold gradient-text-accent">
+                R$ 0,00
+              </span>
+            </div>
+            <Badge variant="outline" className="bg-green-500/10 border-green-500/30 text-green-400">
+              Incluído no seu acesso
+            </Badge>
+            <p className="text-sm text-muted-foreground mt-3">
+              Baseado em 20 encontros mensais
             </p>
           </div>
         </div>
