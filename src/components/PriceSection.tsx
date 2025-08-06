@@ -14,7 +14,11 @@ const PriceSection = () => {
     { item: "Desconto de 50% em qualquer evento presencial organizado pelo Pettrus para membros durante 1 ano!", value: "Incalculável", isOneMonth: false },
     { item: "Os 5 primeiro terão uma consultoria individual com o Pettrus de 1 hora no zoom!", value: "R$ 3.000", isOneMonth: false },
     { item: "Acesso antecipado da HUBBIA com 1 mês grátis*! (Com uma quantidade de créditos disponível para uso)", value: "R$ 97", isOneMonth: false },
-    { item: "Acesso aos cursos da IAIRON ACADEMY (Clones sentinela, Fotos com IA, Desenhos animados com IA, AIGRAM e Agentes Express)!", value: "R$ 497", isOneMonth: false },
+    { 
+      item: "Acesso aos cursos da IAIRON ACADEMY: 🤖 Clones Sentinela • 📸 Fotos com IA • 🎨 Desenhos Animados com IA • 📱 AIGRAM • ⚡ Agentes Express", 
+      value: "R$ 497", 
+      isOneMonth: false 
+    },
     { item: "4 formas de ganhar dinheiro com IA em 7 dias!", value: "R$ 497", isOneMonth: false },
     { item: "Sites com IA - Faça a partir de 3 salários mínimos por mês! Acesso a toda estratégia pronta para você executar!", value: "R$ 500", isOneMonth: false },
     { item: "Arsenal de PROMPTS e ASSISTENTES do Pettrus! (Gerador de prompts para VEO3, Gerador de prompts pra fotos com IA, Gerador de conteúdo para carrossel VIRAL, Gerador de prompts para artes e próximos assistentes)", value: "R$ 1.000", isOneMonth: false }

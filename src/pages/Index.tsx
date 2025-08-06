@@ -1,3 +1,4 @@
+
 import React from 'react';
 import UrgencyBar from '@/components/UrgencyBar';
 import VideoSection from '@/components/VideoSection';
@@ -44,7 +45,33 @@ const Index = () => {
   const bonuses = [
     {
       title: "BÔNUS #1: IAIRON ACADEMY",
-      description: "Acesso completo aos cursos da IAIRON ACADEMY (Clones sentinela, Fotos com IA, Desenhos animados com IA, AIGRAM e Agentes Express)!",
+      description: (
+        <div>
+          <p className="mb-3">Acesso completo aos cursos da IAIRON ACADEMY:</p>
+          <div className="space-y-2 text-sm">
+            <div className="flex items-center gap-2">
+              <span>🤖</span>
+              <span><strong>Clones Sentinela</strong> - Criação de avatares IA</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>📸</span>
+              <span><strong>Fotos com IA</strong> - Geração profissional de imagens</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>🎨</span>
+              <span><strong>Desenhos Animados com IA</strong> - Animações e personagens</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>📱</span>
+              <span><strong>AIGRAM</strong> - Automação para Instagram</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>⚡</span>
+              <span><strong>Agentes Express</strong> - Assistentes IA personalizados</span>
+            </div>
+          </div>
+        </div>
+      ),
       value: "Valor: R$ 497 | Seu preço: GRÁTIS"
     },
     {
