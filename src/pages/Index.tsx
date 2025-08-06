@@ -130,12 +130,7 @@ const Index = () => {
       value: "Valor: R$ 500 | Seu preço: GRÁTIS"
     },
     {
-      title: "BÔNUS #8: Consultoria Individual VIP",
-      description: "Os 5 primeiros terão uma consultoria individual com o Pettrus de 1 hora no zoom!",
-      value: "Valor: R$ 3.000 | Seu preço: GRÁTIS"
-    },
-    {
-      title: "BÔNUS #9: Ingresso VIP Evento Presencial",
+      title: "BÔNUS #8: Ingresso VIP Evento Presencial",
       description: "Ingresso VIP para o evento presencial do Pettrus (VÍDEOS COM IA e Negócios) que vai acontecer em SP entre Agosto e Setembro!",
       value: "Valor: R$ 500 | Seu preço: GRÁTIS"
     }
