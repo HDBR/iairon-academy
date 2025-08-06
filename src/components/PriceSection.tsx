@@ -1,24 +1,24 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
-import { Check, ArrowRight } from 'lucide-react';
+import { Check, ArrowRight, Calendar, Clock } from 'lucide-react';
 import CountdownTimer from './CountdownTimer';
 import PurchaseButton from './PurchaseButton';
 
 const PriceSection = () => {
   const valueBreakdown = [
-    { item: "Uma área de treinamentos que está sempre atualizada com novos cursos! Acesso 1 ano", value: "R$ 2.000" },
-    { item: "Acesso a uma comunidade de clareza, informações atualizadas e networking! Acesso 1 ano", value: "R$ 1.000" },
-    { item: "4 imersões ao vivo com o Pettrus no zoom aos sábados em hora pra acabar! Acesso 1 mês", value: "R$ 2.000" },
-    { item: "Mais de 20 tutorias semanais ao vivo no zoom com especialistas em cada área! Acesso 1 mês", value: "R$ 4.000" },
-    { item: "Grupo de whatsapp do Pettrus! Acesso 1 mês", value: "R$ 1.000" },
-    { item: "Ingresso VIP para o evento presencial do Pettrus (VÍDEOS COM IA e Negócios) que vai acontecer em SP entre Agosto e Setembro!", value: "R$ 500" },
-    { item: "Desconto de 50% em qualquer evento presencial organizado pelo Pettrus para membros durante 1 ano!", value: "Incalculável" },
-    { item: "Os 5 primeiro terão uma consultoria individual com o Pettrus de 1 hora no zoom!", value: "R$ 3.000" },
-    { item: "Acesso antecipado da HUBBIA com 1 mês grátis*! (Com uma quantidade de créditos disponível para uso)", value: "R$ 97" },
-    { item: "Acesso aos cursos da IAIRON ACADEMY (Clones sentinela, Fotos com IA, Desenhos animados com IA, AIGRAM e Agentes Express)!", value: "R$ 497" },
-    { item: "4 formas de ganhar dinheiro com IA em 7 dias!", value: "R$ 497" },
-    { item: "Sites com IA - Faça a partir de 3 salários mínimos por mês! Acesso a toda estratégia pronta para você executar!", value: "R$ 500" },
-    { item: "Arsenal de PROMPTS e ASSISTENTES do Pettrus! (Gerador de prompts para VEO3, Gerador de prompts pra fotos com IA, Gerador de conteúdo para carrossel VIRAL, Gerador de prompts para artes e próximos assistentes)", value: "R$ 1.000" }
+    { item: "Uma área de treinamentos que está sempre atualizada com novos cursos! Acesso 1 ano", value: "R$ 2.000", duration: "anual" },
+    { item: "Acesso a uma comunidade de clareza, informações atualizadas e networking! Acesso 1 ano", value: "R$ 1.000", duration: "anual" },
+    { item: "4 imersões ao vivo com o Pettrus no zoom aos sábados em hora pra acabar! Acesso 1 mês", value: "R$ 2.000", duration: "mensal" },
+    { item: "Mais de 20 tutorias semanais ao vivo no zoom com especialistas em cada área! Acesso 1 mês", value: "R$ 4.000", duration: "mensal" },
+    { item: "Grupo de whatsapp do Pettrus! Acesso 1 mês", value: "R$ 1.000", duration: "mensal" },
+    { item: "Ingresso VIP para o evento presencial do Pettrus (VÍDEOS COM IA e Negócios) que vai acontecer em SP entre Agosto e Setembro!", value: "R$ 500", duration: "evento" },
+    { item: "Desconto de 50% em qualquer evento presencial organizado pelo Pettrus para membros durante 1 ano!", value: "Incalculável", duration: "anual" },
+    { item: "Os 5 primeiro terão uma consultoria individual com o Pettrus de 1 hora no zoom!", value: "R$ 3.000", duration: "unico" },
+    { item: "Acesso antecipado da HUBBIA com 1 mês grátis*! (Com uma quantidade de créditos disponível para uso)", value: "R$ 97", duration: "mensal" },
+    { item: "Acesso aos cursos da IAIRON ACADEMY (Clones sentinela, Fotos com IA, Desenhos animados com IA, AIGRAM e Agentes Express)!", value: "R$ 497", duration: "permanente" },
+    { item: "4 formas de ganhar dinheiro com IA em 7 dias!", value: "R$ 497", duration: "permanente" },
+    { item: "Sites com IA - Faça a partir de 3 salários mínimos por mês! Acesso a toda estratégia pronta para você executar!", value: "R$ 500", duration: "permanente" },
+    { item: "Arsenal de PROMPTS e ASSISTENTES do Pettrus! (Gerador de prompts para VEO3, Gerador de prompts pra fotos com IA, Gerador de conteúdo para carrossel VIRAL, Gerador de prompts para artes e próximos assistentes)", value: "R$ 1.000", duration: "permanente" }
   ];
 
   const totalValue = 16091;
@@ -28,6 +28,45 @@ const PriceSection = () => {
 
   const handlePurchase = () => {
     window.open('https://payfast.greenn.com.br/122280/offer/FlcBck', '_blank');
+  };
+
+  const getDurationBadge = (duration: string) => {
+    switch (duration) {
+      case "anual":
+        return (
+          <div className="flex items-center gap-1 px-2 py-1 bg-tech-blue/20 border border-tech-blue/30 rounded-full text-xs font-semibold text-tech-blue">
+            <Calendar className="w-3 h-3" />
+            1 ANO
+          </div>
+        );
+      case "mensal":
+        return (
+          <div className="flex items-center gap-1 px-2 py-1 bg-tech-yellow/20 border border-tech-yellow/30 rounded-full text-xs font-semibold text-tech-yellow">
+            <Clock className="w-3 h-3" />
+            1 MÊS
+          </div>
+        );
+      case "permanente":
+        return (
+          <div className="flex items-center gap-1 px-2 py-1 bg-tech-purple/20 border border-tech-purple/30 rounded-full text-xs font-semibold text-tech-purple">
+            ♾️ VITALÍCIO
+          </div>
+        );
+      case "evento":
+        return (
+          <div className="flex items-center gap-1 px-2 py-1 bg-gradient-to-r from-tech-purple/20 to-tech-blue/20 border border-tech-purple/30 rounded-full text-xs font-semibold text-tech-purple">
+            🎫 EVENTO
+          </div>
+        );
+      case "unico":
+        return (
+          <div className="flex items-center gap-1 px-2 py-1 bg-tech-red/20 border border-tech-red/30 rounded-full text-xs font-semibold text-tech-red">
+            ⭐ ÚNICO
+          </div>
+        );
+      default:
+        return null;
+    }
   };
 
   return (
@@ -53,7 +92,10 @@ const PriceSection = () => {
               <div key={index} className="flex items-start justify-between gap-4 p-3 rounded-lg bg-muted/20">
                 <div className="flex items-start gap-3 flex-1">
                   <Check className="w-5 h-5 text-tech-blue mt-0.5 flex-shrink-0" />
-                  <span className="text-sm text-foreground leading-relaxed">{item.item}</span>
+                  <div className="flex-1">
+                    <span className="text-sm text-foreground leading-relaxed block mb-2">{item.item}</span>
+                    {getDurationBadge(item.duration)}
+                  </div>
                 </div>
                 <span className="text-sm font-semibold text-tech-blue whitespace-nowrap">
                   {item.value}
