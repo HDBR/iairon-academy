@@ -16,6 +16,7 @@ import { Button } from '@/components/ui/button';
 import { Shield, Star, Zap, TrendingUp, Users, Play, ArrowDown } from 'lucide-react';
 import bgHero from '@/assets/bg-hero.webp';
 import superpackParallax from '@/assets/superpack-parallax.webp';
+import GoldenTicketBonus from '@/components/GoldenTicketBonus';
 
 const Index = () => {
   const features = [
@@ -127,11 +128,6 @@ const Index = () => {
     {
       title: "BÔNUS #7: Sites com IA - Estratégia Completa",
       description: "Sites com IA - Faça a partir de 3 salários mínimos por mês! Acesso a toda estratégia pronta para você executar!",
-      value: "Valor: R$ 500 | Seu preço: GRÁTIS"
-    },
-    {
-      title: "BÔNUS #8: Ingresso VIP Evento Presencial",
-      description: "Ingresso VIP para o evento presencial do Pettrus (VÍDEOS COM IA e Negócios) que vai acontecer em SP entre Agosto e Setembro!",
       value: "Valor: R$ 500 | Seu preço: GRÁTIS"
     }
   ];
@@ -283,6 +279,9 @@ const Index = () => {
                   isBonus={true}
                 />
               ))}
+              
+              {/* Golden Ticket Bonus - Destaque Especial */}
+              <GoldenTicketBonus />
             </div>
           </div>
         </section>

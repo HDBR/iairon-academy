@@ -5,7 +5,7 @@ import { Check, Star } from 'lucide-react';
 
 interface FeatureCardProps {
   title: string;
-  description: string;
+  description: string | React.ReactElement;
   value?: string;
   isBonus?: boolean;
 }
@@ -31,9 +31,9 @@ const FeatureCard = ({ title, description, value, isBonus = false }: FeatureCard
           }`}>
             {title}
           </h3>
-          <p className="text-muted-foreground mb-4 leading-relaxed text-base">
+          <div className="text-muted-foreground mb-4 leading-relaxed text-base">
             {description}
-          </p>
+          </div>
           {value && (
             <div className="glass-card px-4 py-2 rounded-lg inline-block">
               <div className="text-tech-blue font-semibold text-sm">
