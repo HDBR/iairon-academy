@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Check, ArrowRight } from 'lucide-react';
@@ -133,6 +132,16 @@ const PriceSection = () => {
 
           {/* CountdownTimer agora dentro do card */}
           <CountdownTimer />
+
+          {/* Aviso sobre aumento do preço */}
+          <div className="mt-6 p-4 bg-tech-red/10 border border-tech-red/20 rounded-lg">
+            <div className="text-sm font-semibold text-tech-red mb-1">
+              ⚠️ ATENÇÃO: OFERTA POR TEMPO LIMITADO
+            </div>
+            <div className="text-xs text-muted-foreground">
+              Após o fim da contagem, o valor retorna para <span className="font-bold text-tech-red">R$ 1.497,00</span>
+            </div>
+          </div>
         </Card>
 
         <div className="text-center mb-8">
