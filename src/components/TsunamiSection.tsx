@@ -29,9 +29,9 @@ const TsunamiSection = () => {
           
           <div className="glass-card p-6 md:p-8 rounded-2xl border-tech-amber/30 mb-8">
             <h3 className="text-xl md:text-2xl font-black gradient-text-accent mb-4">
-              PRODUÇÃO PROFISSIONAL DE ATÉ 3 MINUTOS
+              CONSULTORIA INDIVIDUAL DE 1 HORA NO ZOOM
             </h3>
-            <p className="text-lg mb-3 text-foreground">Feita pessoalmente pelo PETTRUS VAZ</p>
+            <p className="text-lg mb-3 text-foreground">Com o PETTRUS VAZ pessoalmente</p>
             <p className="text-tech-blue font-bold text-xl mb-6">Valor: R$ 3.000 - GRÁTIS para os 5 primeiros!</p>
             
             <Button 
