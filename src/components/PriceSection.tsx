@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Check, ArrowRight } from 'lucide-react';
@@ -25,9 +26,10 @@ const PriceSection = () => {
   ];
 
   const totalValue = 16091;
-  const currentPrice = 797;
+  const previousPrice = 1497;
+  const currentPrice = 997;
   const savings = totalValue - currentPrice;
-  const installmentValue = "81,94";
+  const installmentValue = "102,51";
 
   const handlePurchase = () => {
     window.open('https://payfast.greenn.com.br/122280/offer/FlcBck', '_blank');
@@ -87,17 +89,24 @@ const PriceSection = () => {
         <Card className="glass-card price-highlight p-8 text-center relative overflow-hidden mb-12">
           <div className="absolute inset-0 bg-gradient-to-br from-tech-blue/5 to-tech-purple/5 -z-10"></div>
           
+          {/* Preço anterior riscado */}
+          <div className="mb-4">
+            <div className="text-lg text-orange-500 line-through font-medium">
+              De R$ {previousPrice.toLocaleString()},00 por
+            </div>
+          </div>
+          
           <h3 className="text-xl font-bold mb-6 gradient-text-accent">
             Seu investimento hoje:
           </h3>
           
           <div className="mb-6">
             {/* Destaque do Parcelado */}
-            <div className="text-3xl md:text-4xl font-black gradient-text-accent mb-2">
+            <div className="text-4xl md:text-5xl font-black gradient-text-accent mb-2">
               12x de R$ {installmentValue}
             </div>
-            <div className="text-lg text-muted-foreground mb-4">
-              à vista R$ {currentPrice},00
+            <div className="text-2xl md:text-3xl font-bold text-tech-blue mb-4">
+              à vista R$ {currentPrice.toLocaleString()},00
             </div>
           </div>
 
@@ -106,7 +115,7 @@ const PriceSection = () => {
               💸 Economia de R$ {savings.toLocaleString()}
             </div>
             <div className="text-sm text-muted-foreground mt-1">
-              Mais de 95% de desconto!
+              Mais de 93% de desconto!
             </div>
           </div>
 
