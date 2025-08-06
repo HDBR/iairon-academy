@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Check, ArrowRight } from 'lucide-react';
@@ -125,14 +126,15 @@ const PriceSection = () => {
           {/* Botão no card */}
           <button
             onClick={handlePurchase}
-            className="cta-button w-full px-8 py-4 text-lg font-bold text-white border-0 transition-all duration-300 rounded-lg"
+            className="cta-button w-full px-8 py-4 text-lg font-bold text-white border-0 transition-all duration-300 rounded-lg mb-6"
           >
             GARANTIR MINHA VAGA AGORA
           </button>
+
+          {/* CountdownTimer agora dentro do card */}
+          <CountdownTimer />
         </Card>
 
-        <CountdownTimer />
-        
         <div className="text-center mb-8">
           <p className="text-xl font-bold text-tech-red">
             Todos os bônus estão disponíveis!!
