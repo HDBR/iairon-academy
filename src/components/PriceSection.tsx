@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Check, ArrowRight } from 'lucide-react';
@@ -6,17 +7,22 @@ import PurchaseButton from './PurchaseButton';
 
 const PriceSection = () => {
   const valueBreakdown = [
-    { item: "LABVIDIA (4 Imersões + Área de Membros + Grupo VIP)", value: "R$ 997" },
-    { item: "IAIRON ACADEMY (Acesso completo por 1 ano)", value: "R$ 497" },
-    { item: "HUBBIA (1 mês grátis + acesso antecipado)", value: "R$ 97" },
-    { item: "Prompts e Assistentes Exclusivos", value: "R$ 297" },
-    { item: "Processo de Estruturação de Clones", value: "R$ 497" },
-    { item: "Imersão \"Lançamento 100% IA\"", value: "R$ 297" },
-    { item: "50% Desconto em Imersões Presenciais", value: "R$ 500" },
-    { item: "50% Desconto em Lançamentos 2025", value: "R$ 200" }
+    { item: "Uma área de treinamentos que está sempre atualizada com novos cursos! Acesso 1 ano", value: "R$ 2.000" },
+    { item: "Acesso a uma comunidade de clareza, informações atualizadas e networking! Acesso 1 ano", value: "R$ 1.000" },
+    { item: "4 imersões ao vivo com o Pettrus no zoom aos sábados em hora pra acabar! Acesso 1 mês", value: "R$ 2.000" },
+    { item: "Mais de 20 tutorias semanais ao vivo no zoom com especialistas em cada área! Acesso 1 mês", value: "R$ 4.000" },
+    { item: "Grupo de whatsapp do Pettrus! Acesso 1 mês", value: "R$ 1.000" },
+    { item: "Ingresso VIP para o evento presencial do Pettrus (VÍDEOS COM IA e Negócios) que vai acontecer em SP entre Agosto e Setembro!", value: "R$ 500" },
+    { item: "Desconto de 50% em qualquer evento presencial organizado pelo Pettrus para membros durante 1 ano!", value: "Incalculável" },
+    { item: "Os 5 primeiro terão uma consultoria individual com o Pettrus de 1 hora no zoom!", value: "R$ 3.000" },
+    { item: "Acesso antecipado da HUBBIA com 1 mês grátis*! (Com uma quantidade de créditos disponível para uso)", value: "R$ 97" },
+    { item: "Acesso aos cursos da IAIRON ACADEMY (Clones sentinela, Fotos com IA, Desenhos animados com IA, AIGRAM e Agentes Express)!", value: "R$ 497" },
+    { item: "4 formas de ganhar dinheiro com IA em 7 dias!", value: "R$ 497" },
+    { item: "Sites com IA - Faça a partir de 3 salários mínimos por mês! Acesso a toda estratégia pronta para você executar!", value: "R$ 500" },
+    { item: "Arsenal de PROMPTS e ASSISTENTES do Pettrus! (Gerador de prompts para VEO3, Gerador de prompts pra fotos com IA, Gerador de conteúdo para carrossel VIRAL, Gerador de prompts para artes e próximos assistentes)", value: "R$ 1.000" }
   ];
 
-  const totalValue = 3382;
+  const totalValue = 16091;
   const currentPrice = 797;
   const savings = totalValue - currentPrice;
   const installmentValue = "81,94";
@@ -44,7 +50,7 @@ const PriceSection = () => {
               Se você comprasse tudo separadamente:
             </h3>
             
-            <div className="space-y-4 mb-6">
+            <div className="space-y-4 mb-6 max-h-96 overflow-y-auto pr-2">
               {valueBreakdown.map((item, index) => (
                 <div key={index} className="flex items-start justify-between gap-4 p-3 rounded-lg bg-muted/20">
                   <div className="flex items-start gap-3 flex-1">
@@ -62,6 +68,9 @@ const PriceSection = () => {
               <div className="flex justify-between items-center text-lg font-bold">
                 <span className="text-foreground">VALOR TOTAL:</span>
                 <span className="text-tech-red line-through">R$ {totalValue.toLocaleString()}</span>
+              </div>
+              <div className="text-xs text-muted-foreground mt-1 text-center">
+                *Sem contar o valor incalculável dos descontos em eventos presenciais
               </div>
             </div>
           </Card>
@@ -89,7 +98,7 @@ const PriceSection = () => {
                 💸 Economia de R$ {savings.toLocaleString()}
               </div>
               <div className="text-sm text-muted-foreground mt-1">
-                Mais de 76% de desconto!
+                Mais de 95% de desconto!
               </div>
             </div>
 
