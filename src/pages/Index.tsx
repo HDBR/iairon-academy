@@ -16,74 +16,144 @@ import { Button } from '@/components/ui/button';
 import { Shield, Star, Zap, TrendingUp, Users, Play, ArrowDown } from 'lucide-react';
 import bgHero from '@/assets/bg-hero.webp';
 import superpackParallax from '@/assets/superpack-parallax.webp';
+import GoldenTicketBonus from '@/components/GoldenTicketBonus';
+
 const Index = () => {
-  const features = [{
-    title: "Hotseats semanais ao vivo no Zoom",
-    description: "Mentorias de longa duração onde desenvolveremos suas habilidades com VEO 3 e outras ferramentas de IA"
-  }, {
-    title: "2 Projetos Reais Desenvolvidos",
-    description: "Criaremos vídeos dos próprios membros aplicando técnicas profissionais"
-  }, {
-    title: "Área de Membros por 1 Ano",
-    description: "Todo material gravado, templates exclusivos e atualizações constantes"
-  }, {
-    title: "Grupo VIP no WhatsApp",
-    description: "Acompanhamento direto e networking com outros profissionais"
-  }, {
-    title: "Materiais de Apoio Exclusivos",
-    description: "Templates, prompts otimizados e checklists para acelerar sua produção"
-  }];
-  const bonuses = [{
-    title: "BÔNUS #1: IAIRON ACADEMY",
-    description: "Acesso completo a TODOS os meus treinamentos: clones, assistentes GPT, agentes para responder DM com IA, vídeos animados estilo desenho e muito mais!",
-    value: "Valor: R$ 497/ano | Seu preço: GRÁTIS"
-  }, {
-    title: "BÔNUS #3: Arsenal de Prompts e Assistentes",
-    description: "Acesso aos meus prompts secretos e assistentes geradores para fotos, vídeos VEO3 e muito mais. Material que NUNCA foi vendido!",
-    value: "Valor: R$ 297 | Seu preço: GRÁTIS"
-  }, {
-    title: "BÔNUS #4: Imersões Presenciais VIP",
-    description: "50% de desconto nas minhas imersões presenciais em Alphaville, Minas, Recife e Rio!",
-    value: "Valor: R$ 500 | Seu preço: GRÁTIS"
-  }, {
-    title: "BÔNUS #5: HUBBIA - Acesso Antecipado",
-    description: "Seja um dos primeiros a acessar a HUBBIA, nossa central de IAs que substitui várias ferramentas! Ganhe 1 mês completamente GRÁTIS!",
-    value: "Valor: R$ 97/mês | Seu preço: GRÁTIS no 1º mês"
-  }, {
-    title: "BÔNUS #6: Processo de Clones Profissionais",
-    description: "Acesso ao meu processo completo de estruturação de clones para conteúdos e anúncios. O mesmo que vendo por R$ 8.000!",
-    value: "Valor: R$ 497 | Seu preço: GRÁTIS"
-  }, {
-    title: "BÔNUS #7: Imersão \"Lançamento 100% IA\"",
-    description: "Descubra como eu fiz ESTE lançamento inteiro com apenas 1 pessoa e 100% IA! Copy, criativos, página, automação, conteúdos!",
-    value: "Valor: R$ 297 | Seu preço: GRÁTIS"
-  }, {
-    title: "BÔNUS #8: Sorteio entre os membros",
-    description: "Desenvolvimento de Funil de aquisição 100% com IA, onde vou ensinar como montar uma estrutura de funil para aquisição de cliente ou venda de infoproduto 100% com IA",
-    value: "Valor: Inestimável | Seu preço: GRÁTIS"
-  }, {
-    title: "BÔNUS #2: Desconto em próximos produtos",
-    description: "Desconto nos próximos produtos que lançarei em 2025",
-    value: "Valor: R$ 200+ | Seu preço: GRÁTIS"
-  }];
+  const features = [
+    {
+      title: "Hotseats semanais ao vivo no Zoom",
+      description: "Mentorias de longa duração onde desenvolveremos suas habilidades com VEO 3 e outras ferramentas de IA"
+    },
+    {
+      title: "2 Projetos Reais Desenvolvidos",
+      description: "Criaremos vídeos dos próprios membros aplicando técnicas profissionais"
+    },
+    {
+      title: "Área de Membros por 1 Ano",
+      description: "Todo material gravado, templates exclusivos e atualizações constantes"
+    },
+    {
+      title: "Grupo VIP no WhatsApp",
+      description: "Acompanhamento direto e networking com outros profissionais"
+    },
+    {
+      title: "Materiais de Apoio Exclusivos",
+      description: "Templates, prompts otimizados e checklists para acelerar sua produção"
+    }
+  ];
+
+  const bonuses = [
+    {
+      title: "BÔNUS #1: IAIRON ACADEMY",
+      description: (
+        <div>
+          <p className="mb-3">Acesso completo aos cursos da IAIRON ACADEMY:</p>
+          <div className="space-y-2 text-sm">
+            <div className="flex items-center gap-2">
+              <span>🤖</span>
+              <span><strong>Clones Sentinela</strong> - Criação de avatares IA</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>📸</span>
+              <span><strong>Fotos com IA</strong> - Geração profissional de imagens</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>🎨</span>
+              <span><strong>Desenhos Animados com IA</strong> - Animações e personagens</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>📱</span>
+              <span><strong>AIGRAM</strong> - Automação para Instagram</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>⚡</span>
+              <span><strong>Agentes Express</strong> - Assistentes IA personalizados</span>
+            </div>
+          </div>
+        </div>
+      ),
+      value: "Valor: R$ 497 | Seu preço: GRÁTIS"
+    },
+    {
+      title: "BÔNUS #2: Desconto em próximos produtos",
+      description: "Desconto nos próximos produtos que lançarei em 2025",
+      value: "Valor: R$ 200+ | Seu preço: GRÁTIS"
+    },
+    {
+      title: "BÔNUS #3: Arsenal de PROMPTS e ASSISTENTES",
+      description: (
+        <div>
+          <p className="mb-3">Arsenal completo de PROMPTS e ASSISTENTES do Pettrus:</p>
+          <div className="space-y-2 text-sm">
+            <div className="flex items-center gap-2">
+              <span>🎬</span>
+              <span><strong>Gerador de prompts para VEO3</strong> - Criação otimizada de vídeos</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>🖼️</span>
+              <span><strong>Gerador de prompts para fotos IA</strong> - Imagens profissionais</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>📱</span>
+              <span><strong>Gerador de conteúdo VIRAL</strong> - Carrosséis que convertem</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>🎨</span>
+              <span><strong>Gerador de prompts para artes</strong> - Criações artísticas</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>🤖</span>
+              <span><strong>Próximos assistentes</strong> - Ferramentas exclusivas em desenvolvimento</span>
+            </div>
+          </div>
+        </div>
+      ),
+      value: "Valor: R$ 1.000 | Seu preço: GRÁTIS"
+    },
+    {
+      title: "BÔNUS #4: Imersões Presenciais VIP",
+      description: "Desconto de 50% em qualquer evento presencial organizado pelo Pettrus para membros durante 1 ano!",
+      value: "Valor: Incalculável | Seu preço: GRÁTIS"
+    },
+    {
+      title: "BÔNUS #5: HUBBIA - Acesso Antecipado",
+      description: "Acesso antecipado da HUBBIA com 1 mês grátis*! (Com uma quantidade de créditos disponível para uso)",
+      value: "Valor: R$ 97/mês | Seu preço: GRÁTIS no 1º mês"
+    },
+    {
+      title: "BÔNUS #6: 4 Formas de Ganhar Dinheiro com IA",
+      description: "4 formas de ganhar dinheiro com IA em 7 dias!",
+      value: "Valor: R$ 497 | Seu preço: GRÁTIS"
+    },
+    {
+      title: "BÔNUS #7: Sites com IA - Estratégia Completa",
+      description: "Sites com IA - Faça a partir de 3 salários mínimos por mês! Acesso a toda estratégia pronta para você executar!",
+      value: "Valor: R$ 500 | Seu preço: GRÁTIS"
+    }
+  ];
+
   const scrollToPricing = () => {
     const pricingSection = document.querySelector('#pricing-section');
     if (pricingSection) {
-      pricingSection.scrollIntoView({
-        behavior: 'smooth'
-      });
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
   const handlePurchase = () => {
     window.open('https://payfast.greenn.com.br/122280/offer/3lXE3l?b_id_1=130096&b_offer_1=mXYbYh', '_blank');
   };
-  return <div className="min-h-screen bg-background relative">
+
+  return (
+    <div className="min-h-screen bg-background relative">
       {/* Background Hero Image */}
-      <div className="fixed top-0 left-0 w-full h-screen bg-cover bg-center bg-no-repeat opacity-100 z-0" style={{
-      backgroundImage: `url(${bgHero})`,
-      backgroundAttachment: 'fixed',
-      backgroundPosition: 'top center'
-    }} />
+      <div 
+        className="fixed top-0 left-0 w-full h-screen bg-cover bg-center bg-no-repeat opacity-100 z-0"
+        style={{
+          backgroundImage: `url(${bgHero})`,
+          backgroundAttachment: 'fixed',
+          backgroundPosition: 'top center'
+        }}
+      />
       
       <BackgroundEffects />
       <UrgencyBar />
@@ -98,7 +168,11 @@ const Index = () => {
               </div>
               
               <div className="mb-4">
-                <img src="/lovable-uploads/6a7a0740-082a-461e-a486-8ef7542d838e.png" alt="LABVIDIA Logo" className="mx-auto max-w-7xl w-full h-auto" />
+                <img 
+                  src="/lovable-uploads/6a7a0740-082a-461e-a486-8ef7542d838e.png" 
+                  alt="LABVIDIA Logo" 
+                  className="mx-auto max-w-7xl w-full h-auto"
+                />
               </div>
               
               <p className="text-xl md:text-2xl text-muted-foreground font-light mb-4 max-w-3xl mx-auto">
@@ -130,12 +204,21 @@ const Index = () => {
 
               {/* Botões de CTA na Hero */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-                <Button onClick={handlePurchase} size="lg" className="cta-button px-8 py-4 text-lg font-bold text-white border-0 transition-all duration-300">
+                <Button 
+                  onClick={handlePurchase}
+                  size="lg" 
+                  className="cta-button px-8 py-4 text-lg font-bold text-white border-0 transition-all duration-300"
+                >
                   <Zap className="w-6 h-6 mr-3" />
                   GARANTIR MINHA VAGA AGORA
                 </Button>
                 
-                <Button onClick={scrollToPricing} variant="outline" size="lg" className="glass-card px-8 py-4 text-lg font-medium border-tech-blue/30 hover:bg-tech-blue/10 transition-all duration-300">
+                <Button 
+                  onClick={scrollToPricing}
+                  variant="outline"
+                  size="lg" 
+                  className="glass-card px-8 py-4 text-lg font-medium border-tech-blue/30 hover:bg-tech-blue/10 transition-all duration-300"
+                >
                   <ArrowDown className="w-5 h-5 mr-2" />
                   Ver Parcelamento
                 </Button>
@@ -163,7 +246,13 @@ const Index = () => {
             </h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {features.map((feature, index) => <FeatureCard key={index} title={feature.title} description={feature.description} />)}
+              {features.map((feature, index) => (
+                <FeatureCard
+                  key={index}
+                  title={feature.title}
+                  description={feature.description}
+                />
+              ))}
             </div>
           </div>
         </section>
@@ -181,16 +270,27 @@ const Index = () => {
             </h2>
             
             <div className="space-y-6">
-              {bonuses.map((bonus, index) => <FeatureCard key={index} title={bonus.title} description={bonus.description} value={bonus.value} isBonus={true} />)}
+              {bonuses.map((bonus, index) => (
+                <FeatureCard
+                  key={index}
+                  title={bonus.title}
+                  description={bonus.description}
+                  value={bonus.value}
+                  isBonus={true}
+                />
+              ))}
+              
+              {/* Golden Ticket Bonus - Destaque Especial */}
+              <GoldenTicketBonus />
             </div>
           </div>
         </section>
 
         {/* 6. Certificate Section */}
-        
+        <CertificateSection />
 
         {/* 7. Opportunities Section */}
-        
+        <OpportunitiesSection />
 
         {/* 8. Results Guarantee Section */}
         <section className="section-spacing container-padding">
@@ -238,13 +338,16 @@ const Index = () => {
         <TsunamiSection />
 
         {/* Parallax Image Section */}
-        <section className="h-[60vh] relative overflow-hidden" style={{
-        backgroundImage: `url(${superpackParallax})`,
-        backgroundAttachment: 'fixed',
-        backgroundPosition: 'center center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat'
-      }}>
+        <section 
+          className="h-[60vh] relative overflow-hidden"
+          style={{
+            backgroundImage: `url(${superpackParallax})`,
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'center center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+          }}
+        >
           <div className="absolute inset-0 bg-black/20"></div>
         </section>
 
@@ -271,6 +374,8 @@ const Index = () => {
           </div>
         </footer>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
