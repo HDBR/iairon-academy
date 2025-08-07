@@ -75,7 +75,7 @@ const Index = () => {
     }
   };
   const handlePurchase = () => {
-    window.open('https://payfast.greenn.com.br/122280/offer/FlcBck', '_blank');
+    window.open('https://payfast.greenn.com.br/122280/offer/3lXE3l?b_id_1=130096&b_offer_1=mXYbYh', '_blank');
   };
   return <div className="min-h-screen bg-background relative">
       {/* Background Hero Image */}
