@@ -44,91 +44,19 @@ const Index = () => {
 
   const bonuses = [
     {
-      title: "BÔNUS #1: IAIRON ACADEMY",
-      description: (
-        <div>
-          <p className="mb-3">Acesso completo aos cursos da IAIRON ACADEMY:</p>
-          <div className="space-y-2 text-sm">
-            <div className="flex items-center gap-2">
-              <span>🤖</span>
-              <span><strong>Clones Sentinela</strong> - Criação de avatares IA</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span>📸</span>
-              <span><strong>Fotos com IA</strong> - Geração profissional de imagens</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span>🎨</span>
-              <span><strong>Desenhos Animados com IA</strong> - Animações e personagens</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span>📱</span>
-              <span><strong>AIGRAM</strong> - Automação para Instagram</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span>⚡</span>
-              <span><strong>Agentes Express</strong> - Assistentes IA personalizados</span>
-            </div>
-          </div>
-        </div>
-      ),
-      value: "Valor: R$ 497 | Seu preço: GRÁTIS"
-    },
-    {
-      title: "BÔNUS #2: Desconto em próximos produtos",
-      description: "Desconto nos próximos produtos que lançarei em 2025",
-      value: "Valor: R$ 200+ | Seu preço: GRÁTIS"
-    },
-    {
-      title: "BÔNUS #3: Arsenal de PROMPTS e ASSISTENTES",
-      description: (
-        <div>
-          <p className="mb-3">Arsenal completo de PROMPTS e ASSISTENTES do Pettrus:</p>
-          <div className="space-y-2 text-sm">
-            <div className="flex items-center gap-2">
-              <span>🎬</span>
-              <span><strong>Gerador de prompts para VEO3</strong> - Criação otimizada de vídeos</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span>🖼️</span>
-              <span><strong>Gerador de prompts para fotos IA</strong> - Imagens profissionais</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span>📱</span>
-              <span><strong>Gerador de conteúdo VIRAL</strong> - Carrosséis que convertem</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span>🎨</span>
-              <span><strong>Gerador de prompts para artes</strong> - Criações artísticas</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span>🤖</span>
-              <span><strong>Próximos assistentes</strong> - Ferramentas exclusivas em desenvolvimento</span>
-            </div>
-          </div>
-        </div>
-      ),
-      value: "Valor: R$ 1.000 | Seu preço: GRÁTIS"
-    },
-    {
-      title: "BÔNUS #4: Imersões Presenciais VIP",
-      description: "Desconto de 50% em qualquer evento presencial organizado pelo Pettrus para membros durante 1 ano!",
-      value: "Valor: Incalculável | Seu preço: GRÁTIS"
-    },
-    {
-      title: "BÔNUS #5: HUBBIA - Acesso Antecipado",
-      description: "Acesso antecipado da HUBBIA com 1 mês grátis*! (Com uma quantidade de créditos disponível para uso)",
-      value: "Valor: R$ 97/mês | Seu preço: GRÁTIS no 1º mês"
-    },
-    {
-      title: "BÔNUS #6: 4 Formas de Ganhar Dinheiro com IA",
+      title: "BÔNUS #1: 4 Formas de Ganhar Dinheiro com IA",
       description: "4 formas de ganhar dinheiro com IA em 7 dias!",
       value: "Valor: R$ 497 | Seu preço: GRÁTIS"
     },
     {
-      title: "BÔNUS #7: Sites com IA - Estratégia Completa",
+      title: "BÔNUS #2: Sites com IA - Estratégia Completa",
       description: "Sites com IA - Faça a partir de 3 salários mínimos por mês! Acesso a toda estratégia pronta para você executar!",
       value: "Valor: R$ 500 | Seu preço: GRÁTIS"
+    },
+    {
+      title: "BÔNUS #3: Ingresso VIP do Evento Presencial",
+      description: "Ingresso VIP para o evento presencial que acontecerá em outubro em São Paulo! Uma experiência única de networking e aprendizado intensivo com o Pettrus.",
+      value: "Valor: Incalculável | Seu preço: GRÁTIS"
     }
   ];
 
