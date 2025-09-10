@@ -11,6 +11,7 @@ import BackgroundEffects from '@/components/BackgroundEffects';
 import WeeklyTutorialsSection from '@/components/WeeklyTutorialsSection';
 import WhatsAppVipSection from '@/components/WhatsAppVipSection';
 import { ImmediateAccessSection } from '@/components/ImmediateAccessSection';
+import { AllInOneSection } from '@/components/AllInOneSection';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -149,7 +150,10 @@ const Index = () => {
         {/* 1. Immediate Access Section */}
         <ImmediateAccessSection />
 
-        {/* 2. Video Section */}
+        {/* 2. All In One Section */}
+        <AllInOneSection />
+
+        {/* 3. Video Section */}
         <VideoSection />
 
         {/* 3. Testimonials Section */}
