@@ -1,12 +1,18 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useEffect, useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
+import carouselGroup1 from "@/assets/carousel-group-1.webp";
+import carouselLayer1 from "@/assets/carousel-layer-1.webp";
+import carouselVideoSample from "@/assets/carousel-video-sample.webp";
 
 const images = [
   "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%20sessao%20de%20fotos%20com%20IA.webp",
   "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/labvidia%20capa.webp",
+  carouselGroup1,
   "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/replay%281%29%281%29.webp",
+  carouselLayer1,
   "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%281%29.webp",
+  carouselVideoSample,
   "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/CLONES.webp",
   "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%20cursos%20aigram.webp",
   "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%20agentes%20express.webp",
