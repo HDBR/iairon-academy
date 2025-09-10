@@ -35,7 +35,7 @@ const GoldenTicketBonus = () => {
                 <Star className="w-6 h-6 text-black" />
               </div>
               <h3 className="font-bold text-2xl bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 bg-clip-text text-transparent">
-                BÔNUS #8: 🎫 GOLDEN TICKET - Ingresso VIP Evento Presencial
+                BÔNUS ESPECIAL: 🎫 GOLDEN TICKET - Ingresso VIP Evento Presencial
               </h3>
             </div>
             
