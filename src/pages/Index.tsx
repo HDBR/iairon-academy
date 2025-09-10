@@ -45,7 +45,7 @@ const Index = () => {
       title: "BÔNUS #1: 4 Formas de Ganhar Dinheiro com IA",
       description: "4 formas de ganhar dinheiro com IA em 7 dias!",
       value: "Valor: R$ 497 | Seu preço: GRÁTIS",
-      image: "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/pack%20capa.webp"
+      image: "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/banner%20curso.webp"
     },
     {
       title: "BÔNUS #2: Sites com IA - Estratégia Completa",
