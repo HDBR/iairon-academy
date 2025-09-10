@@ -15,16 +15,16 @@ const FeatureCard = ({ title, description, value, isBonus = false, image }: Feat
   return (
     <Card className={`glass-card glass-card-hover transition-all duration-300 p-8 ${isBonus ? 'border-tech-purple/30' : 'border-tech-blue/20'}`}>
       {image ? (
-        <div className="flex flex-col md:flex-row items-start gap-6">
-          <div className="w-full md:w-48 flex-shrink-0">
+        <div className="flex flex-col items-center gap-6">
+          <div className="w-full max-w-md mx-auto">
             <img 
               src={image} 
               alt={title}
               className="w-full h-auto rounded-lg object-cover"
             />
           </div>
-          <div className="flex-1">
-            <div className="flex items-start space-x-4 mb-4">
+          <div className="w-full text-center">
+            <div className="flex items-center justify-center space-x-4 mb-4">
               <div className={`rounded-full p-2 flex-shrink-0 ${
                 isBonus 
                   ? 'bg-gradient-to-r from-tech-purple to-tech-blue' 
