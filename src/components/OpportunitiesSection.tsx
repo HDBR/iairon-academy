@@ -27,6 +27,38 @@ const OpportunitiesSection = () => {
     title: "Automação de Processos",
     description: "Implemente soluções de vídeo automatizadas para grandes empresas"
   }];
-  return;
+  
+  return (
+    <section className="section-spacing container-padding">
+      <div className="section-divider mb-12"></div>
+      
+      <div className="container mx-auto max-w-6xl">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 gradient-text">
+          Oportunidades que se abrem para você
+        </h2>
+        <p className="text-xl text-muted-foreground text-center mb-12 max-w-3xl mx-auto">
+          Com o conhecimento do LABVIDIA, você pode explorar diversas oportunidades no mercado de vídeos com IA
+        </p>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {opportunities.map((opportunity, index) => (
+            <Card key={index} className="glass-card glass-card-hover p-6 text-center">
+              <div className="flex justify-center mb-4">
+                <div className="bg-gradient-to-r from-tech-purple/20 to-tech-blue/20 p-4 rounded-full">
+                  {opportunity.icon}
+                </div>
+              </div>
+              <h3 className="font-bold text-xl mb-3 text-foreground">
+                {opportunity.title}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                {opportunity.description}
+              </p>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 export default OpportunitiesSection;

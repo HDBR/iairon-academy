@@ -21,12 +21,8 @@ import GoldenTicketBonus from '@/components/GoldenTicketBonus';
 const Index = () => {
   const features = [
     {
-      title: "Hotseats semanais ao vivo no Zoom",
+      title: "Imersões de sábado com o Pettrus o dia todo!",
       description: "Mentorias de longa duração onde desenvolveremos suas habilidades com VEO 3 e outras ferramentas de IA"
-    },
-    {
-      title: "2 Projetos Reais Desenvolvidos",
-      description: "Criaremos vídeos dos próprios membros aplicando técnicas profissionais"
     },
     {
       title: "Área de Membros por 1 Ano",
