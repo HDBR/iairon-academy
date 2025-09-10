@@ -9,6 +9,7 @@ import CertificateSection from '@/components/CertificateSection';
 import OpportunitiesSection from '@/components/OpportunitiesSection';
 import BackgroundEffects from '@/components/BackgroundEffects';
 import WeeklyTutorialsSection from '@/components/WeeklyTutorialsSection';
+import WhatsAppVipSection from '@/components/WhatsAppVipSection';
 import { ImmediateAccessSection } from '@/components/ImmediateAccessSection';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { Card } from '@/components/ui/card';
@@ -31,10 +32,6 @@ const Index = () => {
     {
       title: "Área de Membros por 1 Ano",
       description: "Todo material gravado, templates exclusivos e atualizações constantes"
-    },
-    {
-      title: "Grupo VIP no WhatsApp",
-      description: "Acompanhamento direto e networking com outros profissionais"
     },
     {
       title: "Materiais de Apoio Exclusivos",
@@ -183,7 +180,10 @@ const Index = () => {
         {/* 5. Weekly Tutorials Section */}
         <WeeklyTutorialsSection />
 
-        {/* 6. Bonuses Section */}
+        {/* 6. WhatsApp VIP Section */}
+        <WhatsAppVipSection />
+
+        {/* 7. Bonuses Section */}
         <section className="section-spacing container-padding">
           <div className="section-divider mb-12"></div>
           
