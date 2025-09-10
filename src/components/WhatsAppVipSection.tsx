@@ -3,14 +3,11 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { MessageCircle, Users, Clock, Star } from 'lucide-react';
-
 const WhatsAppVipSection = () => {
   const handlePurchase = () => {
     window.open('https://payfast.greenn.com.br/122280/offer/3lXE3l?b_id_1=130096&b_offer_1=mXYbYh', '_blank');
   };
-
-  return (
-    <section className="section-spacing container-padding">
+  return <section className="section-spacing container-padding">
       <div className="section-divider mb-12"></div>
       
       <div className="container mx-auto max-w-4xl">
@@ -85,22 +82,11 @@ const WhatsAppVipSection = () => {
                 </p>
               </div>
 
-              <div className="mt-8">
-                <Button 
-                  onClick={handlePurchase}
-                  size="lg" 
-                  className="cta-button px-8 py-4 text-lg font-bold text-white border-0 transition-all duration-300 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700"
-                >
-                  <MessageCircle className="w-6 h-6 mr-3" />
-                  GARANTIR ACESSO VIP AGORA
-                </Button>
-              </div>
+              
             </div>
           </div>
         </Card>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default WhatsAppVipSection;
