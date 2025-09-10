@@ -33,10 +33,6 @@ const Index = () => {
     {
       title: "Área de Membros por 1 Ano",
       description: "Todo material gravado, templates exclusivos e atualizações constantes"
-    },
-    {
-      title: "Materiais de Apoio Exclusivos",
-      description: "Templates, prompts otimizados e checklists para acelerar sua produção"
     }
   ];
 
