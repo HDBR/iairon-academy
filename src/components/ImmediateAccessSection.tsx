@@ -15,9 +15,7 @@ const images = [
   carouselVideoSample,
   "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/CLONES.webp",
   "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%20cursos%20aigram.webp",
-  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%20agentes%20express.webp",
-  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/edicao%20com%20IA.webp",
-  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/ia%20para%20produtos%20fisicos_.webp"
+  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%20agentes%20express.webp"
 ];
 
 export const ImmediateAccessSection = () => {
