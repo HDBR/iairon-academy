@@ -118,15 +118,6 @@ const CircularGallery = React.forwardRef<HTMLDivElement, CircularGalleryProps>(
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
                   />
-                  <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/90 to-transparent text-white">
-                    <h3 className="text-lg font-bold mb-1">{item.title}</h3>
-                    <p className="text-sm opacity-90 line-clamp-2">{item.description}</p>
-                    {item.category && (
-                      <span className="text-xs mt-2 inline-block px-2 py-1 bg-primary/20 rounded-full opacity-80">
-                        {item.category}
-                      </span>
-                    )}
-                  </div>
                 </div>
               </div>
             );
