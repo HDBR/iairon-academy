@@ -195,7 +195,7 @@ const Index = () => {
               Seus Bônus Exclusivos
             </h2>
             
-            <div className="space-y-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
               {bonuses.map((bonus, index) => (
                 <FeatureCard
                   key={index}
@@ -206,10 +206,10 @@ const Index = () => {
                   image={bonus.image}
                 />
               ))}
-              
-              {/* Golden Ticket Bonus - Destaque Especial */}
-              <GoldenTicketBonus />
             </div>
+            
+            {/* Golden Ticket Bonus - Destaque Especial */}
+            <GoldenTicketBonus />
           </div>
         </section>
 

@@ -16,7 +16,7 @@ const FeatureCard = ({ title, description, value, isBonus = false, image }: Feat
     <Card className={`glass-card glass-card-hover transition-all duration-300 p-8 ${isBonus ? 'border-tech-purple/30' : 'border-tech-blue/20'}`}>
       {image ? (
         <div className="flex flex-col items-center gap-6">
-          <div className="w-full max-w-md mx-auto">
+          <div className="w-full max-w-xs mx-auto">
             <img 
               src={image} 
               alt={title}
