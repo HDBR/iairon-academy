@@ -9,7 +9,6 @@ const images = [
   "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%20sessao%20de%20fotos%20com%20IA.webp",
   "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/labvidia%20capa.webp",
   carouselGroup1,
-  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/replay%281%29%281%29.webp",
   carouselLayer1,
   "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%281%29.webp",
   carouselVideoSample,
