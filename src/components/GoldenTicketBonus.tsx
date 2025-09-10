@@ -49,7 +49,7 @@ const GoldenTicketBonus = () => {
                   <Calendar className="w-5 h-5 text-yellow-500" />
                   <div>
                     <div className="font-semibold text-yellow-500">Quando</div>
-                    <div className="text-sm text-muted-foreground">Agosto - Setembro 2025</div>
+                    <div className="text-sm text-muted-foreground">Outubro 2025</div>
                   </div>
                 </div>
                 
@@ -70,6 +70,12 @@ const GoldenTicketBonus = () => {
                   <li>• Estratégias avançadas de negócios</li>
                   <li>• Acesso VIP com benefícios especiais</li>
                 </ul>
+              </div>
+              
+              <div className="bg-red-500/10 p-3 rounded-lg border border-red-400/30">
+                <p className="text-sm text-red-400 font-medium">
+                  ⚠️ <strong>Importante:</strong> O Golden Ticket garante apenas o ingresso VIP. Gastos com deslocamento, hospedagem e alimentação não estão inclusos.
+                </p>
               </div>
             </div>
             
