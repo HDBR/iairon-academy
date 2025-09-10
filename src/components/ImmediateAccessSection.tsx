@@ -28,10 +28,10 @@ export const ImmediateAccessSection = () => {
         {/* Title */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
-            Tenha Acesso Imediato
+            Acesso por 1 Ano Completo
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Veja o que você vai receber assim que finalizar sua inscrição
+            Veja o que você vai receber + todas as atualizações e novos cursos gravados durante este ano
           </p>
         </div>
 
