@@ -3,7 +3,7 @@ import allInOneImage from "@/assets/all-in-one-section.webp";
 
 export const AllInOneSection = () => {
   return (
-    <section className="py-16 px-4">
+    <section className="px-4">
       <div className="max-w-6xl mx-auto">
         <ContainerScroll
           titleComponent={

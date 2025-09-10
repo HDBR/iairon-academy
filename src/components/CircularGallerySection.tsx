@@ -62,7 +62,7 @@ const galleryData: GalleryItem[] = [
 
 export const CircularGallerySection = () => {
   return (
-    <div className="w-full bg-background text-foreground" style={{ height: '400vh' }}>
+    <div className="w-full bg-background text-foreground" style={{ height: '250vh' }}>
       <div className="w-full h-screen sticky top-0 flex flex-col items-center justify-center overflow-hidden relative">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>

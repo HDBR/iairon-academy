@@ -81,7 +81,7 @@ const Index = () => {
       
       <div className="main-content relative z-10">
         {/* Hero Section with Video */}
-        <section className="pt-16 pb-8 container-padding relative overflow-hidden">
+        <section className="pt-12 pb-8 container-padding relative overflow-hidden">
           <div className="container mx-auto text-center max-w-5xl">
             <div className="mb-12">
               <div className="inline-block glass-card px-6 py-3 rounded-full mb-8 animate-shimmer">
