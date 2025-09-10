@@ -52,11 +52,6 @@ const Index = () => {
       title: "BÔNUS #2: Sites com IA - Estratégia Completa",
       description: "Sites com IA - Faça a partir de 3 salários mínimos por mês! Acesso a toda estratégia pronta para você executar!",
       value: "Valor: R$ 500 | Seu preço: GRÁTIS"
-    },
-    {
-      title: "BÔNUS #3: Ingresso VIP do Evento Presencial",
-      description: "Ingresso VIP para o evento presencial que acontecerá em outubro em São Paulo! Uma experiência única de networking e aprendizado intensivo com o Pettrus.",
-      value: "Valor: Incalculável | Seu preço: GRÁTIS"
     }
   ];
 
