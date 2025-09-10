@@ -195,7 +195,7 @@ const Index = () => {
               Seus Bônus Exclusivos
             </h2>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 justify-items-center">
               {bonuses.map((bonus, index) => (
                 <FeatureCard
                   key={index}
