@@ -154,8 +154,6 @@ const Index = () => {
         {/* 2. All In One Section */}
         <AllInOneSection />
 
-        {/* 3. Circular Gallery Section */}
-        <CircularGallerySection />
 
         {/* 4. Video Section */}
         <VideoSection />
@@ -289,6 +287,9 @@ const Index = () => {
 
         {/* 11. Mentor Section */}
         <MentorSection />
+
+        {/* 12. Circular Gallery Section */}
+        <CircularGallerySection />
 
         {/* Footer */}
         <footer className="section-spacing container-padding border-t border-border/50 relative">
