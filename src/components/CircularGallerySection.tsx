@@ -85,7 +85,7 @@ export const CircularGallerySection = () => {
           <CircularGallery 
             items={galleryData} 
             radius={500}
-            autoRotateSpeed={0.015}
+            autoRotateSpeed={0.05}
           />
         </div>
 
