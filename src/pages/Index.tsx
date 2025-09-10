@@ -17,6 +17,7 @@ import { Button } from '@/components/ui/button';
 import { Shield, Star, Zap, TrendingUp, Users, Play, ArrowDown } from 'lucide-react';
 import bgHero from '@/assets/bg-hero.webp';
 import superpackParallax from '@/assets/superpack-parallax.webp';
+import carouselGroup1 from '@/assets/carousel-group-1.webp';
 import GoldenTicketBonus from '@/components/GoldenTicketBonus';
 
 const Index = () => {
@@ -43,12 +44,14 @@ const Index = () => {
     {
       title: "BÔNUS #1: 4 Formas de Ganhar Dinheiro com IA",
       description: "4 formas de ganhar dinheiro com IA em 7 dias!",
-      value: "Valor: R$ 497 | Seu preço: GRÁTIS"
+      value: "Valor: R$ 497 | Seu preço: GRÁTIS",
+      image: carouselGroup1
     },
     {
       title: "BÔNUS #2: Sites com IA - Estratégia Completa",
       description: "Sites com IA - Faça a partir de 3 salários mínimos por mês! Acesso a toda estratégia pronta para você executar!",
-      value: "Valor: R$ 500 | Seu preço: GRÁTIS"
+      value: "Valor: R$ 500 | Seu preço: GRÁTIS",
+      image: "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/Sites%20com%20IA.webp"
     }
   ];
 
@@ -200,6 +203,7 @@ const Index = () => {
                   description={bonus.description}
                   value={bonus.value}
                   isBonus={true}
+                  image={bonus.image}
                 />
               ))}
               
