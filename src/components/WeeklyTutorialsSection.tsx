@@ -49,23 +49,23 @@ const WeeklyTutorialsSection = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-  const totalValue = 20 * 200; // 20 encontros × R$ 200
+  const totalValue = 4 * 5 * 200; // 4 semanas × 5 dias × R$ 200
 
   return <section className="section-spacing bg-gradient-to-b from-background/50 to-background">
       <div className="container-padding">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
             <Calendar className="w-8 h-8 text-tech-blue" />
-            <Badge variant="outline" className="glass-card border-tech-blue/30 text-tech-blue px-4 py-2">
-              Tutorias Semanais
+            <Badge variant="outline" className="glass-card border-tech-purple/30 text-tech-purple px-4 py-2">
+              BÔNUS EXCLUSIVO
             </Badge>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6 animate-pulse drop-shadow-lg">
-            ✨ Tutorias Ao Vivo Semanais no Zoom ✨
+            ✨ 4 Semanas de Tutorias Ao Vivo no Zoom ✨
           </h2>
           
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">O único treinamento que te dar acompanhamento personalizado diário para acelerar seus resultados na IA com especialistas AO VIVO!</p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">BÔNUS EXCLUSIVO: 4 semanas completas de acompanhamento personalizado diário para acelerar seus resultados na IA com especialistas AO VIVO!</p>
         </div>
 
         {/* Weekly Calendar */}
@@ -115,7 +115,7 @@ const WeeklyTutorialsSection = () => {
         <div className="glass-card p-8 max-w-2xl mx-auto mt-12 border border-tech-purple/20">
           <div className="text-center">
             <p className="text-lg text-muted-foreground mb-4">
-              Se fosse cobrar R$ 200,00 por cada encontro, isso daria:
+              Se fosse cobrar R$ 200,00 por cada encontro durante 4 semanas, isso daria:
             </p>
             <div className="flex items-center justify-center gap-4 mb-4">
               <span className="text-3xl font-bold text-red-500 line-through">
@@ -126,9 +126,9 @@ const WeeklyTutorialsSection = () => {
               </span>
             </div>
             <Badge variant="outline" className="bg-green-500/10 border-green-500/30 text-green-400">
-              Incluído no seu acesso
+              BÔNUS EXCLUSIVO incluído
             </Badge>
-            <p className="text-sm text-muted-foreground mt-3">Baseado em 20 encontros no mês</p>
+            <p className="text-sm text-muted-foreground mt-3">Baseado em 4 semanas completas de tutoriais</p>
           </div>
         </div>
 
