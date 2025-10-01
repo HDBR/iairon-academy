@@ -6,7 +6,7 @@ import FeatureCard from '@/components/FeatureCard';
 import TsunamiSection from '@/components/TsunamiSection';
 import PriceSection from '@/components/PriceSection';
 import CertificateSection from '@/components/CertificateSection';
-import OpportunitiesSection from '@/components/OpportunitiesSection';
+
 import BackgroundEffects from '@/components/BackgroundEffects';
 import WeeklyTutorialsSection from '@/components/WeeklyTutorialsSection';
 import WhatsAppVipSection from '@/components/WhatsAppVipSection';
@@ -216,8 +216,6 @@ const Index = () => {
         {/* 6. Certificate Section */}
         <CertificateSection />
 
-        {/* 7. Opportunities Section */}
-        <OpportunitiesSection />
 
         {/* 8. Results Guarantee Section */}
         <section className="section-spacing container-padding">
