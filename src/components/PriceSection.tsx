@@ -26,13 +26,45 @@ const PriceSection = () => {
   ];
 
   const totalValue = 16091;
-  const previousPrice = 1497;
-  const currentPrice = 997;
-  const savings = totalValue - currentPrice;
-  const installmentValue = "102,51";
 
-  const handlePurchase = () => {
-    window.open('https://payfast.greenn.com.br/122280/offer/3lXE3l?b_id_1=130096&b_offer_1=mXYbYh', '_blank');
+  const plans = [
+    {
+      id: 'basic',
+      name: 'PLANO BÁSICO',
+      price: 797,
+      previousPrice: 1297,
+      installmentValue: '82,04',
+      savings: totalValue - 797,
+      features: [
+        'Acesso aos cursos gravados por 1 ano',
+        '4 semanas de tutoria ao vivo com tutores especialistas no zoom',
+        '1 mês de grupo de whatsapp do Pettrus',
+        '1 imersão de sábado ao vivo o dia todo'
+      ],
+      purchaseUrl: 'https://payfast.greenn.com.br/122280/offer/3lXE3l?b_id_1=130096&b_offer_1=mXYbYh',
+      isPopular: false
+    },
+    {
+      id: 'premium',
+      name: 'PLANO PREMIUM',
+      price: 997,
+      previousPrice: 1497,
+      installmentValue: '102,51',
+      savings: totalValue - 997,
+      features: [
+        'Acesso aos cursos gravados por 1 ano',
+        '4 semanas de tutoria ao vivo com tutores especialistas no zoom',
+        '1 mês de grupo de whatsapp do Pettrus',
+        '4 imersões de sábado ao vivo o dia todo 🔥'
+      ],
+      purchaseUrl: 'https://payfast.greenn.com.br/122280/offer/3lXE3l?b_id_1=130096&b_offer_1=mXYbYh',
+      isPopular: true,
+      highlightFeature: '4 imersões de sábado ao vivo o dia todo'
+    }
+  ];
+
+  const handlePurchase = (url: string) => {
+    window.open(url, '_blank');
   };
 
   return (
@@ -85,91 +117,150 @@ const PriceSection = () => {
           </div>
         </Card>
 
-        {/* Segundo Card: Oferta Atual */}
-        <Card className="glass-card price-highlight p-8 text-center relative overflow-hidden mb-12">
-          <div className="absolute inset-0 bg-gradient-to-br from-tech-blue/5 to-tech-purple/5 -z-10"></div>
-          
-          {/* Preço anterior riscado */}
-          <div className="mb-4">
-            <div className="text-lg text-orange-500 line-through font-medium">
-              De R$ {previousPrice.toLocaleString()},00 por
-            </div>
-          </div>
-          
-          <h3 className="text-xl font-bold mb-6 gradient-text-accent">
-            Seu investimento hoje:
-          </h3>
-          
-          <div className="mb-6">
-            {/* Destaque do Parcelado */}
-            <div className="text-4xl md:text-5xl font-black gradient-text-accent mb-2">
-              12x de R$ {installmentValue}
-            </div>
-            <div className="text-2xl md:text-3xl font-bold text-tech-blue mb-4">
-              à vista R$ {currentPrice.toLocaleString()},00
-            </div>
-          </div>
+        {/* Dois Planos Lado a Lado */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          {plans.map((plan) => (
+            <Card 
+              key={plan.id}
+              className={`glass-card p-8 text-center relative overflow-hidden transition-all duration-300 ${
+                plan.isPopular 
+                  ? 'price-highlight border-2 border-tech-blue shadow-lg shadow-tech-blue/20 scale-105' 
+                  : 'border border-border/50'
+              }`}
+            >
+              {/* Badge "Mais Popular" */}
+              {plan.isPopular && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+                  <div className="bg-gradient-to-r from-tech-blue to-tech-purple text-white px-6 py-1 rounded-full text-xs font-bold">
+                    ⭐ MAIS POPULAR
+                  </div>
+                </div>
+              )}
 
-          <div className="glass-card px-6 py-4 rounded-xl mb-6">
-            <div className="text-xl font-bold text-tech-blue">
-              💸 Economia de R$ {savings.toLocaleString()}
-            </div>
-            <div className="text-sm text-muted-foreground mt-1">
-              Mais de 93% de desconto!
-            </div>
-          </div>
+              <div className={`absolute inset-0 ${
+                plan.isPopular 
+                  ? 'bg-gradient-to-br from-tech-blue/10 to-tech-purple/10' 
+                  : 'bg-gradient-to-br from-tech-blue/5 to-tech-purple/5'
+              } -z-10`}></div>
+              
+              {/* Nome do Plano */}
+              <h3 className={`text-xl font-bold mb-4 ${
+                plan.isPopular ? 'gradient-text-accent' : 'text-foreground'
+              }`}>
+                {plan.name}
+              </h3>
 
-          <div className="space-y-3 text-sm text-muted-foreground mb-6">
-            <div className="flex items-center justify-center gap-2">
-              <ArrowRight className="w-4 h-4 text-tech-blue" />
-              <span>Acesso imediato após o pagamento</span>
-            </div>
-            <div className="flex items-center justify-center gap-2">
-              <ArrowRight className="w-4 h-4 text-tech-blue" />
-              <span>Garantia de 7 dias</span>
-            </div>
-            <div className="flex items-center justify-center gap-2">
-              <ArrowRight className="w-4 h-4 text-tech-blue" />
-              <span>Pagamento 100% seguro</span>
-            </div>
-          </div>
+              {/* Preço anterior riscado */}
+              <div className="mb-4">
+                <div className="text-lg text-orange-500 line-through font-medium">
+                  De R$ {plan.previousPrice.toLocaleString()},00
+                </div>
+              </div>
+              
+              {/* Preço */}
+              <div className="mb-6">
+                <div className={`text-3xl md:text-4xl font-black mb-2 ${
+                  plan.isPopular ? 'gradient-text-accent' : 'text-tech-blue'
+                }`}>
+                  12x de R$ {plan.installmentValue}
+                </div>
+                <div className="text-xl md:text-2xl font-bold text-tech-blue mb-4">
+                  à vista R$ {plan.price.toLocaleString()},00
+                </div>
+              </div>
 
-          {/* Botão no card */}
-          <button
-            onClick={handlePurchase}
-            className="cta-button w-full px-8 py-4 text-lg font-bold text-white border-0 transition-all duration-300 rounded-lg mb-6"
-          >
-            GARANTIR MINHA VAGA AGORA
-          </button>
+              {/* Economia */}
+              <div className="glass-card px-6 py-3 rounded-xl mb-6">
+                <div className="text-lg font-bold text-tech-blue">
+                  💸 Economia de R$ {plan.savings.toLocaleString()}
+                </div>
+                <div className="text-xs text-muted-foreground mt-1">
+                  Mais de {Math.round((plan.savings / totalValue) * 100)}% de desconto!
+                </div>
+              </div>
 
-          {/* CountdownTimer agora dentro do card */}
-          <CountdownTimer />
+              {/* Features do Plano */}
+              <div className="space-y-3 mb-6 text-left">
+                {plan.features.map((feature, idx) => (
+                  <div 
+                    key={idx}
+                    className={`flex items-start gap-3 p-3 rounded-lg ${
+                      plan.isPopular && feature.includes(plan.highlightFeature || '') 
+                        ? 'bg-tech-blue/20 border-2 border-tech-blue/50 animate-pulse-glow' 
+                        : 'bg-muted/20'
+                    }`}
+                  >
+                    <Check className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
+                      plan.isPopular && feature.includes(plan.highlightFeature || '') 
+                        ? 'text-tech-blue' 
+                        : 'text-tech-blue'
+                    }`} />
+                    <span className={`text-sm leading-relaxed ${
+                      plan.isPopular && feature.includes(plan.highlightFeature || '') 
+                        ? 'font-bold text-foreground' 
+                        : 'text-foreground'
+                    }`}>
+                      {feature}
+                    </span>
+                  </div>
+                ))}
+              </div>
 
-          {/* Aviso sobre aumento do preço */}
-          <div className="mt-6 p-4 bg-tech-red/10 border border-tech-red/20 rounded-lg">
-            <div className="text-sm font-semibold text-tech-red mb-1">
-              ⚠️ ATENÇÃO: OFERTA POR TEMPO LIMITADO
-            </div>
-            <div className="text-xs text-muted-foreground">
-              Após o fim da contagem, o valor retorna para <span className="font-bold text-tech-red">R$ 1.497,00</span>
-            </div>
-          </div>
-        </Card>
+              {/* Informações adicionais */}
+              <div className="space-y-2 text-xs text-muted-foreground mb-6">
+                <div className="flex items-center justify-center gap-2">
+                  <ArrowRight className="w-3 h-3 text-tech-blue" />
+                  <span>Acesso imediato após o pagamento</span>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <ArrowRight className="w-3 h-3 text-tech-blue" />
+                  <span>Garantia de 7 dias</span>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <ArrowRight className="w-3 h-3 text-tech-blue" />
+                  <span>Pagamento 100% seguro</span>
+                </div>
+              </div>
 
-        <div className="text-center mb-8">
-          <p className="text-xl font-bold text-tech-red">
-            Todos os bônus estão disponíveis!!
-          </p>
+              {/* Botão de compra */}
+              <button
+                onClick={() => handlePurchase(plan.purchaseUrl)}
+                className={`w-full px-6 py-4 text-base font-bold text-white border-0 transition-all duration-300 rounded-lg ${
+                  plan.isPopular 
+                    ? 'cta-button' 
+                    : 'bg-tech-blue hover:bg-tech-blue/90'
+                }`}
+              >
+                GARANTIR MINHA VAGA AGORA
+              </button>
+
+              {/* Aviso de tempo limitado */}
+              {plan.isPopular && (
+                <div className="mt-6 p-3 bg-tech-red/10 border border-tech-red/20 rounded-lg">
+                  <div className="text-xs font-semibold text-tech-red mb-1">
+                    ⚠️ OFERTA POR TEMPO LIMITADO
+                  </div>
+                  <div className="text-[10px] text-muted-foreground">
+                    Após o fim da contagem, o valor retorna para <span className="font-bold text-tech-red">R$ {plan.previousPrice.toLocaleString()},00</span>
+                  </div>
+                </div>
+              )}
+            </Card>
+          ))}
         </div>
 
-        {/* Botão final de compra */}
+        {/* Contador centralizado */}
+        <div className="mb-8">
+          <CountdownTimer />
+        </div>
+
         <div className="text-center">
-          <button
-            onClick={handlePurchase}
-            className="cta-button px-8 py-4 text-lg font-bold text-white border-0 transition-all duration-300 rounded-lg"
-          >
-            GARANTIR MINHA VAGA AGORA
-          </button>
+          <p className="text-xl font-bold text-tech-red mb-4">
+            Todos os bônus estão disponíveis em ambos os planos!!
+          </p>
+          <p className="text-sm text-muted-foreground">
+            Escolha o plano que melhor se encaixa com suas necessidades
+          </p>
         </div>
       </div>
     </section>
