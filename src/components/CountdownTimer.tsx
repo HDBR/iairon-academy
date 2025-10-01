@@ -36,39 +36,39 @@ const CountdownTimer = () => {
   const formatTime = (time: number) => time.toString().padStart(2, '0');
 
   return (
-    <div className="flex items-center justify-center space-x-8 py-12">
+    <div className="flex items-center justify-center space-x-3 sm:space-x-8 py-8 sm:py-12">
       <div className="text-center">
-        <div className="glass-card p-6 rounded-2xl tech-glow">
-          <div className="text-4xl md:text-5xl font-mono font-bold gradient-text-accent glow-text">
+        <div className="glass-card p-3 sm:p-6 rounded-xl sm:rounded-2xl tech-glow">
+          <div className="text-2xl sm:text-4xl md:text-5xl font-mono font-bold gradient-text-accent glow-text">
             {formatTime(timeLeft.hours)}
           </div>
-          <div className="text-xs text-muted-foreground mt-2 uppercase tracking-wider font-medium">
+          <div className="text-[10px] sm:text-xs text-muted-foreground mt-1 sm:mt-2 uppercase tracking-wider font-medium">
             Horas
           </div>
         </div>
       </div>
       
-      <div className="text-3xl font-mono text-tech-blue">:</div>
+      <div className="text-xl sm:text-3xl font-mono gradient-text-accent">:</div>
       
       <div className="text-center">
-        <div className="glass-card p-6 rounded-2xl tech-glow">
-          <div className="text-4xl md:text-5xl font-mono font-bold gradient-text-accent glow-text">
+        <div className="glass-card p-3 sm:p-6 rounded-xl sm:rounded-2xl tech-glow">
+          <div className="text-2xl sm:text-4xl md:text-5xl font-mono font-bold gradient-text-accent glow-text">
             {formatTime(timeLeft.minutes)}
           </div>
-          <div className="text-xs text-muted-foreground mt-2 uppercase tracking-wider font-medium">
+          <div className="text-[10px] sm:text-xs text-muted-foreground mt-1 sm:mt-2 uppercase tracking-wider font-medium">
             Minutos
           </div>
         </div>
       </div>
       
-      <div className="text-3xl font-mono text-tech-blue">:</div>
+      <div className="text-xl sm:text-3xl font-mono gradient-text-accent">:</div>
       
       <div className="text-center">
-        <div className="glass-card p-6 rounded-2xl tech-glow">
-          <div className="text-4xl md:text-5xl font-mono font-bold gradient-text-accent glow-text">
+        <div className="glass-card p-3 sm:p-6 rounded-xl sm:rounded-2xl tech-glow">
+          <div className="text-2xl sm:text-4xl md:text-5xl font-mono font-bold gradient-text-accent glow-text">
             {formatTime(timeLeft.seconds)}
           </div>
-          <div className="text-xs text-muted-foreground mt-2 uppercase tracking-wider font-medium">
+          <div className="text-[10px] sm:text-xs text-muted-foreground mt-1 sm:mt-2 uppercase tracking-wider font-medium">
             Segundos
           </div>
         </div>

@@ -354,6 +354,30 @@
   }
 }
 
+/* Tech glow effects for countdown timer */
+.tech-glow {
+  box-shadow: 
+    0 0 20px hsl(var(--primary) / 0.3),
+    0 0 40px hsl(var(--primary) / 0.1),
+    inset 0 0 20px hsl(var(--primary) / 0.05);
+  border: 1px solid hsl(var(--primary) / 0.2);
+  transition: all 0.3s ease;
+}
+
+.tech-glow:hover {
+  box-shadow: 
+    0 0 30px hsl(var(--primary) / 0.4),
+    0 0 60px hsl(var(--primary) / 0.2),
+    inset 0 0 30px hsl(var(--primary) / 0.1);
+}
+
+.glow-text {
+  text-shadow: 
+    0 0 10px hsl(var(--primary) / 0.5),
+    0 0 20px hsl(var(--primary) / 0.3),
+    0 0 30px hsl(var(--primary) / 0.1);
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
