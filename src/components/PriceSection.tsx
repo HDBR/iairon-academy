@@ -11,7 +11,7 @@ const PriceSection = () => {
     { item: "4 imersões ao vivo com o Pettrus no zoom aos sábados em hora pra acabar! Acesso 1 mês", value: "R$ 2.000", isOneMonth: true },
     { item: "Mais de 20 tutorias semanais ao vivo no zoom com especialistas em cada área! Acesso 1 mês", value: "R$ 4.000", isOneMonth: true },
     { item: "Grupo de whatsapp do Pettrus! Acesso 1 mês", value: "R$ 1.000", isOneMonth: true },
-    { item: "Ingresso VIP para o evento presencial do Pettrus (VÍDEOS COM IA e Negócios) que vai acontecer em SP entre Agosto e Setembro!", value: "R$ 500", isOneMonth: false },
+    { item: "Ingresso VIP para o evento presencial do Pettrus (VÍDEOS COM IA e Negócios) que vai acontecer em SP nos dias 15 e 16 de Novembro!", value: "R$ 500", isOneMonth: false },
     { item: "Desconto de 50% em qualquer evento presencial organizado pelo Pettrus para membros durante 1 ano!", value: "Incalculável", isOneMonth: false },
     { item: "Os 5 primeiro terão uma consultoria individual com o Pettrus de 1 hora no zoom!", value: "R$ 3.000", isOneMonth: false },
     { item: "Acesso antecipado da HUBBIA com 1 mês grátis*! (Com uma quantidade de créditos disponível para uso)", value: "R$ 97", isOneMonth: false },
@@ -130,8 +130,8 @@ const PriceSection = () => {
             >
               {/* Badge "Mais Popular" */}
               {plan.isPopular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                  <div className="bg-gradient-to-r from-tech-blue to-tech-purple text-white px-6 py-1 rounded-full text-xs font-bold">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 w-max">
+                  <div className="bg-gradient-to-r from-tech-blue to-tech-purple text-white px-4 sm:px-6 py-1 rounded-full text-[10px] sm:text-xs font-bold whitespace-nowrap">
                     ⭐ MAIS POPULAR
                   </div>
                 </div>
