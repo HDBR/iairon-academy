@@ -29,22 +29,6 @@ const PriceSection = () => {
 
   const plans = [
     {
-      id: 'basic',
-      name: 'PLANO BÁSICO',
-      price: 797,
-      previousPrice: 1297,
-      installmentValue: '82,04',
-      savings: totalValue - 797,
-      features: [
-        'Acesso aos cursos gravados por 1 ano',
-        '4 semanas de tutoria ao vivo com tutores especialistas no zoom',
-        '1 mês de grupo de whatsapp do Pettrus',
-        '1 imersão de sábado ao vivo o dia todo'
-      ],
-      purchaseUrl: 'https://payfast.greenn.com.br/122280',
-      isPopular: false
-    },
-    {
       id: 'premium',
       name: 'PLANO PREMIUM',
       price: 997,
@@ -60,6 +44,22 @@ const PriceSection = () => {
       purchaseUrl: 'https://payfast.greenn.com.br/122280',
       isPopular: true,
       highlightFeature: '4 imersões de sábado ao vivo o dia todo'
+    },
+    {
+      id: 'basic',
+      name: 'PLANO BÁSICO',
+      price: 797,
+      previousPrice: 1297,
+      installmentValue: '82,04',
+      savings: totalValue - 797,
+      features: [
+        'Acesso aos cursos gravados por 1 ano',
+        '4 semanas de tutoria ao vivo com tutores especialistas no zoom',
+        '1 mês de grupo de whatsapp do Pettrus',
+        '1 imersão de sábado ao vivo o dia todo'
+      ],
+      purchaseUrl: 'https://payfast.greenn.com.br/122280',
+      isPopular: false
     }
   ];
 
