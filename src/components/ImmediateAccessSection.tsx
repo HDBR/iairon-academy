@@ -14,7 +14,10 @@ const images = [
   carouselVideoSample,
   "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/CLONES.webp",
   "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%20cursos%20aigram.webp",
-  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%20agentes%20express.webp"
+  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%20agentes%20express.webp",
+  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%20veo3.webp",
+  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/edicao%20com%20IA.webp",
+  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/banner%20curso%20%281%29.webp"
 ];
 
 export const ImmediateAccessSection = () => {
