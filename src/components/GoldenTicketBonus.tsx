@@ -49,7 +49,7 @@ const GoldenTicketBonus = () => {
                   <Calendar className="w-5 h-5 text-yellow-500 flex-shrink-0" />
                   <div>
                     <div className="font-semibold text-yellow-500 text-sm md:text-base">Quando</div>
-                    <div className="text-xs md:text-sm text-muted-foreground">Outubro 2025</div>
+                    <div className="text-xs md:text-sm text-muted-foreground">15 e 16 de Novembro</div>
                   </div>
                 </div>
                 
