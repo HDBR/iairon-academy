@@ -41,7 +41,7 @@ const PriceSection = () => {
         '1 mês de grupo de whatsapp do Pettrus',
         '4 imersões de sábado ao vivo o dia todo 🔥'
       ],
-      purchaseUrl: 'https://payfast.greenn.com.br/122280/offer/3lXE3l?b_id_1=130096&b_offer_1=mXYbYh',
+      purchaseUrl: 'https://payfast.greenn.com.br/122280',
       isPopular: true,
       highlightFeature: '4 imersões de sábado ao vivo o dia todo'
     },
