@@ -44,22 +44,6 @@ const PriceSection = () => {
       purchaseUrl: 'https://payfast.greenn.com.br/122280/offer/3lXE3l?b_id_1=130096&b_offer_1=mXYbYh',
       isPopular: true,
       highlightFeature: '4 imersões de sábado ao vivo o dia todo'
-    },
-    {
-      id: 'basic',
-      name: 'PLANO BÁSICO',
-      price: 797,
-      previousPrice: 1297,
-      installmentValue: '82,04',
-      savings: totalValue - 797,
-      features: [
-        'Acesso aos cursos gravados por 1 ano',
-        '4 semanas de tutoria ao vivo com tutores especialistas no zoom',
-        '1 mês de grupo de whatsapp do Pettrus',
-        '1 imersão de sábado ao vivo o dia todo'
-      ],
-      purchaseUrl: 'https://payfast.greenn.com.br/122280',
-      isPopular: false
     }
   ];
 
@@ -117,14 +101,14 @@ const PriceSection = () => {
           </div>
         </Card>
 
-        {/* Dois Planos Lado a Lado */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        {/* Plano Premium Centralizado */}
+        <div className="flex justify-center mb-12">
           {plans.map((plan) => (
             <Card 
               key={plan.id}
-              className={`glass-card p-8 text-center relative overflow-hidden transition-all duration-300 ${
+              className={`glass-card p-8 text-center relative overflow-hidden transition-all duration-300 max-w-md w-full ${
                 plan.isPopular 
-                  ? 'price-highlight border-2 border-tech-blue shadow-lg shadow-tech-blue/20 scale-105' 
+                  ? 'price-highlight border-2 border-tech-blue shadow-lg shadow-tech-blue/20' 
                   : 'border border-border/50'
               }`}
             >
@@ -256,10 +240,7 @@ const PriceSection = () => {
 
         <div className="text-center">
           <p className="text-xl font-bold text-tech-red mb-4">
-            Todos os bônus estão disponíveis em ambos os planos!!
-          </p>
-          <p className="text-sm text-muted-foreground">
-            Escolha o plano que melhor se encaixa com suas necessidades
+            Todos os bônus estão inclusos!
           </p>
         </div>
       </div>
