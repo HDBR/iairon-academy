@@ -6,12 +6,10 @@ import FeatureCard from '@/components/FeatureCard';
 import TsunamiSection from '@/components/TsunamiSection';
 import PriceSection from '@/components/PriceSection';
 import CertificateSection from '@/components/CertificateSection';
-
 import BackgroundEffects from '@/components/BackgroundEffects';
 import WeeklyTutorialsSection from '@/components/WeeklyTutorialsSection';
 import WhatsAppVipSection from '@/components/WhatsAppVipSection';
 import { ImmediateAccessSection } from '@/components/ImmediateAccessSection';
-
 import { CircularGallerySection } from '@/components/CircularGallerySection';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { Card } from '@/components/ui/card';
@@ -21,60 +19,46 @@ import bgHero from '@/assets/bg-hero.webp';
 import superpackParallax from '@/assets/superpack-parallax.webp';
 import carouselGroup1 from '@/assets/carousel-group-1.webp';
 import GoldenTicketBonus from '@/components/GoldenTicketBonus';
-
 const Index = () => {
-  const features = [
-    {
-      title: "4 Imersões de sábado com o Pettrus o dia todo!",
-      description: "Mentorias de longa duração onde desenvolveremos suas habilidades com VEO 3 e outras ferramentas de IA. Todas as imersões ficarão gravadas para você revisar quando quiser"
-    },
-    {
-      title: "Comunidade Fechada no Circle",
-      description: "Acesso exclusivo à nossa comunidade privada no Circle, onde você terá networking direto com outros membros e suporte contínuo"
-    },
-    {
-      title: "Área de Membros por 1 Ano",
-      description: "Todo material gravado, templates exclusivos e atualizações constantes"
-    }
-  ];
-
-  const bonuses = [
-    {
-      title: "BÔNUS #1: 4 Formas de Ganhar Dinheiro com IA",
-      description: "4 formas de ganhar dinheiro com IA em 7 dias!",
-      value: "Valor: R$ 497 | Seu preço: GRÁTIS",
-      image: "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/banner%20curso.webp"
-    },
-    {
-      title: "BÔNUS #2: Sites com IA - Estratégia Completa",
-      description: "Sites com IA - Faça a partir de 3 salários mínimos por mês! Acesso a toda estratégia pronta para você executar!",
-      value: "Valor: R$ 500 | Seu preço: GRÁTIS",
-      image: "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/Sites%20com%20IA.webp"
-    }
-  ];
-
+  const features = [{
+    title: "4 Imersões de sábado com o Pettrus o dia todo!",
+    description: "Mentorias de longa duração onde desenvolveremos suas habilidades com VEO 3 e outras ferramentas de IA. Todas as imersões ficarão gravadas para você revisar quando quiser"
+  }, {
+    title: "Comunidade Fechada no Circle",
+    description: "Acesso exclusivo à nossa comunidade privada no Circle, onde você terá networking direto com outros membros e suporte contínuo"
+  }, {
+    title: "Área de Membros por 1 Ano",
+    description: "Todo material gravado, templates exclusivos e atualizações constantes"
+  }];
+  const bonuses = [{
+    title: "BÔNUS #1: 4 Formas de Ganhar Dinheiro com IA",
+    description: "4 formas de ganhar dinheiro com IA em 7 dias!",
+    value: "Valor: R$ 497 | Seu preço: GRÁTIS",
+    image: "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/banner%20curso.webp"
+  }, {
+    title: "BÔNUS #2: Sites com IA - Estratégia Completa",
+    description: "Sites com IA - Faça a partir de 3 salários mínimos por mês! Acesso a toda estratégia pronta para você executar!",
+    value: "Valor: R$ 500 | Seu preço: GRÁTIS",
+    image: "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/Sites%20com%20IA.webp"
+  }];
   const scrollToPricing = () => {
     const pricingSection = document.querySelector('#pricing-section');
     if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: 'smooth' });
+      pricingSection.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
   const handlePurchase = () => {
     window.open('https://payfast.greenn.com.br/122280/offer/3lXE3l?b_id_1=130096&b_offer_1=mXYbYh', '_blank');
   };
-
-  return (
-    <div className="min-h-screen bg-background relative">
+  return <div className="min-h-screen bg-background relative">
       {/* Background Hero Image */}
-      <div 
-        className="fixed top-0 left-0 w-full h-screen bg-cover bg-center bg-no-repeat opacity-100 z-0"
-        style={{
-          backgroundImage: `url(${bgHero})`,
-          backgroundAttachment: 'fixed',
-          backgroundPosition: 'top center'
-        }}
-      />
+      <div className="fixed top-0 left-0 w-full h-screen bg-cover bg-center bg-no-repeat opacity-100 z-0" style={{
+      backgroundImage: `url(${bgHero})`,
+      backgroundAttachment: 'fixed',
+      backgroundPosition: 'top center'
+    }} />
       
       <BackgroundEffects />
       <UrgencyBar />
@@ -89,11 +73,7 @@ const Index = () => {
               </div>
               
               <div className="mb-4">
-                <img 
-                  src="/lovable-uploads/6a7a0740-082a-461e-a486-8ef7542d838e.png" 
-                  alt="LABVIDIA Logo" 
-                  className="mx-auto max-w-7xl w-full h-auto"
-                />
+                <img src="/lovable-uploads/6a7a0740-082a-461e-a486-8ef7542d838e.png" alt="LABVIDIA Logo" className="mx-auto max-w-7xl w-full h-auto" />
               </div>
               
               <p className="text-xl md:text-2xl text-muted-foreground font-light mb-4 max-w-3xl mx-auto">
@@ -125,21 +105,12 @@ const Index = () => {
 
               {/* Botões de CTA na Hero */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-                <Button 
-                  onClick={handlePurchase}
-                  size="lg" 
-                  className="cta-button px-8 py-4 text-lg font-bold text-white border-0 transition-all duration-300"
-                >
+                <Button onClick={handlePurchase} size="lg" className="cta-button px-8 py-4 text-lg font-bold text-white border-0 transition-all duration-300">
                   <Zap className="w-6 h-6 mr-3" />
                   GARANTIR MINHA VAGA AGORA
                 </Button>
                 
-                <Button 
-                  onClick={scrollToPricing}
-                  variant="outline"
-                  size="lg" 
-                  className="glass-card px-8 py-4 text-lg font-medium border-tech-blue/30 hover:bg-tech-blue/10 transition-all duration-300"
-                >
+                <Button onClick={scrollToPricing} variant="outline" size="lg" className="glass-card px-8 py-4 text-lg font-medium border-tech-blue/30 hover:bg-tech-blue/10 transition-all duration-300">
                   <ArrowDown className="w-5 h-5 mr-2" />
                   Ver Parcelamento
                 </Button>
@@ -169,13 +140,7 @@ const Index = () => {
             </h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {features.map((feature, index) => (
-                <FeatureCard
-                  key={index}
-                  title={feature.title}
-                  description={feature.description}
-                />
-              ))}
+              {features.map((feature, index) => <FeatureCard key={index} title={feature.title} description={feature.description} />)}
             </div>
           </div>
         </section>
@@ -196,16 +161,7 @@ const Index = () => {
             </h2>
             
             <div className="grid md:grid-cols-2 gap-6 mb-8 justify-items-center">
-              {bonuses.map((bonus, index) => (
-                <FeatureCard
-                  key={index}
-                  title={bonus.title}
-                  description={bonus.description}
-                  value={bonus.value}
-                  isBonus={true}
-                  image={bonus.image}
-                />
-              ))}
+              {bonuses.map((bonus, index) => <FeatureCard key={index} title={bonus.title} description={bonus.description} value={bonus.value} isBonus={true} image={bonus.image} />)}
             </div>
             
             {/* Golden Ticket Bonus - Destaque Especial */}
@@ -260,19 +216,16 @@ const Index = () => {
         </section>
 
         {/* 9. Tsunami Section */}
-        <TsunamiSection />
+        
 
         {/* Parallax Image Section */}
-        <section 
-          className="h-[60vh] relative overflow-hidden"
-          style={{
-            backgroundImage: `url(${superpackParallax})`,
-            backgroundAttachment: 'fixed',
-            backgroundPosition: 'center center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-          }}
-        >
+        <section className="h-[60vh] relative overflow-hidden" style={{
+        backgroundImage: `url(${superpackParallax})`,
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
+      }}>
           <div className="absolute inset-0 bg-black/20"></div>
         </section>
 
@@ -302,8 +255,6 @@ const Index = () => {
           </div>
         </footer>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
