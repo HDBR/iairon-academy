@@ -82,9 +82,9 @@ const Index = () => {
               
               <div className="max-w-4xl mx-auto mb-8">
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground leading-relaxed">
-                  A formação mais completa do Brasil para dominar o 
-                  <span className="gradient-text-accent"> VEO 3 </span>
-                  e outras IAs de vídeo e ainda faturar alto com vídeos criados por IA
+                  A formação mais completa do Brasil para dominar 
+                  <span className="gradient-text-accent">Vídeos com IA</span>
+                  {" "}e muito mais!
                 </h2>
               </div>
 
