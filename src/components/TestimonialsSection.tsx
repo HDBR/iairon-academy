@@ -114,7 +114,7 @@ export const TestimonialsSection = () => {
 
         {/* Testimonials Mural - Masonry Style */}
         <div className="relative">
-          <div className="overflow-hidden h-[750px] md:h-[900px]">
+          <div className="overflow-hidden h-[900px] md:h-[1200px]">
             <div className="animate-scroll hover:[animation-play-state:paused] w-[200%]">
               <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6 2xl:columns-7 [column-gap:0.5rem]">
                 {duplicatedTestimonials.map((testimonial, index) => {
