@@ -103,7 +103,7 @@ const PhotosCarousel = () => {
       </div>
       <div className="relative">
         <Carousel
-          plugins={[plugin.current]}
+          plugins={[plugin.current as any]}
           className="w-full max-w-5xl mx-auto"
           opts={{ align: "center", loop: true }}
         >
