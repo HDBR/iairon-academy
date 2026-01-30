@@ -27,15 +27,21 @@ const videosCourses = [
   { image: carouselVideoSample, title: 'Clipes com IA' },
 ];
 
-// Photos track data
+// Photos track data - duplicated for infinite loop effect
 const photosCourses = [
+  { image: sessaoFotosIa, title: 'Sessao de Fotos com IA' },
+  { image: clones, title: 'Clones Sentinela' },
+  { image: capaMasterclass, title: 'Influencer de IA' },
   { image: sessaoFotosIa, title: 'Sessao de Fotos com IA' },
   { image: clones, title: 'Clones Sentinela' },
   { image: capaMasterclass, title: 'Influencer de IA' },
 ];
 
-// Business track data
+// Business track data - duplicated for infinite loop effect
 const businessCourses = [
+  { image: aigram, title: 'AIGRAM - Atendimento com IA' },
+  { image: agentesExpress, title: 'Agentes Express' },
+  { image: bannerCurso, title: 'Sites com IA' },
   { image: aigram, title: 'AIGRAM - Atendimento com IA' },
   { image: agentesExpress, title: 'Agentes Express' },
   { image: bannerCurso, title: 'Sites com IA' },
