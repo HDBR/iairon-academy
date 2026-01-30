@@ -1,125 +1,78 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, Clock, Users, Brain, TrendingUp, Zap } from 'lucide-react';
+import { Calendar, Users, Video, Zap } from 'lucide-react';
+
 const WeeklyTutorialsSection = () => {
-  const [activeDay, setActiveDay] = useState(0);
-  const tutorials = [{
-    day: "Segunda",
-    title: "Marketing, Tráfego e Posicionamento",
-    time: "19h às 21h30",
-    recommendation: "Para quem quer dominar estratégias de marketing digital e posicionamento de marca",
-    icon: TrendingUp,
-    color: "from-tech-blue to-tech-purple"
-  }, {
-    day: "Terça",
-    title: "Tutoria Google Flow",
-    time: "19h às 21h30",
-    recommendation: "Para quem quer automatizar processos e otimizar fluxos de trabalho",
-    icon: Zap,
-    color: "from-tech-purple to-tech-blue"
-  }, {
-    day: "Quinta",
-    title: "Tutoria Google Flow",
-    time: "19h às 21h30",
-    recommendation: "Continuação e aprofundamento em automações Google",
-    icon: Zap,
-    color: "from-tech-blue to-tech-purple"
-  }, {
-    day: "Sexta",
-    title: "IA do Zero",
-    time: "19h às 21h30",
-    recommendation: "Para quem não sabe nada de IA e está começando do zero - ideal para iniciantes",
-    icon: Brain,
-    color: "from-tech-purple to-tech-blue"
-  }, {
-    day: "Sábado",
-    title: "Imersão com Pettrus",
-    time: "7+ horas de duração",
-    recommendation: "Para quem quer uma experiência imersiva e resultados acelerados",
-    icon: Users,
-    color: "from-tech-blue to-tech-purple",
-    special: true
-  }];
+  const scrollToPricing = () => {
+    const pricingSection = document.querySelector('#pricing-section');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
-  // Auto-rotate animation
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveDay(prev => (prev + 1) % tutorials.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-  const totalValue = 4 * 5 * 200; // 4 semanas × 5 dias × R$ 200
-
-  return <section className="section-spacing bg-gradient-to-b from-background/50 to-background">
+  return (
+    <section className="section-spacing bg-gradient-to-b from-background/50 to-background">
       <div className="container-padding">
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <Calendar className="w-8 h-8 text-tech-blue" />
-            <Badge variant="outline" className="glass-card border-tech-purple/30 text-tech-purple px-4 py-2">
-              BÔNUS EXCLUSIVO
-            </Badge>
-          </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6 animate-pulse drop-shadow-lg">
-            ✨ 4 Semanas de Tutorias Ao Vivo no Zoom ✨
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-6">
+            Aqui, você não vai começar sozinho.
           </h2>
-          
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">BÔNUS EXCLUSIVO: 4 semanas completas de acompanhamento personalizado diário para acelerar seus resultados na IA com especialistas AO VIVO!</p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Tenha 4 Semanas de Tutorias Ao Vivo no Zoom
+          </p>
         </div>
 
-        {/* Weekly Calendar */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
-          {tutorials.map((tutorial, index) => {
-          const Icon = tutorial.icon;
-          const isActive = activeDay === index;
-          return <Card key={tutorial.day} className={`glass-card glass-card-hover p-6 transition-all duration-500 cursor-pointer relative overflow-hidden ${isActive ? 'border-tech-blue/50 shadow-lg shadow-tech-blue/20 scale-105' : 'border-tech-blue/20 hover:border-tech-blue/40'} ${tutorial.special ? 'md:col-span-2 lg:col-span-1' : ''}`} onClick={() => setActiveDay(index)}>
-                {/* Background gradient overlay when active */}
-                {isActive && <div className={`absolute inset-0 bg-gradient-to-br ${tutorial.color} opacity-5 animate-pulse`} />}
-                
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-4">
-                    <Badge variant="outline" className={`${isActive ? 'border-tech-blue/50 text-tech-blue' : 'border-tech-blue/30'}`}>
-                      {tutorial.day}
-                    </Badge>
-                    <div className={`p-2 rounded-full bg-gradient-to-r ${tutorial.color} ${isActive ? 'animate-pulse' : ''}`}>
-                      <Icon className="w-5 h-5 text-white" />
-                    </div>
-                  </div>
-
-                  <h3 className={`font-bold text-lg mb-3 ${isActive ? 'gradient-text' : 'text-foreground'}`}>
-                    {tutorial.title}
-                  </h3>
-
-                  <div className="flex items-center gap-2 mb-4 text-sm text-muted-foreground">
-                    <Clock className="w-4 h-4" />
-                    <span>{tutorial.time}</span>
-                  </div>
-
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {tutorial.recommendation}
-                  </p>
-
-                  {tutorial.special && <Badge variant="outline" className="mt-4 bg-tech-purple/10 border-tech-purple/30 text-tech-purple">
-                      Imersão Especial
-                    </Badge>}
+        <div className="container mx-auto max-w-4xl">
+          {/* Bonus Cards */}
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            {/* Bonus 1 */}
+            <Card className="glass-card p-6 border-tech-blue/30 hover:border-tech-blue/50 transition-all duration-300">
+              <Badge variant="outline" className="bg-tech-blue/10 border-tech-blue/30 text-tech-blue mb-4">
+                BÔNUS EXCLUSIVO #1
+              </Badge>
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-tech-blue/20">
+                  <Calendar className="w-6 h-6 text-tech-blue" />
                 </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-2 text-foreground">4 Semanas de Tutorias</h3>
+                  <p className="text-muted-foreground text-sm">
+                    4 semanas completas de tutorias, 2x na semana (totalizando 8 tutorias),
+                    para acelerar seus resultados na IA com especialistas AO VIVO!
+                  </p>
+                </div>
+              </div>
+            </Card>
 
-                {/* Active indicator */}
-                {isActive && <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-tech-blue to-tech-purple animate-pulse" />}
-              </Card>;
-        })}
-        </div>
+            {/* Bonus 2 */}
+            <Card className="glass-card p-6 border-tech-purple/30 hover:border-tech-purple/50 transition-all duration-300">
+              <Badge variant="outline" className="bg-tech-purple/10 border-tech-purple/30 text-tech-purple mb-4">
+                BÔNUS EXCLUSIVO #2
+              </Badge>
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-tech-purple/20">
+                  <Users className="w-6 h-6 text-tech-purple" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-2 text-foreground">2 Imersões com Pettrus Vaz</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Tenha 2x encontros de tira-dúvidas diretamente com Pettrus Vaz,
+                    em verdadeiras imersões o dia inteiro no sábado!
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </div>
 
-        {/* Value Anchor */}
-        <div className="glass-card p-8 max-w-2xl mx-auto mt-12 border border-tech-purple/20">
-          <div className="text-center">
+          {/* Value Anchor */}
+          <Card className="glass-card p-8 border border-tech-purple/20 text-center">
             <p className="text-lg text-muted-foreground mb-4">
-              Se fosse cobrar R$ 200,00 por cada encontro durante 4 semanas, isso daria:
+              Se fosse cobrar R$ 200,00 por cada tutoria durante 4 semanas, isso daria:
             </p>
             <div className="flex items-center justify-center gap-4 mb-4">
               <span className="text-3xl font-bold text-red-500 line-through">
-                R$ {totalValue.toLocaleString('pt-BR')}
+                R$ 1.600
               </span>
               <span className="text-4xl font-bold gradient-text-accent">
                 R$ 0,00
@@ -128,16 +81,24 @@ const WeeklyTutorialsSection = () => {
             <Badge variant="outline" className="bg-green-500/10 border-green-500/30 text-green-400">
               BÔNUS EXCLUSIVO incluído
             </Badge>
-            <p className="text-sm text-muted-foreground mt-3">Baseado em 4 semanas completas de tutoriais</p>
+            <p className="text-sm text-muted-foreground mt-3">
+              Baseado em 4 semanas completas de tutoriais
+            </p>
+          </Card>
+
+          {/* CTA Button */}
+          <div className="text-center mt-8">
+            <button
+              onClick={scrollToPricing}
+              className="cta-button px-8 py-4 text-lg font-bold text-white border-0 transition-all duration-300 rounded-lg"
+            >
+              GARANTIR MINHA VAGA AGORA
+            </button>
           </div>
         </div>
-
-        <div className="text-center mt-12">
-          <p className="text-lg gradient-text-accent font-semibold">
-            🚀 Para acelerar seus resultados!
-          </p>
-        </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default WeeklyTutorialsSection;

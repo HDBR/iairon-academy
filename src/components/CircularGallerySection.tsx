@@ -1,72 +1,77 @@
 import { CircularGallery, GalleryItem } from '@/components/ui/circular-gallery';
+
+// Local course images
 import carouselGroup1 from "@/assets/carousel-group-1.webp";
 import carouselLayer1 from "@/assets/carousel-layer-1.webp";
 import carouselVideoSample from "@/assets/carousel-video-sample.webp";
+import sessaoFotosIa from '@/assets/courses/sessao-fotos-ia.webp';
+import labvidiaCapa from '@/assets/courses/labvidia-capa.webp';
+import capaMasterclass from '@/assets/courses/capa-masterclass.webp';
+import clones from '@/assets/courses/clones.webp';
+import aigram from '@/assets/courses/aigram.webp';
+import agentesExpress from '@/assets/courses/agentes-express.webp';
+
 const galleryData: GalleryItem[] = [{
-  title: 'Sessão de Fotos com IA',
-  description: 'Aprenda a criar fotos profissionais incríveis utilizando inteligência artificial avançada',
-  imageUrl: "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%20sessao%20de%20fotos%20com%20IA.webp",
+  title: 'Sessao de Fotos com IA',
+  description: 'Aprenda a criar fotos profissionais incriveis utilizando inteligencia artificial avancada',
+  imageUrl: sessaoFotosIa,
   category: 'Fotografia IA'
 }, {
   title: 'LABVIDIA Completo',
-  description: 'O curso principal com todas as estratégias para monetizar com vídeos de IA',
-  imageUrl: "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/labvidia%20capa.webp",
+  description: 'O curso principal com todas as estrategias para monetizar com videos de IA',
+  imageUrl: labvidiaCapa,
   category: 'Curso Principal'
 }, {
-  title: 'Estratégias Avançadas',
-  description: 'Técnicas profissionais para maximizar seus resultados e lucros com IA',
+  title: 'Estrategias Avancadas',
+  description: 'Tecnicas profissionais para maximizar seus resultados e lucros com IA',
   imageUrl: carouselGroup1,
-  category: 'Estratégias'
+  category: 'Estrategias'
 }, {
   title: 'Templates Exclusivos',
-  description: 'Modelos prontos e personalizáveis para acelerar sua produção de conteúdo',
+  description: 'Modelos prontos e personalizaveis para acelerar sua producao de conteudo',
   imageUrl: carouselLayer1,
   category: 'Templates'
 }, {
   title: 'Masterclass Completa',
-  description: 'Aulas detalhadas com casos reais e aplicações práticas do mercado',
-  imageUrl: "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%281%29.webp",
+  description: 'Aulas detalhadas com casos reais e aplicacoes praticas do mercado',
+  imageUrl: capaMasterclass,
   category: 'Masterclass'
 }, {
-  title: 'Exemplos Práticos',
-  description: 'Vídeos demonstrativos mostrando cada passo da criação à monetização',
+  title: 'Exemplos Praticos',
+  description: 'Videos demonstrativos mostrando cada passo da criacao a monetizacao',
   imageUrl: carouselVideoSample,
-  category: 'Demonstrações'
+  category: 'Demonstracoes'
 }, {
   title: 'Clones de Sucesso',
-  description: 'Como criar e gerenciar múltiplas personas para diversificar seus ganhos',
-  imageUrl: "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/CLONES.webp",
+  description: 'Como criar e gerenciar multiplas personas para diversificar seus ganhos',
+  imageUrl: clones,
   category: 'Personas IA'
 }, {
   title: 'Cursos AIgram',
-  description: 'Especialização em marketing digital e crescimento orgânico com IA',
-  imageUrl: "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%20cursos%20aigram.webp",
+  description: 'Especializacao em marketing digital e crescimento organico com IA',
+  imageUrl: aigram,
   category: 'Marketing IA'
 }, {
   title: 'Agentes Express',
-  description: 'Automação completa para criar sistemas de vendas com inteligência artificial',
-  imageUrl: "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%20agentes%20express.webp",
-  category: 'Automação'
+  description: 'Automacao completa para criar sistemas de vendas com inteligencia artificial',
+  imageUrl: agentesExpress,
+  category: 'Automacao'
 }];
 export const CircularGallerySection = () => {
-  return <div className="w-full bg-background text-foreground" style={{
-    height: '250vh'
-  }}>
-      <div className="w-full h-screen sticky top-0 flex flex-col items-center justify-center overflow-hidden relative">
-        {/* Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,hsl(var(--background))_70%)]"></div>
-        
-        {/* Title Section */}
-        
-        
+  return (
+    <div className="w-full text-foreground relative" style={{ height: '200vh' }}>
+      {/* Top Gradient Mask - fusion with section above */}
+      <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-background to-transparent pointer-events-none z-20" />
+
+      <div className="w-full h-screen sticky top-0 flex flex-col items-center justify-center overflow-hidden">
         {/* 3D Circular Gallery */}
         <div className="w-full h-full">
           <CircularGallery items={galleryData} radius={500} autoRotateSpeed={0.05} />
         </div>
 
-        {/* Bottom Gradient */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/50 to-transparent pointer-events-none z-10" />
+        {/* Bottom Gradient - fusion with footer */}
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background to-transparent pointer-events-none z-10" />
       </div>
-    </div>;
+    </div>
+  );
 };

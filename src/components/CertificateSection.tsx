@@ -10,18 +10,18 @@ const CertificateSection = () => {
       
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
-          Certificado de Especialista em Vídeos com IA
+          Certificado de Especialista em IA
         </h2>
-        
+
         <Card className="glass-card p-8 md:p-12 text-center">
           <div className="mb-8">
             <Award className="w-20 h-20 text-tech-amber mx-auto mb-6" />
             <h3 className="text-2xl md:text-3xl font-bold mb-4 gradient-text-accent">
-              Certificação Oficial LABVIDIA
+              Certificação Oficial IAIRON Academy
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Ao concluir o LABVIDIA, você receberá um certificado oficial que comprova sua 
-              especialização em criação de vídeos com Inteligência Artificial
+              Ao concluir a IAIRON Academy, você receberá um certificado oficial que comprova sua
+              especialização em criação de vídeos com Inteligência Artificial.
             </p>
           </div>
           

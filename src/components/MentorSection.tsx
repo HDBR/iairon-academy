@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Star, Award, Users } from 'lucide-react';
+import pettrusImg from '@/assets/mentor/pettrus.webp';
 
 const MentorSection = () => {
   return (
@@ -60,9 +60,9 @@ const MentorSection = () => {
             <div className="order-1 md:order-2 flex justify-center">
               <div className="relative">
                 <Avatar className="w-48 h-48 md:w-64 md:h-64 border-4 border-gradient-to-br from-tech-blue to-tech-purple">
-                  <AvatarImage 
-                    src="http://veo3.iairon.com.br/images/pettrus.webp" 
-                    alt="Pettrus Vaz" 
+                  <AvatarImage
+                    src={pettrusImg}
+                    alt="Pettrus Vaz"
                     className="object-cover"
                   />
                   <AvatarFallback className="text-4xl md:text-6xl font-bold gradient-text-accent bg-gradient-to-br from-muted to-background">

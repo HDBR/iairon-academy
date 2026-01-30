@@ -1,23 +1,34 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
+
+// Local course images
 import carouselGroup1 from "@/assets/carousel-group-1.webp";
 import carouselLayer1 from "@/assets/carousel-layer-1.webp";
 import carouselVideoSample from "@/assets/carousel-video-sample.webp";
+import sessaoFotosIa from '@/assets/courses/sessao-fotos-ia.webp';
+import labvidiaCapa from '@/assets/courses/labvidia-capa.webp';
+import capaMasterclass from '@/assets/courses/capa-masterclass.webp';
+import clones from '@/assets/courses/clones.webp';
+import aigram from '@/assets/courses/aigram.webp';
+import agentesExpress from '@/assets/courses/agentes-express.webp';
+import veo3 from '@/assets/courses/veo3.webp';
+import edicaoIa from '@/assets/courses/edicao-ia.webp';
+import bannerCurso from '@/assets/courses/banner-curso.webp';
 
 const images = [
-  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%20sessao%20de%20fotos%20com%20IA.webp",
-  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/labvidia%20capa.webp",
+  sessaoFotosIa,
+  labvidiaCapa,
   carouselGroup1,
   carouselLayer1,
-  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%281%29.webp",
+  capaMasterclass,
   carouselVideoSample,
-  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/CLONES.webp",
-  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%20cursos%20aigram.webp",
-  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%20agentes%20express.webp",
-  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/capa%20veo3.webp",
-  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/edicao%20com%20IA.webp",
-  "https://nyc3.digitaloceanspaces.com/club.greenn/media/31585/banner%20curso%20%281%29.webp"
+  clones,
+  aigram,
+  agentesExpress,
+  veo3,
+  edicaoIa,
+  bannerCurso
 ];
 
 export const ImmediateAccessSection = () => {
