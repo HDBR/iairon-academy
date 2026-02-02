@@ -13,8 +13,8 @@ const PriceSection = () => {
   ];
 
   const totalValue = 4977;
-  const offerPrice = 797;
-  const installmentValue = "81,94";
+  const offerPrice = 997;
+  const installmentValue = "102,51";
   const savings = totalValue - offerPrice;
   const discountPercent = Math.round((savings / totalValue) * 100);
 
@@ -82,16 +82,10 @@ const PriceSection = () => {
             PLANO PREMIUM
           </h3>
 
-          {/* Previous Prices */}
-          <div className="mb-4 space-y-1">
+          {/* Previous Price */}
+          <div className="mb-4">
             <div className="text-lg text-orange-500 line-through font-medium">
               De R$ {totalValue.toLocaleString()},00
-            </div>
-            <div className="text-base text-muted-foreground line-through">
-              12x de R$ 102,51
-            </div>
-            <div className="text-base text-muted-foreground line-through">
-              à vista R$ 997,00
             </div>
           </div>
 
