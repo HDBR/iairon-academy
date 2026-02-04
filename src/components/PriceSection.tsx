@@ -13,8 +13,10 @@ const PriceSection = () => {
   ];
 
   const totalValue = 4977;
-  const offerPrice = 997;
-  const installmentValue = "102,51";
+  const originalPrice = 997;
+  const offerPrice = 797;
+  const extraDiscount = originalPrice - offerPrice;
+  const installmentValue = "81,94";
   const savings = totalValue - offerPrice;
   const discountPercent = Math.round((savings / totalValue) * 100);
 
@@ -26,7 +28,7 @@ const PriceSection = () => {
   ];
 
   const handlePurchase = () => {
-    window.open('https://payfast.greenn.com.br/122280/offer/yC91i5?cupom=200IAIRON', '_blank');
+    window.open('https://payfast.greenn.com.br/122280/offer/yC91i5?cupom=EXTRA', '_blank');
   };
 
   return (
@@ -90,12 +92,22 @@ const PriceSection = () => {
           </div>
 
           {/* Current Price */}
-          <div className="mb-6">
+          <div className="mb-4">
             <div className="text-4xl md:text-5xl font-black gradient-text-accent mb-2">
               12x de R$ {installmentValue}
             </div>
             <div className="text-2xl md:text-3xl font-bold text-tech-blue">
               à vista R$ {offerPrice.toLocaleString()},00
+            </div>
+          </div>
+
+          {/* Extra Discount Badge */}
+          <div className="bg-green-500/15 border border-green-500/40 px-6 py-3 rounded-xl mb-4 inline-block">
+            <div className="text-lg font-bold text-green-400">
+              De R$ {originalPrice.toLocaleString()},00 por R$ {offerPrice.toLocaleString()},00
+            </div>
+            <div className="text-sm font-semibold text-green-300 mt-1">
+              R$ {extraDiscount},00 de desconto!
             </div>
           </div>
 
