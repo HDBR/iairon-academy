@@ -28,7 +28,7 @@ const Index = () => {
   };
 
   const handlePurchase = () => {
-    window.open('https://payfast.greenn.com.br/122280/offer/yC91i5?cupom=200IAIRON', '_blank');
+    window.open('https://payfast.greenn.com.br/122280/offer/yC91i5?cupom=EXTRA', '_blank');
   };
 
   return (

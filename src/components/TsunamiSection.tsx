@@ -4,7 +4,7 @@ import { Zap, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 const TsunamiSection = () => {
   const handlePurchase = () => {
-    window.open('https://payfast.greenn.com.br/122280/offer/3lXE3l?b_id_1=130096&b_offer_1=mXYbYh', '_blank');
+    window.open('https://payfast.greenn.com.br/122280/offer/yC91i5?cupom=EXTRA', '_blank');
   };
   return <section className="section-spacing container-padding relative">
       <div className="section-divider mb-12"></div>
