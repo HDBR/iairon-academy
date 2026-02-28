@@ -14,9 +14,9 @@ const PriceSection = () => {
 
   const totalValue = 4977;
   const originalPrice = 1297;
-  const offerPrice = 997;
+  const offerPrice = 797;
   const extraDiscount = originalPrice - offerPrice;
-  const installmentValue = "102,51";
+  const installmentValue = "81,94";
   const savings = totalValue - offerPrice;
   const discountPercent = Math.round((savings / totalValue) * 100);
 
