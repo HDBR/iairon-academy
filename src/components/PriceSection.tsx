@@ -14,9 +14,9 @@ const PriceSection = () => {
 
   const totalValue = 4977;
   const originalPrice = 1297;
-  const offerPrice = 797;
+  const offerPrice = 997;
   const extraDiscount = originalPrice - offerPrice;
-  const installmentValue = "81,94";
+  const installmentValue = "102,51";
   const savings = totalValue - offerPrice;
   const discountPercent = Math.round((savings / totalValue) * 100);
 
@@ -28,7 +28,7 @@ const PriceSection = () => {
   ];
 
   const handlePurchase = () => {
-    window.open('https://payfast.greenn.com.br/122280/offer/yC91i5?cupom=EXTRA', '_blank');
+    window.open('https://payfast.greenn.com.br/122280/offer/yC91i5', '_blank');
   };
 
   return (
