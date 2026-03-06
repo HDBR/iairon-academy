@@ -28,7 +28,7 @@ const PriceSection = () => {
   ];
 
   const handlePurchase = () => {
-    window.open('https://payfast.greenn.com.br/122280/offer/yC91i5', '_blank');
+    window.open('https://payfast.greenn.com.br/122280/offer/yC91i5?cupom=EXTRA', '_blank');
   };
 
   return (
