@@ -40,5 +40,27 @@
   <!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Script UTM -->
+    <script>
+        var timer = setInterval(function () {
+            const location = new URL(document.location.href);
+            const fields = ["src", "sck", "utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "a_id"];
+            var links = document.getElementsByTagName("a");
+
+            for (var i = 0, n = links.length; i < n; i++) {
+                if (links[i].href.includes("#")) continue;
+                if (links[i].href) {
+                    let link = new URL(links[i].href);
+                    fields.forEach(field => {
+                        if (location.searchParams.get(field))
+                            link.searchParams.set(field, location.searchParams.get(field));
+                    });
+                    let href = link.href;
+                    links[i].href = href;
+                }
+            }
+        }, 500);
+    </script>
   </body>
 </html>
