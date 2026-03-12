@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { MessageCircle, Users, Clock, Star } from 'lucide-react';
 const WhatsAppVipSection = () => {
   const handlePurchase = () => {
-    window.open('https://payfast.greenn.com.br/122280/offer/yC91i5?cupom=EXTRA', '_blank');
+    window.open('https://payfast.greenn.com.br/122280', '_blank');
   };
   return <section className="section-spacing container-padding">
       <div className="section-divider mb-12"></div>
