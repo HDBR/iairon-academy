@@ -41,26 +41,181 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 
-    <!-- Script UTM -->
+    <!-- UTM / URL Params Propagator -->
     <script>
-        var timer = setInterval(function () {
-            const location = new URL(document.location.href);
-            const fields = ["src", "sck", "utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "a_id"];
-            var links = document.getElementsByTagName("a");
+    (function () {
+      'use strict';
 
-            for (var i = 0, n = links.length; i < n; i++) {
-                if (links[i].href.includes("#")) continue;
-                if (links[i].href) {
-                    let link = new URL(links[i].href);
-                    fields.forEach(field => {
-                        if (location.searchParams.get(field))
-                            link.searchParams.set(field, location.searchParams.get(field));
-                    });
-                    let href = link.href;
-                    links[i].href = href;
-                }
+      function getCurrentParams() {
+        return new URLSearchParams(window.location.search);
+      }
+
+      function mergeParams(targetUrl, sourceParams) {
+        if (!targetUrl || targetUrl.startsWith('#') || targetUrl.startsWith('javascript')) {
+          return targetUrl;
+        }
+        var url;
+        try {
+          url = new URL(targetUrl, window.location.href);
+        } catch (e) {
+          return targetUrl;
+        }
+        sourceParams.forEach(function (value, key) {
+          if (!url.searchParams.has(key)) {
+            url.searchParams.set(key, value);
+          }
+        });
+        return url.toString();
+      }
+
+      function updateLinks() {
+        var params = getCurrentParams();
+        if (!params.toString()) return;
+        document.querySelectorAll('a[href]').forEach(function (link) {
+          link.href = mergeParams(link.getAttribute('href'), params);
+        });
+      }
+
+      function updateForms() {
+        var params = getCurrentParams();
+        if (!params.toString()) return;
+        document.querySelectorAll('form').forEach(function (form) {
+          params.forEach(function (value, key) {
+            if (!form.querySelector('input[name="' + key + '"]')) {
+              var hidden = document.createElement('input');
+              hidden.type = 'hidden';
+              hidden.name = key;
+              hidden.value = value;
+              form.appendChild(hidden);
             }
-        }, 500);
+          });
+          var action = form.getAttribute('action');
+          if (action && form.method.toLowerCase() !== 'post') {
+            form.action = mergeParams(action || window.location.href, params);
+          }
+        });
+      }
+
+      function patchWindowLocation() {
+        var params = getCurrentParams();
+        if (!params.toString()) return;
+
+        var originalOpen = window.open.bind(window);
+        window.open = function (url, target, features) {
+          return originalOpen(mergeParams(url, getCurrentParams()), target, features);
+        };
+
+        var originalPushState = history.pushState.bind(history);
+        history.pushState = function (state, title, url) {
+          if (url) url = mergeParams(url, getCurrentParams());
+          return originalPushState(state, title, url);
+        };
+
+        var originalReplaceState = history.replaceState.bind(history);
+        history.replaceState = function (state, title, url) {
+          if (url) url = mergeParams(url, getCurrentParams());
+          return originalReplaceState(state, title, url);
+        };
+      }
+
+      function patchOnclickRedirects() {
+        var params = getCurrentParams();
+        if (!params.toString()) return;
+        document.addEventListener('click', function (e) {
+          var el = e.target.closest('[onclick]');
+          if (!el) return;
+          var onclick = el.getAttribute('onclick') || '';
+          var urlMatch = onclick.match(
+            /(?:location(?:\.href)?\s*=\s*|location\.(?:assign|replace)\s*\()\s*['"]([^'"]+)['"]/
+          );
+          if (!urlMatch) return;
+          var originalUrl = urlMatch[1];
+          var newUrl = mergeParams(originalUrl, params);
+          if (newUrl !== originalUrl) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            var newOnclick = onclick.replace(originalUrl, newUrl);
+            el.setAttribute('onclick', newOnclick);
+            el.click();
+          }
+        }, true);
+      }
+
+      function watchDOMChanges() {
+        var params = getCurrentParams();
+        if (!params.toString()) return;
+        var observer = new MutationObserver(function (mutations) {
+          mutations.forEach(function (mutation) {
+            mutation.addedNodes.forEach(function (node) {
+              if (node.nodeType !== 1) return;
+              if (node.tagName === 'A' && node.href) {
+                node.href = mergeParams(node.getAttribute('href'), params);
+              }
+              node.querySelectorAll && node.querySelectorAll('a[href]').forEach(function (link) {
+                link.href = mergeParams(link.getAttribute('href'), params);
+              });
+              if (node.tagName === 'FORM') {
+                injectHiddenInputs(node, params);
+              }
+              node.querySelectorAll && node.querySelectorAll('form').forEach(function (form) {
+                injectHiddenInputs(form, params);
+              });
+            });
+          });
+        });
+        observer.observe(document.body || document.documentElement, {
+          childList: true,
+          subtree: true,
+        });
+      }
+
+      function injectHiddenInputs(form, params) {
+        params.forEach(function (value, key) {
+          if (!form.querySelector('input[name="' + key + '"]')) {
+            var hidden = document.createElement('input');
+            hidden.type = 'hidden';
+            hidden.name = key;
+            hidden.value = value;
+            form.appendChild(hidden);
+          }
+        });
+      }
+
+      function patchButtonClicks() {
+        var params = getCurrentParams();
+        if (!params.toString()) return;
+        document.addEventListener('click', function (e) {
+          var target = e.target.closest('[data-href],[data-redirect],[data-url]');
+          if (!target) return;
+          var attr = target.getAttribute('data-href') ||
+                     target.getAttribute('data-redirect') ||
+                     target.getAttribute('data-url');
+          if (attr) {
+            var newUrl = mergeParams(attr, params);
+            target.setAttribute('data-href', newUrl);
+            target.setAttribute('data-redirect', newUrl);
+            target.setAttribute('data-url', newUrl);
+          }
+        }, true);
+      }
+
+      function init() {
+        patchWindowLocation();
+        patchOnclickRedirects();
+        patchButtonClicks();
+        updateLinks();
+        updateForms();
+        watchDOMChanges();
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', function () {
+            updateLinks();
+            updateForms();
+          });
+        }
+      }
+
+      init();
+    })();
     </script>
   </body>
 </html>
