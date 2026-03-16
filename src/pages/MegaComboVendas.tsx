@@ -109,11 +109,18 @@ const MegaComboVendas = () => {
           </div>
 
           <div className="relative z-10 container mx-auto text-center max-w-4xl py-16">
-            {/* Logo */}
+            {/* Logo IAIRON Academy */}
+            <img
+              src="/lovable-uploads/iairon-academy-logo.png"
+              alt="IAIRON Academy Logo"
+              className="mx-auto w-48 md:w-64 h-auto mb-6"
+            />
+
+            {/* Logo Mega Combo */}
             <img
               src={logoMegaCombo}
               alt="Mega Combo IA Vitalício"
-              className="mx-auto max-w-md w-full h-auto mb-10"
+              className="mx-auto max-w-xs md:max-w-md w-full h-auto mb-10"
             />
 
             {/* Main Headline */}
