@@ -118,10 +118,10 @@
   body::before {
     content: '';
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
     background:
       linear-gradient(135deg,
         hsl(220 50% 8%) 0%,
@@ -452,7 +452,8 @@
     0 0 30px hsl(var(--primary) / 0.1);
 }
 
-/* Scrollbar */
+/* Scrollbar - desktop only (iOS uses native overlay scrollbar) */
+@media (min-width: 768px) {
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -477,6 +478,7 @@
     hsl(var(--tech-purple))
   );
 }
+} /* end @media min-width: 768px */
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {

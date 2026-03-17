@@ -493,7 +493,7 @@ const MegaComboVendas = () => {
         </section>
 
         {/* ============ FOOTER ============ */}
-        <footer className="section-spacing container-padding relative">
+        <footer className="section-spacing container-padding relative" style={{ paddingBottom: 'max(2rem, env(safe-area-inset-bottom))' }}>
           <div className="container mx-auto text-center text-muted-foreground space-y-4">
             <p className="text-lg">
               Este é um produto digital. Você receberá os acessos por e-mail em até 24 horas.
