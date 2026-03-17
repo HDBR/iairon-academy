@@ -144,7 +144,7 @@ const CourseCarousel = ({ courses, icon: Icon, iconColor, bgColor, title, subtit
 
 const MegaComboVendas = () => {
   return (
-    <div className="min-h-screen bg-background relative">
+    <div className="min-h-screen min-h-screen-dynamic bg-background relative">
       <BackgroundEffects />
 
       {/* Sticky Student Banner */}
@@ -159,7 +159,7 @@ const MegaComboVendas = () => {
       <div className="main-content relative z-10 pt-12">
 
         {/* ============ DOBRA 01 - HERO ============ */}
-        <section className="relative min-h-screen flex flex-col items-center justify-center container-padding overflow-hidden">
+        <section className="relative min-h-screen min-h-screen-dynamic flex flex-col items-center justify-center container-padding overflow-hidden">
           {/* Hero background image */}
           <div className="absolute inset-0 z-0">
             <img

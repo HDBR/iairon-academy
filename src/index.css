@@ -100,10 +100,15 @@
     @apply border-border;
   }
 
+  html {
+    /* iOS Safari: allow content to extend behind safe areas */
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+
   body {
     @apply bg-background text-foreground font-inter antialiased overflow-x-hidden;
-    background: 
-      linear-gradient(135deg, 
+    background:
+      linear-gradient(135deg,
         hsl(220 50% 8%) 0%,
         hsl(250 40% 10%) 25%,
         hsl(280 30% 8%) 50%,
@@ -111,7 +116,7 @@
         hsl(190 30% 8%) 100%
       );
     background-attachment: fixed;
-    min-height: 100vh;
+    min-height: 100dvh;
     position: relative;
   }
 
@@ -395,9 +400,14 @@
   .section-spacing {
     @apply py-8 md:py-12 lg:py-16;
   }
-  
+
   .container-padding {
     @apply px-4 md:px-6 lg:px-8;
+  }
+
+  /* iOS Safari: use dynamic viewport height instead of 100vh */
+  .min-h-screen-dynamic {
+    min-height: 100dvh;
   }
 }
 
