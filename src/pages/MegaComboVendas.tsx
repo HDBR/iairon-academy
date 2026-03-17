@@ -124,13 +124,13 @@ const MegaComboVendas = () => {
             />
 
             {/* Main Headline */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-4">
               INSCRIÇÕES ABERTAS PARA O{' '}
               <span className="gradient-text-accent">MEGA COMBO IA VITALÍCIO</span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg md:text-xl text-muted-foreground font-medium mb-10 max-w-3xl mx-auto leading-relaxed uppercase tracking-wide">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground font-medium mb-10 max-w-3xl mx-auto leading-relaxed uppercase tracking-wide">
               VOCÊ NUNCA MAIS VAI PRECISAR COMPRAR UM CURSO DE INTELIGÊNCIA ARTIFICIAL PELO RESTO DA VIDA.
             </p>
 
@@ -154,9 +154,9 @@ const MegaComboVendas = () => {
             <Button
               onClick={handleCheckout}
               size="lg"
-              className="cta-button px-10 py-6 text-lg md:text-xl font-bold text-white border-0 transition-all duration-300 animate-pulse-glow"
+              className="cta-button px-6 sm:px-10 py-5 sm:py-6 text-base sm:text-lg md:text-xl font-bold text-white border-0 transition-all duration-300 animate-pulse-glow w-full sm:w-auto"
             >
-              <Zap className="w-6 h-6 mr-3" />
+              <Zap className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
               Garantir minha vaga agora!
             </Button>
           </div>
@@ -167,7 +167,7 @@ const MegaComboVendas = () => {
           <div className="section-divider mb-12" />
           <div className="container mx-auto max-w-4xl">
 
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 leading-tight text-foreground">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 leading-tight text-foreground">
               Meu aluno, o Mega Combo IA Vitalício é a maior oferta que já fizemos em toda a história da{' '}
               <span className="gradient-text-accent">IAIRON Academy</span>.
             </h2>
@@ -177,24 +177,24 @@ const MegaComboVendas = () => {
             </p>
 
             {/* Course Price List */}
-            <Card className="glass-card p-6 md:p-8 mb-8">
-              <div className="grid md:grid-cols-2 gap-x-8 gap-y-3">
+            <Card className="glass-card p-4 sm:p-6 md:p-8 mb-8">
+              <div className="grid md:grid-cols-2 gap-x-8 gap-y-1 sm:gap-y-3">
                 {courses.map((course, i) => (
-                  <div key={i} className="flex items-center justify-between gap-2 py-2 border-b border-border/30 last:border-0">
-                    <div className="flex items-center gap-2 min-w-0">
-                      <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
-                      <span className="text-sm md:text-base text-foreground truncate">{course.name}</span>
+                  <div key={i} className="flex items-center justify-between gap-2 py-1.5 sm:py-2 border-b border-border/30 last:border-0">
+                    <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
+                      <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-400 flex-shrink-0" />
+                      <span className="text-xs sm:text-sm md:text-base text-foreground line-clamp-1">{course.name}</span>
                     </div>
-                    <span className="text-sm md:text-base text-muted-foreground font-mono whitespace-nowrap">{course.price}</span>
+                    <span className="text-xs sm:text-sm md:text-base text-muted-foreground font-mono whitespace-nowrap">{course.price}</span>
                   </div>
                 ))}
               </div>
             </Card>
 
             {/* Total Separado */}
-            <div className="flex items-center justify-center gap-3 mb-10">
-              <X className="w-6 h-6 text-red-500 flex-shrink-0" />
-              <span className="text-xl md:text-2xl font-bold text-red-400">
+            <div className="flex items-center justify-center gap-2 sm:gap-3 mb-10 text-center">
+              <X className="w-5 h-5 sm:w-6 sm:h-6 text-red-500 flex-shrink-0" />
+              <span className="text-base sm:text-xl md:text-2xl font-bold text-red-400">
                 Total comprando tudo separado: R$ 4.066,00
               </span>
             </div>
@@ -204,35 +204,35 @@ const MegaComboVendas = () => {
               Vamos fazer as contas de quanto você investiria para ter acesso a todos os nossos cursos ao longo do tempo:
             </p>
 
-            <Card className="glass-card p-6 md:p-8 mb-8 max-w-2xl mx-auto">
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
-                  <span className="text-foreground">Adquirir todos os cursos:</span>
-                  <span className="ml-auto font-mono text-muted-foreground">R$ 4.066,00</span>
+            <Card className="glass-card p-4 sm:p-6 md:p-8 mb-8 max-w-2xl mx-auto">
+              <div className="space-y-3 sm:space-y-4">
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 flex-shrink-0" />
+                  <span className="text-sm sm:text-base text-foreground">Adquirir todos os cursos:</span>
+                  <span className="ml-auto font-mono text-sm sm:text-base text-muted-foreground">R$ 4.066,00</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
-                  <span className="text-foreground">Renovar tudo por mais um ano:</span>
-                  <span className="ml-auto font-mono text-muted-foreground">R$ 4.066,00</span>
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 flex-shrink-0" />
+                  <span className="text-sm sm:text-base text-foreground">Renovar por mais 1 ano:</span>
+                  <span className="ml-auto font-mono text-sm sm:text-base text-muted-foreground">R$ 4.066,00</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
-                  <span className="text-foreground">Renovar tudo por dois anos:</span>
-                  <span className="ml-auto font-mono text-muted-foreground">R$ 4.066,00</span>
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 flex-shrink-0" />
+                  <span className="text-sm sm:text-base text-foreground">Renovar por mais 2 anos:</span>
+                  <span className="ml-auto font-mono text-sm sm:text-base text-muted-foreground">R$ 4.066,00</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
-                  <span className="text-foreground">Renovar tudo por três anos:</span>
-                  <span className="ml-auto font-mono text-muted-foreground">R$ 4.066,00</span>
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 flex-shrink-0" />
+                  <span className="text-sm sm:text-base text-foreground">Renovar por mais 3 anos:</span>
+                  <span className="ml-auto font-mono text-sm sm:text-base text-muted-foreground">R$ 4.066,00</span>
                 </div>
               </div>
             </Card>
 
             {/* Total FORA */}
-            <div className="flex items-center justify-center gap-3 mb-10">
-              <X className="w-6 h-6 text-red-500 flex-shrink-0" />
-              <span className="text-xl md:text-2xl font-bold text-red-400">
+            <div className="flex items-center justify-center gap-2 sm:gap-3 mb-10 text-center">
+              <X className="w-5 h-5 sm:w-6 sm:h-6 text-red-500 flex-shrink-0" />
+              <span className="text-base sm:text-xl md:text-2xl font-bold text-red-400">
                 Total FORA do Mega Combo IA Vitalício: R$ 16.264,00
               </span>
             </div>
@@ -243,29 +243,29 @@ const MegaComboVendas = () => {
                 Mas comprando hoje, você não vai investir tudo isso. Você só vai investir:
               </p>
 
-              <Card className="glass-card p-8 md:p-12 border-tech-blue/30 max-w-2xl mx-auto relative overflow-hidden">
+              <Card className="glass-card p-5 sm:p-8 md:p-12 border-tech-blue/30 max-w-2xl mx-auto relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-tech-blue/10 via-tech-purple/5 to-transparent" />
                 <div className="relative z-10">
-                  <p className="text-lg text-amber-400 font-semibold mb-2">
+                  <p className="text-base sm:text-lg text-amber-400 font-semibold mb-2">
                     Desconto EXCLUSIVO para alunos:
                   </p>
-                  <p className="text-xl text-muted-foreground mb-2">
+                  <p className="text-lg sm:text-xl text-muted-foreground mb-2">
                     <span className="line-through text-red-400/70">De R$ 16.264,00</span>
                   </p>
-                  <p className="text-xl text-muted-foreground mb-4">Por apenas:</p>
-                  <p className="text-5xl md:text-7xl font-bold gradient-text-accent mb-2">
+                  <p className="text-lg sm:text-xl text-muted-foreground mb-4">Por apenas:</p>
+                  <p className="text-4xl sm:text-5xl md:text-7xl font-bold gradient-text-accent mb-2">
                     12x R$ 51,10
                   </p>
-                  <p className="text-xl text-muted-foreground mb-8">
+                  <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8">
                     ou <span className="text-foreground font-semibold">R$ 497,00</span> à vista
                   </p>
 
                   <Button
                     onClick={handleCheckout}
                     size="lg"
-                    className="cta-button px-10 py-6 text-lg md:text-xl font-bold text-white border-0 transition-all duration-300 animate-pulse-glow"
+                    className="cta-button px-6 sm:px-10 py-5 sm:py-6 text-base sm:text-lg md:text-xl font-bold text-white border-0 transition-all duration-300 animate-pulse-glow w-full sm:w-auto"
                   >
-                    <Zap className="w-6 h-6 mr-3" />
+                    <Zap className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
                     Garantir minha vaga agora!
                   </Button>
                 </div>
@@ -281,10 +281,10 @@ const MegaComboVendas = () => {
 
             {/* Warning */}
             <div className="text-center mb-12 max-w-4xl mx-auto">
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <AlertTriangle className="w-8 h-8 text-amber-400" />
-                <h2 className="text-3xl md:text-4xl font-bold text-amber-400">ATENÇÃO</h2>
-                <AlertTriangle className="w-8 h-8 text-amber-400" />
+              <div className="flex items-center justify-center gap-2 sm:gap-3 mb-6">
+                <AlertTriangle className="w-6 h-6 sm:w-8 sm:h-8 text-amber-400" />
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-amber-400">ATENÇÃO</h2>
+                <AlertTriangle className="w-6 h-6 sm:w-8 sm:h-8 text-amber-400" />
               </div>
 
               <p className="text-lg md:text-xl text-muted-foreground mb-4 leading-relaxed">
@@ -320,19 +320,19 @@ const MegaComboVendas = () => {
           <div className="section-divider mb-12" />
           <div className="container mx-auto text-center max-w-4xl">
 
-            <Card className="glass-card p-8 md:p-12 border-tech-purple/30 relative overflow-hidden">
+            <Card className="glass-card p-5 sm:p-8 md:p-12 border-tech-purple/30 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-tech-purple/10 via-tech-blue/5 to-transparent" />
               <div className="relative z-10">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 leading-tight text-foreground">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 leading-tight text-foreground">
                   Você <span className="gradient-text-accent">NUNCA MAIS</span> vai precisar comprar nenhum curso de Inteligência Artificial pelo resto da vida!
                 </h2>
 
                 <Button
                   onClick={handleCheckout}
                   size="lg"
-                  className="cta-button px-12 py-6 text-xl md:text-2xl font-bold text-white border-0 transition-all duration-300 animate-pulse-glow"
+                  className="cta-button px-6 sm:px-12 py-5 sm:py-6 text-lg sm:text-xl md:text-2xl font-bold text-white border-0 transition-all duration-300 animate-pulse-glow w-full sm:w-auto"
                 >
-                  <Zap className="w-7 h-7 mr-3" />
+                  <Zap className="w-6 h-6 sm:w-7 sm:h-7 mr-2 sm:mr-3" />
                   GARANTIR MEU ACESSO!
                 </Button>
               </div>
@@ -349,8 +349,8 @@ const MegaComboVendas = () => {
               Quem é Petrus Vaz?
             </h2>
 
-            <Card className="mentor-card p-8 md:p-12">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
+            <Card className="mentor-card p-5 sm:p-8 md:p-12">
+              <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
                 <div className="order-2 md:order-1">
                   <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                     Especialista em Inteligência Artificial e criador do método mais eficaz para dominar as ferramentas de IA no Brasil. Com anos de experiência no mercado digital, já treinou milhares de pessoas a faturarem alto com tecnologia.
@@ -384,7 +384,7 @@ const MegaComboVendas = () => {
 
                 <div className="order-1 md:order-2 flex justify-center">
                   <div className="relative">
-                    <Avatar className="w-48 h-48 md:w-64 md:h-64 border-4 border-gradient-to-br from-tech-blue to-tech-purple">
+                    <Avatar className="w-36 h-36 sm:w-48 sm:h-48 md:w-64 md:h-64 border-4 border-gradient-to-br from-tech-blue to-tech-purple">
                       <AvatarImage
                         src={pettrusImg}
                         alt="Petrus Vaz"
