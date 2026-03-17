@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
 const MegaComboVendas = lazy(() => import("./pages/MegaComboVendas"));
+const MegaComboAulao = lazy(() => import("./pages/MegaComboAulao"));
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/megacombo" element={<Suspense fallback={<div className="min-h-screen bg-background" />}><MegaComboVendas /></Suspense>} />
+          <Route path="/aulao" element={<Suspense fallback={<div className="min-h-screen bg-background" />}><MegaComboAulao /></Suspense>} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
