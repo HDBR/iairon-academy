@@ -27,7 +27,7 @@ import aigram from '@/assets/courses/aigram.webp';
 import agentesExpress from '@/assets/courses/agentes-express.webp';
 import bannerCurso from '@/assets/courses/banner-curso.webp';
 
-const CHECKOUT_URL = 'https://payfast.greenn.com.br/gqhvkuu/offer/hrOhaf';
+const CHECKOUT_URL = 'https://payfast.greenn.com.br/gqhvkuu/offer/6OAqtv';
 
 const handleCheckout = () => {
   window.open(CHECKOUT_URL, '_blank');
@@ -310,10 +310,10 @@ const MegaComboAulao = () => {
                   </p>
                   <p className="text-lg sm:text-xl text-muted-foreground mb-4">Por apenas:</p>
                   <p className="text-4xl sm:text-5xl md:text-7xl font-bold gradient-text-accent mb-2">
-                    12x R$ 81,94
+                    12x R$ 92,23
                   </p>
                   <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8">
-                    ou <span className="text-foreground font-semibold">R$ 797,00</span> à vista
+                    ou <span className="text-foreground font-semibold">R$ 897,00</span> à vista
                   </p>
 
                   <Button
