@@ -100,11 +100,6 @@
     @apply border-border;
   }
 
-  html {
-    /* iOS Safari: allow content to extend behind safe areas */
-    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-  }
-
   body {
     @apply bg-background text-foreground font-inter antialiased overflow-x-hidden;
     background:
@@ -402,7 +397,22 @@
   }
 
   .container-padding {
-    @apply px-4 md:px-6 lg:px-8;
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+
+  @media (min-width: 768px) {
+    .container-padding {
+      padding-left: max(1.5rem, env(safe-area-inset-left));
+      padding-right: max(1.5rem, env(safe-area-inset-right));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-padding {
+      padding-left: max(2rem, env(safe-area-inset-left));
+      padding-right: max(2rem, env(safe-area-inset-right));
+    }
   }
 
   /* iOS Safari: use dynamic viewport height instead of 100vh */
