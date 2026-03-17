@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { Zap, Check, X, AlertTriangle, Star, Users, Award } from 'lucide-react';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
+import { Zap, Check, X, AlertTriangle, Star, Users, Award, Video, Camera, Briefcase } from 'lucide-react';
 import BackgroundEffects from '@/components/BackgroundEffects';
 import logoMegaCombo from '@/assets/logo-megacombo-v01.png';
 import heroDesktop from '@/assets/img_pettrus_hero_desktop.webp';
 import heroMobile from '@/assets/img_pettrus_hero_mobile.webp';
 import pettrusImg from '@/assets/mentor/pettrus.webp';
+
+// Course images - Videos track
+import veo3 from '@/assets/courses/veo3.webp';
+import edicaoIa from '@/assets/courses/edicao-ia.webp';
+import labvidiaCapa from '@/assets/courses/labvidia-capa.webp';
+import carouselVideoSample from '@/assets/carousel-video-sample.webp';
+
+// Course images - Photos track
+import sessaoFotosIa from '@/assets/courses/sessao-fotos-ia.webp';
+import clones from '@/assets/courses/clones.webp';
+import capaMasterclass from '@/assets/courses/capa-masterclass.webp';
+
+// Course images - Business track
+import aigram from '@/assets/courses/aigram.webp';
+import agentesExpress from '@/assets/courses/agentes-express.webp';
+import bannerCurso from '@/assets/courses/banner-curso.webp';
 
 const CHECKOUT_URL = 'https://payfast.greenn.com.br/gqhvkuu/offer/YHEcHb';
 
@@ -46,34 +64,83 @@ const courses = [
   { name: 'Transformando seu Conhecimento em Dinheiro com IA', price: 'R$ 147,00' },
 ];
 
-const courseGrid = [
-  { title: 'Vídeos Virais', desc: 'Acesse o meu método para criar vídeos virais ultrarrealistas com IA, mesmo começando do zero.' },
-  { title: 'Seu Influencer de IA 100% Consistente', desc: 'Entenda como manter identidade visual, voz e padrão narrativo consistente em personagens de IA.' },
-  { title: 'Pack de Prompts VEO3', desc: 'Acesse a minha biblioteca estratégica de prompts prontos para gerar cenas cinematográficas no VEO3 sem precisar testar dezenas de variações.' },
-  { title: 'Desafio R$ 10K com IA', desc: 'Replay do desafio 100% prático para gerar até 10 mil reais aplicando estratégias com IA em curto prazo.' },
-  { title: 'Dominando o VEO3', desc: 'Treinamento completo para aprender a usar o gerador de vídeo VEO 3 do Google, do completo zero ao avançado, criando vídeos ultrarrealistas, cinematográficos e prontos para viralizar ou vender.' },
-  { title: 'Edição com IA (CapCut)', desc: 'Aprenda a usar IA dentro do CapCut para acelerar a edição, criar cortes dinâmicos, legendas automáticas e vídeos com padrão profissional.' },
-  { title: 'Efeitos de Cinema com Runway', desc: 'Aplique efeitos cinematográficos com IA usando Runway para transformar vídeos simples em cenas de alto impacto visual.' },
-  { title: 'Áudio de IA com sotaque', desc: 'Crie áudios realistas com sotaque específico, usando IA para vídeos, personagens e projetos digitais.' },
-  { title: '2 Personagens no mesmo vídeo', desc: 'Gere vídeos com dois personagens interagindo, mesmo sendo 100% gerados por IA, sem precisar gerar separadamente.' },
-  { title: 'Clipes com IA', desc: 'Crie clipes musicais de alta qualidade, gerando a letra, melodia, cantores, banda, cenário e todo o clipe, 100% com IA.' },
-  { title: 'TikTok Shop com IA', desc: 'Descubra como usar a IA para criar vídeos e criativos que vendem produtos físicos dentro do TikTok Shop.' },
-  { title: 'Gerador de Roteiros para TikTok Shop', desc: 'Ferramenta estratégica para criar roteiros prontos para vídeos de venda no TikTok Shop.' },
-  { title: 'IA para Produtos Físicos', desc: 'Use o poder da IA para criar criativos, imagens e anúncios de vendas focados em produtos físicos.' },
-  { title: 'Histórias Animadas com IA', desc: 'Faça histórias animadas com qualidade de cinema usando IA, desde a narração aos personagens, publique nas redes sociais e monetize.' },
-  { title: 'Sessão de Fotos com IA', desc: 'Faça ensaios fotográficos realistas sem câmera, estúdio ou fotógrafo, usando IA para perfis, marcas ou personagens.' },
-  { title: 'Qualidade Profissional em Imagens', desc: 'Domine técnicas para elevar o padrão visual de imagens geradas por IA ao nível profissional.' },
-  { title: 'Lovart - IA Proibida', desc: 'Tenha acesso à IA mais criativa do mercado e descubra como criar infinitas possibilidades, como anúncios, artes, capas de filme e muito mais!' },
-  { title: 'IADS - Método Clones Sentinela', desc: 'Crie clones digitais de altíssima qualidade para produzir seus conteúdos.' },
-  { title: 'AIGRAM - Atendimento com IA', desc: 'Automatize o atendimento e as conversas no Instagram usando inteligência artificial.' },
-  { title: 'Meus Assistentes de IA', desc: 'Acesse a estrutura dos meus agentes e assistentes para produtividade e geração de dinheiro.' },
-  { title: '4 Formas de Fazer Dinheiro com IA em 7 dias', desc: 'Método prático para te mostrar como monetizar rápido usando ferramentas acessíveis de IA.' },
-  { title: 'Transformando seu Conhecimento em Dinheiro com IA', desc: 'Entenda como empacotar seu conhecimento e vender usando IA para criação, estrutura e escala.' },
-  { title: 'Sites com IA', desc: 'Crie sites 100% profissionais usando inteligência artificial sem precisar programar.' },
-  { title: 'Dashboards com IA', desc: 'Descubra como criar painéis inteligentes para organização, métricas e controle dos seus projetos.' },
-  { title: 'Agentes Express Personalizados', desc: 'Descubra como criar agentes de IA personalizados para tarefas específicas em qualquer negócio.' },
-  { title: 'Automação com IA', desc: 'Curso completo e prático de automações para escalar processos usando IA e integrações.' },
+// Carousel data
+const videosCourses = [
+  { image: veo3, title: 'Dominando o VEO3' },
+  { image: edicaoIa, title: 'Edição com IA' },
+  { image: labvidiaCapa, title: 'LABVIDIA Completo' },
+  { image: carouselVideoSample, title: 'Clipes com IA' },
 ];
+
+const photosCourses = [
+  { image: sessaoFotosIa, title: 'Sessão de Fotos com IA' },
+  { image: clones, title: 'Clones Sentinela' },
+  { image: capaMasterclass, title: 'Influencer de IA' },
+  { image: sessaoFotosIa, title: 'Sessão de Fotos com IA' },
+  { image: clones, title: 'Clones Sentinela' },
+  { image: capaMasterclass, title: 'Influencer de IA' },
+];
+
+const businessCourses = [
+  { image: aigram, title: 'AIGRAM - Atendimento com IA' },
+  { image: agentesExpress, title: 'Agentes Express' },
+  { image: bannerCurso, title: 'Sites com IA' },
+  { image: aigram, title: 'AIGRAM - Atendimento com IA' },
+  { image: agentesExpress, title: 'Agentes Express' },
+  { image: bannerCurso, title: 'Sites com IA' },
+];
+
+const CourseCarousel = ({ courses, icon: Icon, iconColor, bgColor, title, subtitle, delay }: {
+  courses: { image: string; title: string }[];
+  icon: React.ElementType;
+  iconColor: string;
+  bgColor: string;
+  title: string;
+  subtitle: string;
+  delay: number;
+}) => {
+  const plugin = useRef(Autoplay({ delay, stopOnInteraction: false }));
+
+  return (
+    <div className="mb-10">
+      <div className="text-center mb-5">
+        <div className="flex items-center justify-center gap-3 mb-2">
+          <div className={`p-2 rounded-lg ${bgColor}`}>
+            <Icon className={`w-5 h-5 ${iconColor}`} />
+          </div>
+          <h3 className="text-xl md:text-2xl font-bold text-foreground">{title}</h3>
+        </div>
+        <p className="text-muted-foreground">{subtitle}</p>
+      </div>
+      <div className="relative">
+        <Carousel
+          plugins={[plugin.current as any]}
+          className="w-full max-w-5xl mx-auto"
+          opts={{ align: "center", loop: true }}
+        >
+          <CarouselContent className="-ml-2 md:-ml-4">
+            {courses.map((course, idx) => (
+              <CarouselItem key={idx} className="pl-2 md:pl-4 basis-2/3 sm:basis-1/2 md:basis-1/3">
+                <div className="group relative overflow-hidden rounded-xl border border-white/10 transition-all duration-300 hover:scale-105">
+                  <img src={course.image} alt={course.title} className="w-full h-auto object-cover aspect-[4/5]" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                      <p className="text-white text-sm font-medium">{course.title}</p>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex -left-12 bg-background/80 hover:bg-background border-primary/20" />
+          <CarouselNext className="hidden md:flex -right-12 bg-background/80 hover:bg-background border-primary/20" />
+        </Carousel>
+        <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-background to-transparent pointer-events-none" />
+        <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-background to-transparent pointer-events-none" />
+      </div>
+    </div>
+  );
+};
 
 const MegaComboVendas = () => {
   return (
@@ -303,14 +370,35 @@ const MegaComboVendas = () => {
               </p>
             </div>
 
-            {/* Course Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-              {courseGrid.map((course, i) => (
-                <Card key={i} className="glass-card glass-card-hover p-5 transition-all duration-300">
-                  <h3 className="text-base font-bold gradient-text-accent mb-2">{course.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{course.desc}</p>
-                </Card>
-              ))}
+            {/* Course Carousels */}
+            <div className="mb-0">
+              <CourseCarousel
+                courses={videosCourses}
+                icon={Video}
+                iconColor="text-tech-blue"
+                bgColor="bg-tech-blue/20"
+                title="Vídeos com IA"
+                subtitle="Crie vídeos incríveis, sem precisar aparecer."
+                delay={2000}
+              />
+              <CourseCarousel
+                courses={photosCourses}
+                icon={Camera}
+                iconColor="text-tech-purple"
+                bgColor="bg-tech-purple/20"
+                title="Fotos com IA"
+                subtitle="Faça fotos e artes profissionais."
+                delay={2500}
+              />
+              <CourseCarousel
+                courses={businessCourses}
+                icon={Briefcase}
+                iconColor="text-tech-cyan"
+                bgColor="bg-tech-cyan/20"
+                title="Negócios com IA"
+                subtitle="Automatize e escale o seu negócio."
+                delay={3000}
+              />
             </div>
           </div>
         </section>
