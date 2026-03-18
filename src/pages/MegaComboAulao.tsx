@@ -211,6 +211,7 @@ const MegaComboAulao = () => {
 
             {/* CTA */}
             <Button
+              id="button-checkout"
               onClick={handleCheckout}
               size="lg"
               className="cta-button px-6 sm:px-10 py-5 sm:py-6 text-base sm:text-lg md:text-xl font-bold text-white border-0 transition-all duration-300 animate-pulse-glow w-full sm:w-auto"
@@ -317,6 +318,7 @@ const MegaComboAulao = () => {
                   </p>
 
                   <Button
+                    id="button-checkout"
                     onClick={handleCheckout}
                     size="lg"
                     className="cta-button px-6 sm:px-10 py-5 sm:py-6 text-base sm:text-lg md:text-xl font-bold text-white border-0 transition-all duration-300 animate-pulse-glow w-full sm:w-auto"
@@ -405,6 +407,7 @@ const MegaComboAulao = () => {
                 </h2>
 
                 <Button
+                  id="button-checkout"
                   onClick={handleCheckout}
                   size="lg"
                   className="cta-button px-6 sm:px-12 py-5 sm:py-6 text-lg sm:text-xl md:text-2xl font-bold text-white border-0 transition-all duration-300 animate-pulse-glow w-full sm:w-auto"
